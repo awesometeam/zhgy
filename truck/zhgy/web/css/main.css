@@ -6,10 +6,11 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.7em;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
+	font: 12px/16px 'Microsoft Yahei','NSimSun',Helvetica,Arial,sans-serif;
 	color: #707b84;
-	background: #3e464d;
+/* 	background: #3e464d; */
+/* 	background: #fff; */
+	background: url("../images/bg.gif") repeat-x scroll left top rgb(255, 255, 255);
 }
 		
 a:link, a:visited { color: #0066CC; text-decoration: none; font-weight: normal; } 
@@ -89,10 +90,10 @@ h3 {
 #templatemo_header {
 	clear: both;
 	width: 960px;
-	height: 200px;
+	height: 110px;
 	margin: 0 auto;
-	padding: 0 10px;
-	background: url(../images/templatemo_header.jpg) no-repeat;
+	padding: 0px;
+	background: url(../images/header_bg.jpg) no-repeat;
 }
 
 #templatemo_header p {
@@ -148,14 +149,14 @@ h3 {
 
 #templatemo_menu_wrapper {
 	width: 100%;
-	height: 90px;
+	height: 60px;
 	margin: 0 auto;
-	background: url(../images/templatemo_menu.jpg) repeat-x;
+	background: url(../images/menu_bg.jpg) repeat-x;
 }
 
 #templatemo_menu {
 	width: 920px;
-	height: 90px;
+	height: 64px;
 	margin: 0 auto;
 	padding: 0 30px;
 	
@@ -179,28 +180,40 @@ h3 {
 	float: left;
 	width: 152px;
 	display: block;
-	height: 40px;
-	padding: 50px 0 0 0;
+	height: 100%;
+	padding: 15px 0px 0px;
 	text-align: center;
-	font-size: 14px;
+	font-size: 15px;
 	text-decoration: none;
 	color: #333333;	
-	font-weight: bold;
+/* 	font-weight: bold; */
 	outline: none;
 }
 
 #templatemo_menu li a:hover, #templatemo_menu li .current {
-	color: #008400;
-	background: url(../images/templatemo_menu_hover.jpg) bottom no-repeat;
+	color: #005AB5;
+/* 	background: url(../images/templatemo_menu_hover.jpg) bottom no-repeat; */
 }
 
 /* end of menu */
+
+/* my content */
+
+.content 
+{
+	width:920px;
+	height: 500px;
+	background: url("../images/contentbg.gif") repeat-x scroll left bottom transparent;
+}
+
+
+/* ********** */
 
 /* content */
 
 #templatemo_content_wrapper {
 	width: 920px;
-	padding: 30px;
+/* 	padding: 30px; */
 	margin: 0 auto;
 }
 
@@ -210,7 +223,7 @@ h3 {
 }
 
 .sidebar_box {
-	padding: 20px 30px;
+	padding: 15px 25px;
 	background: #fff;
 }
 
