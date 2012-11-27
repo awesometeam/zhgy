@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.tornado.entity.Information" %>
+<%@ page import="com.tornado.service.InformationService" %>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +19,10 @@
 <script type="text/javascript" src="js/module/homepage.js"></script>
 </head>
 <body>
+<%
+	List<Information> infos = InformationService.getLastInfos();
+	request.setAttribute("infos",infos);
+%>
 <div id="header_wrapper">
     <div id="header">
     	<div id="site_title">
@@ -53,7 +62,7 @@
 
 	<div id="sidebar">
     
-    	<div class="sidebar_box">
+    	<div id="introduction" class="sidebar_box">
         	<div class="information_box">
             	<h2>公司简介</h2>
             </div>
@@ -80,7 +89,7 @@
     
     <div id="content">
     
-    	<div class="content_box">
+    	<div id="informations" class="content_box">
         	<div class="information_box">
 	        	<div  style="float:left;">
 	        		<h2>最新资讯</h2>
@@ -90,22 +99,30 @@
 	        	</div>
 	        	<div style="clear:both;"></div>
         	</div>
-        	<div class="information_box">
-                <a href="#">在逆市中不断突破 期盼今年产值翻番</a><span>[2012-01-01]</span>
+        	<c:forEach items="${infos}" var="info">
+        		<div class="information_box">
+    	            <a href="#"><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
+	            </div>
+        	</c:forEach>
+<!--         	<div class="information_box"> -->
+<!--                 <a href="#">在逆市中不断突破 期盼今年产值翻番</a><span>[2012-01-01]</span> -->
 <!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-            </div>
-            <div class="information_box">
-                <a href="#">经济衰退使亚洲印刷出口额出现下降趋势</a><span>[2012-02-02]</span>
+<!--             </div> -->
+<!--             <div class="information_box"> -->
+<!--                 <a href="#">经济衰退使亚洲印刷出口额出现下降趋势</a><span>[2012-02-02]</span> -->
 <!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-            </div>
-            <div class="information_box">
-                <a href="#"> 芬兰技术专长助力中国造纸工业现代化</a><span>[2012-03-03]</span>
+<!--             </div> -->
+<!--             <div class="information_box"> -->
+<!--                 <a href="#"> 芬兰技术专长助力中国造纸工业现代化</a><span>[2012-03-03]</span> -->
 <!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-            </div>
-            <div class="information_box">
-                <a href="#">国际印刷联盟发布欧洲印刷媒体及生产现状报...</a><span>[2012-04-04]</span>
+<!--             </div> -->
+<!--             <div class="information_box"> -->
+<!--                 <a href="#">国际印刷联盟发布欧洲印刷媒体及生产现状报...</a><span>[2012-04-04]</span> -->
 <!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-            </div>
+<!--             </div> -->
+            
+            
+            
         	<div class="cleaner"></div>
         </div>
         
