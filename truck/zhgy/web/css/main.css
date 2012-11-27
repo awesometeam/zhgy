@@ -7,14 +7,30 @@ body {
 	padding: 0;
 	line-height: 1.7em;
 	font: 12px/16px 'Microsoft Yahei','NSimSun',Helvetica,Arial,sans-serif;
-	color: #707b84;
+	color: #272727;
 /* 	background: #3e464d; */
 /* 	background: #fff; */
 	background: url("../images/bg.gif") repeat-x scroll left top rgb(255, 255, 255);
 }
+
+a
+{
+	color: #272727;
+	text-decoration: none; 
+}
 		
-a:link, a:visited { color: #0066CC; text-decoration: none; font-weight: normal; } 
-a:active, a:hover { color: #008400; text-decoration: underline; }
+a:visited 
+{ 
+	color: #272727; 
+	text-decoration: none; 
+	font-weight: normal; 
+} 
+
+a:active, a:hover 
+{ 
+	color: #A23400; 
+	text-decoration: underline; 
+}
 
 p { margin: 0px; padding: 0px; }
 
@@ -28,10 +44,6 @@ img { margin: 0px; padding: 0px; border: none; }
 	float: right;
 }
 
-.divider {
-	background: url(images/divider.jpg) repeat-x bottom;
-}
-
 .cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
 
 .cleaner_h10 { clear: both; width:100%; height: 10px; }
@@ -40,24 +52,6 @@ img { margin: 0px; padding: 0px; border: none; }
 .cleaner_h40 { clear: both; width:100%; height: 40px; }
 .cleaner_h50 { clear: both; width:100%; height: 50px; }
 .cleaner_h60 { clear: both; width:100%; height: 60px; }
-
-.button_01 a {
-	display: block;
-	width: 70px;
-	height: 22px;
-	padding: 5px 2px 0 30px;
-	color: #ffffff;
-	font-size: 12px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	background: url(../images/templatemo_button_01.png) no-repeat;
-}
-
-.button_01 a:hover {
-	color: #ffffff;
-	background: url(../images/templatemo_button_01_hover.png) no-repeat;
-}
 
 h2 {
 	margin: 0px;
@@ -70,23 +64,18 @@ h2 {
 h3 {
 	margin: 0	;
 	padding: 0px;
-	font-size: 13px;
+	font-size: 12px;
 	color: #3e464d;
-}
-
-#templatemo_wrapper {
-	width: 980px;
-	margin: 0 auto;
 }
 
 /* header */
 
-#templatemo_header_wrapper {
+#header_wrapper {
 	width: 100%;
 	background: #fff;
 }
 
-#templatemo_header {
+#header {
 	clear: both;
 	width: 960px;
 	height: 110px;
@@ -95,7 +84,7 @@ h3 {
 	background: url(../images/header_bg.jpg) no-repeat;
 }
 
-#templatemo_header p {
+#header p {
 	clear: both;
 	padding-left: 50px;
 	width: 500px;
@@ -104,7 +93,7 @@ h3 {
 	line-height: 26px;
 }
 
-#templatemo_header #site_title {
+#header #site_title {
 	float: left;
 	padding-top: 10px;
 	margin-left: 50px;
@@ -146,14 +135,14 @@ h3 {
 
 /* menu */
 
-#templatemo_menu_wrapper {
+#menu_wrapper {
 	width: 100%;
 	height: 60px;
 	margin: 0 auto;
 	background: url(../images/menu_bg.jpg) repeat-x;
 }
 
-#templatemo_menu {
+#menu {
 	width: 920px;
 	height: 64px;
 	margin: 0 auto;
@@ -161,20 +150,20 @@ h3 {
 	
 }
 
-#templatemo_menu ul {
+#menu ul {
 	float: left;
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 }
 
-#templatemo_menu ul li {
+#menu ul li {
 	padding: 0px;
 	margin: 0px;
 	display: inline;
 }
 
-#templatemo_menu ul li a {
+#menu ul li a {
 	position: relative;
 	float: left;
 	width: 152px;
@@ -189,21 +178,14 @@ h3 {
 	outline: none;
 }
 
-#templatemo_menu li a:hover, #templatemo_menu li .current {
+#menu li a:hover, #templatemo_menu li .current {
 	color: #005AB5;
 /* 	background: url(../images/templatemo_menu_hover.jpg) bottom no-repeat; */
 }
 
 /* end of menu */
 
-/* my footer */
 
-#footer 
-{
-	width: 100%;
-	margin: 0 auto;
-	background: #fff url(../images/templatemo_footer_top.jpg) top repeat-x;
-}
 
 /* ********** */
 
@@ -222,7 +204,7 @@ h3 {
 }
 
 .sidebar_box {
-	padding: 10px 25px;
+	padding: 10px 15px;
 /* 	background: #fff; */
 }
 
@@ -242,10 +224,11 @@ h3 {
 	font-weight: normal;
 }
 
-.information_box a{
-	color: #000000;
-	font-weight: normal;
+.information_box a {
+    font-weight: normal;
+/*     color: #272727; */
 }
+
 
 .information_box span {
 	color: #157ad2;
@@ -338,13 +321,16 @@ h3 {
 
 /* footer */
 
-#templatemo_footer_wrapper {
+/* my footer */
+
+#footer 
+{
 	width: 100%;
 	margin: 0 auto;
-	background: #fff url(../images/templatemo_footer_top.jpg) top repeat-x;	
+	background: #fff url(../images/templatemo_footer_top.jpg) top repeat-x;
 }
 
-#templatemo_footer {
+#footer_content {
 	width: 920px;
 	margin: 0 auto;
 	padding: 30px;
@@ -352,11 +338,11 @@ h3 {
 	color: #7c7471;
 }
 
-#templatemo_footer a {
+#footer a {
 	color: #333333;
 }
 
-#templatemo_footer .footer_menu {
+#footer .footer_menu {
 	margin: 0 0 10px 0;
 	padding: 0px;
 	list-style: none;
