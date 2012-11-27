@@ -60,18 +60,17 @@ img { margin: 0px; padding: 0px; border: none; }
 }
 
 h2 {
-	margin: 0 0 5px 0;
-	padding: 10px 0;
-	font-size: 24px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
 	font-weight: normal;
 	color: #106fb8;
 }
 
 h3 {
 	margin: 0	;
-	padding: 2px 0;
+	padding: 0px;
 	font-size: 13px;
-	font-weight: bold;
 	color: #3e464d;
 }
 
@@ -197,66 +196,58 @@ h3 {
 
 /* end of menu */
 
-/* my content */
+/* my footer */
 
-.content 
+#footer 
 {
-	width:920px;
-	height: 500px;
-	background: url("../images/contentbg.gif") repeat-x scroll left bottom transparent;
+	width: 100%;
+	margin: 0 auto;
+	background: #fff url(../images/templatemo_footer_top.jpg) top repeat-x;
 }
-
 
 /* ********** */
 
 /* content */
 
-#templatemo_content_wrapper {
+#content_wrapper {
 	width: 920px;
 /* 	padding: 30px; */
 	margin: 0 auto;
 }
 
-#templatemo_sidebar {
+#sidebar {
 	float: left;
-	width: 270px;
+	width: 33%;
+	line-height: 1.7em;
 }
 
 .sidebar_box {
-	padding: 15px 25px;
-	background: #fff;
+	padding: 10px 25px;
+/* 	background: #fff; */
 }
 
-.sidebar_box_bottom {
-	width: 270px;
-	height: 15px;
-	margin-bottom: 30px;
-	background: url(../images/templatemo_sidebar_section_bottom.jpg)
-}
-
-.news_box {
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+.information_box {
+	padding-bottom: 8px;
+	margin-bottom: 8px;
 	border-bottom: 1px dashed #8a9ba8;	
-	color: #ffffff;
 }
 
-.news_box .post_info {
+.information_box .post_info {
 	font-size: 11px;
 	color: #666666;
 }
 
-.news_box .post_info a {
+.information_box .post_info a {
 	color: #157ad2;
 	font-weight: normal;
 }
 
-.news_box a{
+.information_box a{
 	color: #000000;
 	font-weight: normal;
 }
 
-.news_box span {
+.information_box span {
 	color: #157ad2;
 }
 
@@ -290,28 +281,42 @@ h3 {
 	outline: none;
 }
 
-#templatemo_content {
+#content {
 	float:right;
-	width: 590px;
+	width: 66%;
 }
 
 .content_box {
 	clear: both;
-	width: 530px;
-	padding: 20px 30px;
-	background: #fff;
-}
-
-.content_box_bottom {
-	width: 590px;
-	height: 36px;
-	margin-bottom: 20px;
-	background: url(../images/templatemo_content_bottom.jpg) no-repeat;
+	width: 100%px;
+	padding: 10px 0px;
 }
 
 .content_box .image_fl {
 	float: left;
 	margin: 3px 15px 0 0;
+}
+
+#hotproduct {
+	width:100%;
+	overflow: hidden;
+}
+
+#hotproduct ul
+{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:9999px;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+}
+
+#hotproduct ul li
+{
+	float:left;
+	padding:5px
 }
 
 .content_box .section_w250 {
