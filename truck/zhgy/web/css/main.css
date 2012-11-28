@@ -199,7 +199,7 @@ h3 {
 
 #sidebar {
 	float: left;
-	width: 33%;
+	width: 30%;
 	line-height: 1.7em;
 }
 
@@ -266,13 +266,13 @@ h3 {
 
 #content {
 	float:right;
-	width: 66%;
+	width: 70%;
 }
 
 .content_box {
 	clear: both;
 	width: 100%px;
-	padding: 10px 0px;
+	padding: 10px 10px;
 }
 
 .content_box .image_fl {
@@ -315,6 +315,13 @@ h3 {
 .list_01 li {
 	color: #008400;
 	margin-bottom: 7px;
+}
+
+.hotproduct_box
+{
+	clear: both;
+	width:100%;
+	padding:10px 15px;
 }
 
 /* end of content */

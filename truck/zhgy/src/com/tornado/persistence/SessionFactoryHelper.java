@@ -7,6 +7,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
+import com.tornado.entity.CompanyInfo;
+import com.tornado.model.CompanyInfoModel;
 import com.tornado.util.TimeUtil;
 
 public class SessionFactoryHelper {

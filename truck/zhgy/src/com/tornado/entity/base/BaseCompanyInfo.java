@@ -15,9 +15,9 @@ import java.io.Serializable;
 public abstract class BaseCompanyInfo  implements Serializable {
 
 	public static String REF = "CompanyInfo";
-	public static String PROP_VALUE = "Value";
-	public static String PROP_KEY = "Key";
+	public static String PROP_KEYWORD = "Keyword";
 	public static String PROP_ID = "Id";
+	public static String PROP_VAL = "Val";
 
 
 	// constructors
@@ -43,15 +43,15 @@ public abstract class BaseCompanyInfo  implements Serializable {
 	private java.lang.Long id;
 
 	// fields
-	private java.lang.String key;
-	private java.lang.String value;
+	private java.lang.String keyword;
+	private java.lang.String val;
 
 
 
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="COMPANY_INFO_ID"
      */
 	public java.lang.Long getId () {
@@ -71,35 +71,35 @@ public abstract class BaseCompanyInfo  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: KEY
+	 * Return the value associated with the column: KEYWORD
 	 */
-	public java.lang.String getKey () {
-		return key;
+	public java.lang.String getKeyword () {
+		return keyword;
 	}
 
 	/**
-	 * Set the value related to the column: KEY
-	 * @param key the KEY value
+	 * Set the value related to the column: KEYWORD
+	 * @param keyword the KEYWORD value
 	 */
-	public void setKey (java.lang.String key) {
-		this.key = key;
+	public void setKeyword (java.lang.String keyword) {
+		this.keyword = keyword;
 	}
 
 
 
 	/**
-	 * Return the value associated with the column: VALUE
+	 * Return the value associated with the column: VAL
 	 */
-	public java.lang.String getValue () {
-		return value;
+	public java.lang.String getVal () {
+		return val;
 	}
 
 	/**
-	 * Set the value related to the column: VALUE
-	 * @param value the VALUE value
+	 * Set the value related to the column: VAL
+	 * @param val the VAL value
 	 */
-	public void setValue (java.lang.String value) {
-		this.value = value;
+	public void setVal (java.lang.String val) {
+		this.val = val;
 	}
 
 

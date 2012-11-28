@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
 <%@ page import="com.tornado.service.InformationService" %>
+<%@ page import="com.tornado.service.CompanyInfoService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,8 +21,8 @@
 </head>
 <body>
 <%
-	List<Information> infos = InformationService.getLastInfos();
-	request.setAttribute("infos",infos);
+	request.setAttribute("infos",InformationService.getLastInfos());
+	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
 %>
 <div id="header_wrapper">
     <div id="header">
@@ -61,13 +62,6 @@
 	</div>
 
 	<div id="sidebar">
-    
-    	<div id="introduction" class="sidebar_box">
-        	<div class="information_box">
-            	<h2>公司简介</h2>
-            </div>
-            <p>温州中昊工艺品有限公司座落于中国印刷城--温州龙港,是专业从事研发、制造和销售各种促销礼品和包装产品的企业。公司自成立以来，本着"以质量赢市场、以创新促发展、以服务强信誉、以管理增效益"的企业宗旨，走出了一条自主创新、稳定发展、走向品牌的坚实之路。先后引进世界一流印刷设备"海德堡"CD74+UV全数控印刷机器，采用国际环保型UV油墨，做到与国外先进厂家同等水平。公司同时配备了其他印刷设备和各种一流的自动包装机。</p>
-        </div>
         
         <div class="sidebar_box">
 			
@@ -76,7 +70,7 @@
             </div>
             
             <form action="#" method="get">
-            <label>您可以输入产品或公司资讯的相关信息进行搜索</label>
+            <label>您可以输入产品或资讯关键词进行搜索</label>
             <input type="text" value="" name="keyword" size="10" id="input_field" title="search" />
             <input type="submit" name="search" value="搜索" alt="search" id="submit_btn" title="Search" />
             </form>
@@ -89,6 +83,13 @@
     
     <div id="content">
     
+    	<div id="introduction" class="content_box">
+        	<div class="information_box">
+            	<h2>公司简介</h2>
+            </div>
+            <p><c:out value="${companyIntroduction}" /></p>
+        </div>
+        
     	<div id="informations" class="content_box">
         	<div class="information_box">
 	        	<div  style="float:left;">
@@ -121,12 +122,12 @@
 <!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
 <!--             </div> -->
             
-            
-            
         	<div class="cleaner"></div>
         </div>
-        
-        <div class="content_box">
+    
+    </div>
+    
+    <div class="hotproduct_box">
         
         	<div class="information_box">
         		<h2 id="hotproducttitle">热门产品</h2>
@@ -155,8 +156,6 @@
         
         	<div class="cleaner"></div>
         </div>
-    
-    </div>
     
     <div class="cleaner"></div>
 

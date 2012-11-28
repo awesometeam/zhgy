@@ -22,8 +22,8 @@ jQuery(function($) {
 	
 	hotPorductInterval = setInterval(hotProductMove, 20);
 
-	if($("#informations").height()<$("#introduction").height())
-		$("#informations").height($("#introduction").height());
+//	if($("#informations").height()<$("#introduction").height())
+//		$("#informations").height($("#introduction").height());
 });
 
 function hotProductMove() {

@@ -76,7 +76,7 @@ public class PMF {
 			
 		} finally
 		{
-			session.clear();
+//			session.clear();
 			session.close();
 		}
 	}
@@ -101,7 +101,7 @@ public class PMF {
 			
 		} finally
 		{
-			session.clear();
+//			session.clear();
 			session.close();
 		}
 	}
@@ -126,7 +126,7 @@ public class PMF {
 			
 		} finally
 		{
-			session.clear();
+//			session.clear();
 			session.close();
 		}
 	}

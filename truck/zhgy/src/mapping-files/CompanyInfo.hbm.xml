@@ -18,18 +18,17 @@
 		</id>
 
 		<property
-			name="Key"
-			column="KEY"
+			name="Keyword"
+			column="KEYWORD"
 			type="string"
 			not-null="false"
 			length="100"
 		/>
 		<property
-			name="Value"
-			column="VALUE"
+			name="Val"
+			column="VAL"
 			type="string"
 			not-null="false"
-			length="300"
 		/>
 
 
