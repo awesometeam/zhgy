@@ -1,0 +1,3 @@
+[2012-11-28]
+1 修改company_info表字段：key->keyword   value->val
+2 增加company_info表keyword字段唯一性约束
