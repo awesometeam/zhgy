@@ -9,14 +9,20 @@ import com.tornado.persistence.SessionFactoryHelper;
 
 public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 {
-	public  static final String companyIntroductionKeyword = "CompanyIntroduction";
+
+	public CompanyInfoModel() { }
+	
+	public CompanyInfoModel(CompanyInfo entity)
+	{
+		this.entity = entity;
+	}
 	
 	/**
 	 * 通过key取得公司信息
 	 * @param key
 	 * @return
 	 */
-	public CompanyInfo getCompanyInfo(String key)
+	public static CompanyInfo getCompanyInfo(String key)
 	{
 		String hql="from CompanyInfo as ci where ci.Keyword=:keyword";
 		Query query=SessionFactoryHelper.getSession().createQuery(hql);
@@ -32,26 +38,17 @@ public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 	 * @param key
 	 * @return
 	 */
-	public void setCompanyInfo(String key,String value)
+	public void setCompanyInfo(String val)
 	{
-		CompanyInfo ci = null;
-		String hql="from CompanyInfo as ci where ci.key=:key";
+		this.entity.setVal(val);
+		String hql="from CompanyInfo as ci where ci.Keyword=:key";
 		Query query=SessionFactoryHelper.getSession().createQuery(hql);
-		query.setString("key", key);
+		query.setString("key", this.entity.getKeyword());
 		List<CompanyInfo> result = query.list();
 		if(result == null || result.size()==0)
-		{
-			ci = new CompanyInfo();
-			ci.setKeyword(key);
-			ci.setVal(value);
-			save(ci);
-		}
+			save(this.entity);
 		else
-		{
-			ci = result.get(0);
-			ci.setVal(value);
-			modify(ci);
-		}
+			modify(this.entity);
 	}
 	
 }

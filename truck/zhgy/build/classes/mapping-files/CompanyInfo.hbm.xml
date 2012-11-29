@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.tornado.entity">
+	<class
+		name="CompanyInfo"
+		table="COMPANY_INFO"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="java.lang.Long"
+			column="COMPANY_INFO_ID"
+		>
+			<generator class="increment"/>
+		</id>
+
+		<property
+			name="Keyword"
+			column="KEYWORD"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Val"
+			column="VAL"
+			type="string"
+			not-null="false"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

@@ -3,7 +3,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
 <%@ page import="com.tornado.model.InformationModel" %>
-<%@ page import="com.tornado.service.CompanyInfoService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,11 +20,10 @@
 </head>
 <body>
 <%
-	request.setAttribute("infos",new InformationModel().list(0,5));
-	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
+	request.setAttribute("infos",new InformationModel().list());
 %>
 
-<%@ include file="pages/header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <div id="content_wrapper">
 
@@ -140,7 +138,7 @@
 
 </div>
 
-<%@ include file="pages/footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 
 </body>
 </html>

@@ -5,11 +5,12 @@ import com.tornado.model.CompanyInfoModel;
 
 public class CompanyInfoService
 {
-	public static CompanyInfoModel model = new CompanyInfoModel();
+	
+	public  static final String companyIntroductionKeyword = "CompanyIntroduction";
 	
 	public static String getCompanyIntroduction()
 	{
-		CompanyInfo info = model.getCompanyInfo(CompanyInfoModel.companyIntroductionKeyword);
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoService.companyIntroductionKeyword);
 		if(info == null)
 			return "";
 		else

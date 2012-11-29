@@ -19,6 +19,9 @@ public abstract class AbstractModel <T> {
 	
 	protected Class<T> entityClass = null;
 	
+	protected T entity = null;
+	
+	
 	public AbstractModel()
 	{
 		entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
