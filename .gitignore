@@ -1,3 +1,4 @@
 *.class
 *.war
 .*
+.DS_Store
