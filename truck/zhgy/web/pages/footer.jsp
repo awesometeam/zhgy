@@ -4,9 +4,9 @@
 <div id="footer">
 	<div id="footer_content">
         <ul class="footer_menu">
-			<li><a href="###">主页</a></li>
+			<li><a href="index.html">主页</a></li>
 			<li><a href="###">公司简介</a></li>
-			<li><a href="###">产品</a></li>
+			<li><a href="products.jsp">产品</a></li>
 			<li><a href="###">资讯</a></li>
 			<li class="last_menu"><a href="###">联系我们</a></li>
 		</ul>

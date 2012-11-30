@@ -9,14 +9,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="css/main.css" rel="stylesheet" type="text/css" />
 <title>产品</title>
 </head>
 <body>
 <%
 	request.setAttribute("categorys",CategoryService.list());
 %>
+<%@ include file="pages/header.jsp" %>
 	<c:forEach items="${categorys}" var="category">
     	<span>${category.name}</span>
 	</c:forEach>
+<%@ include file="pages/footer.jsp" %>
 </body>
 </html>
