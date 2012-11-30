@@ -14,12 +14,22 @@
 </head>
 <body>
 <%
-	request.setAttribute("categorys",CategoryService.list());
+	request.setAttribute("categories",CategoryService.list());
 %>
 <%@ include file="pages/header.jsp" %>
-	<c:forEach items="${categorys}" var="category">
-    	<span>${category.name}</span>
-	</c:forEach>
+	<script>
+		var categories = Array();
+		<c:forEach items="${categories}" var="category">
+			categories.push({
+				'category_id':"${category.category_id}",
+				'higherid':"${category.higherid}",
+				'havehigher':"${category.havehigher}",
+				'name':"${category.name}",
+				'number':"${category.number}",
+				'introduction':"${category.introduction}",
+						});
+		</c:forEach>
+	</script>
 <%@ include file="pages/footer.jsp" %>
 </body>
 </html>
