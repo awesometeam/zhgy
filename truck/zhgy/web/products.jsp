@@ -9,14 +9,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="css/main.css" rel="stylesheet" type="text/css" />
 <title>产品</title>
 </head>
 <body>
 <%
-	request.setAttribute("categorys",CategoryService.list());
+	request.setAttribute("categories",CategoryService.list());
 %>
-	<c:forEach items="${categorys}" var="category">
-    	<span>${category.name}</span>
-	</c:forEach>
+<%@ include file="pages/header.jsp" %>
+	<script>
+		var categories = Array();
+		<c:forEach items="${categories}" var="category">
+			categories.push({
+				'category_id':"${category.category_id}",
+				'higherid':"${category.higherid}",
+				'havehigher':"${category.havehigher}",
+				'name':"${category.name}",
+				'number':"${category.number}",
+				'introduction':"${category.introduction}",
+						});
+		</c:forEach>
+	</script>
+<%@ include file="pages/footer.jsp" %>
 </body>
 </html>
