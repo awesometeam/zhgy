@@ -13,11 +13,12 @@
 <title>温州中昊工艺品有限公司</title>
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
-<link href="css/main.css" rel="stylesheet" type="text/css" />
-<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="js/framework/jquery.flexslider.js"></script>
-<script type="text/javascript" src="js/module/homepage.js"></script>
+<link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/flexslider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/common.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/homepage.js"></script>
 </head>
 <body>
 <%
@@ -43,7 +44,6 @@
 	<div id="sidebar">
         
         <div class="sidebar_box">
-			
 			<div class="information_box">
            		<h2>搜索:</h2>
             </div>
@@ -53,6 +53,30 @@
             <input type="text" value="" name="keyword" size="10" id="input_field" title="search" />
             <input type="submit" name="search" value="搜索" alt="search" id="submit_btn" title="Search" />
             </form>
+            
+            <div class="cleaner"></div>
+        </div>
+        
+        <div class="sidebar_box">
+			<div class="information_box">
+           		<h2>公司风采:</h2>
+            </div>
+            
+            <label>这是公司风采模块</label>
+            <label>将以图片形式显示</label>
+            
+            <div class="cleaner"></div>
+        </div>
+        
+        <div class="sidebar_box">
+			
+			<div class="information_box">
+           		<h2>联系我们:</h2>
+            </div>
+            <p>电话:0577-59877566</p>
+            <p>传真:0577-59877766</p>
+            <p>邮箱:wzzhgift@wzzhgift.com</p>
+            <p>QQ:87525384</p>
             
             <div class="cleaner"></div>
         
@@ -75,7 +99,7 @@
 	        		<h2>最新资讯</h2>
 	        	</div>
 	        	<div  style="float:right;margin-top:5px;">
-	        		<h3>更多</h3>
+	        		<h3><a href="pages/information/infos.jsp">更多</a></h3>
 	        	</div>
 	        	<div style="clear:both;"></div>
         	</div>

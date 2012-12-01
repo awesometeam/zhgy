@@ -14,9 +14,9 @@
 <div id="menu_wrapper">
     <div id="menu">
         <ul>
-            <li><a href="###" class="current">首页</a></li>
+            <li><a href="/zhgy/index.jsp" class="current">首页</a></li>
             <li><a id="ci" href="###">公司简介</a></li>
-            <li><a href="products.jsp">产品</a></li>
+            <li><a href="###">产品</a></li>
             <li><a href="###">公司资讯</a></li>
             <li><a href="###">联系我们</a></li>
             <li><a href="###">关于我们</a></li>
