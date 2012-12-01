@@ -2,7 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
-<%@ page import="com.tornado.model.InformationModel" %>
+<%@ page import="com.tornado.service.InformationService" %>
 <%@ page import="com.tornado.service.CompanyInfoService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -22,7 +22,7 @@
 </head>
 <body>
 <%
-	request.setAttribute("infos",new InformationModel().list(0,5));
+	request.setAttribute("infos",InformationService.getLatestInfos());
 	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
 %>
 

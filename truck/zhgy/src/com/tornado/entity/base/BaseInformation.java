@@ -46,6 +46,19 @@ public abstract class BaseInformation  implements Serializable {
 		this.setTitle(title);
 		initialize();
 	}
+	
+	public BaseInformation (
+			java.lang.Long id,
+			java.lang.String title,
+			java.lang.String author,
+			java.util.Date date) {
+
+			this.setId(id);
+			this.setTitle(title);
+			this.setAuthor(author);
+			this.setDate(date);
+			initialize();
+		}
 
 	protected void initialize () {}
 
