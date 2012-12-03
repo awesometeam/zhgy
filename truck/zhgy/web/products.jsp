@@ -10,6 +10,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/products.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/products.js"></script>
 <title>产品</title>
 </head>
 <body>
@@ -21,7 +24,7 @@
 		var categories = Array();
 		<c:forEach items="${categories}" var="category">
 			categories.push({
-				'category_id':"${category.category_id}",
+				'id':"${category.id}",
 				'higherid':"${category.higherid}",
 				'havehigher':"${category.havehigher}",
 				'name':"${category.name}",
@@ -30,6 +33,34 @@
 						});
 		</c:forEach>
 	</script>
+	<div id="content_wrapper">
+		<div id="sidebar">
+			<div id="category-div" class="sidebar_box" >
+				<div class="information_box">
+					<h2>产品分类</h2>
+				</div>
+				<ul>
+					<c:forEach items="${categories}" var="category">
+						<c:if test="${category.havehigher==0}">
+							<li id="category-${category.id}">
+								<a href="#">${category.name}</a>
+							</li>
+						</c:if>
+					</c:forEach>
+				</ul>
+			</div>
+			<div class="cleaner"></div>
+		</div>
+		<div id="content">
+			<div id="introduction" class="content_box">
+	        	<div class="information_box">
+	            	<h2>产品</h2>
+	            </div>
+	            <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+        	</div>
+		</div>
+		<div class="cleaner"></div>
+	</div>
 <%@ include file="pages/footer.jsp" %>
 </body>
 </html>
