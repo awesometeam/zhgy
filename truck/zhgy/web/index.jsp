@@ -26,6 +26,7 @@
 	request.setAttribute("infos",InformationService.getLatestInfos());
 	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
+	
 	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
 	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
 	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
@@ -135,8 +136,8 @@
         		<h2 id="hotproducttitle">热门产品</h2>
         	</div>
         	
-        	 <div id="hotproduct">
-		        <ul id="hotproductul">
+        	<div id="hotproduct">
+		    	<ul id="hotproductul">
 		        
 		        	<c:forEach begin="0" end="2" >
 		        		<c:forEach items="${showcasePic}" var="pic">
@@ -144,7 +145,7 @@
 		        		</c:forEach>
 		        	</c:forEach>
 		        </ul>
-		     </div>
+		    </div>
         
         	<div class="cleaner"></div>
         </div>

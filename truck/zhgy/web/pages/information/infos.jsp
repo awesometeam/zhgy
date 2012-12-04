@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
 <%@ page import="com.tornado.model.InformationModel" %>
+<%@ page import="com.tornado.model.PictureModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -22,6 +23,14 @@
 <body>
 <%
 	request.setAttribute("infos",new InformationModel().list());
+
+	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
+	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
+	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
+	request.setAttribute("CompanyEmail",CompanyInfoService.getCompanyEmail());
+	request.setAttribute("CompanyQQ",CompanyInfoService.getCompanyQQ());
+	
+	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>
 
 <%@ include file="../header.jsp" %>
@@ -66,10 +75,10 @@
 			<div class="information_box">
            		<h2>联系我们:</h2>
             </div>
-            <p>电话:0577-59877566</p>
-            <p>传真:0577-59877766</p>
-            <p>邮箱:wzzhgift@wzzhgift.com</p>
-            <p>QQ:87525384</p>
+            <p>电话:<c:out value="${CompanyPhone}"></c:out></p>
+            <p>传真:<c:out value="${CompanyFax}"></c:out></p>
+            <p>邮箱:<c:out value="${CompanyEmail}"></c:out></p>
+            <p>QQ:<c:out value="${CompanyQQ}"></c:out></p>
             
             <div class="cleaner"></div>
         
@@ -111,26 +120,16 @@
         		<h2 id="hotproducttitle">热门产品</h2>
         	</div>
         	
-        	 <div id="hotproduct">
-		        <ul id="hotproductul">
-		            <li><img src="../../image/ZH-CS050.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS051.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS052.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS053.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS054.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS055.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS056.jpg" alt="" width="150" height="150" /></li>
-		            
-		            <li><img src="../../image/ZH-CS050.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS051.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS052.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS053.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS054.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS055.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="../../image/ZH-CS056.jpg" alt="" width="150" height="150" /></li>
-		            
+        	<div id="hotproduct">
+		    	<ul id="hotproductul">
+		        
+		        	<c:forEach begin="0" end="2" >
+		        		<c:forEach items="${showcasePic}" var="pic">
+		        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
+		        		</c:forEach>
+		        	</c:forEach>
 		        </ul>
-		     </div>
+		    </div>
         
         	<div class="cleaner"></div>
         </div>
