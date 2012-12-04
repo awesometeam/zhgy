@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.tornado.entity">
 	<class
 		name="Product"
-		table="PRODUCT"
+		table="product"
 	>
 		<meta attribute="sync-DAO">false</meta>
 		<id
@@ -72,6 +72,12 @@
 			type="java.lang.Long"
 			not-null="false"
 			length="19"
+		/>
+		<property
+			name="Inshowcase"
+			column="INSHOWCASE"
+			type="boolean"
+			not-null="true"
 		/>
 
 

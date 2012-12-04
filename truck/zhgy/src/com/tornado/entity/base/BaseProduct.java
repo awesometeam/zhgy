@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the PRODUCT table.
+ * This is an object that contains data related to the product table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="PRODUCT"
+ *  table="product"
  */
 
 public abstract class BaseProduct  implements Serializable {
@@ -22,6 +22,7 @@ public abstract class BaseProduct  implements Serializable {
 	public static String PROP_NUMBER = "Number";
 	public static String PROP_ID = "Id";
 	public static String PROP_PROCESSES = "Processes";
+	public static String PROP_INSHOWCASE = "Inshowcase";
 	public static String PROP_SPECIFICATIONS = "Specifications";
 	public static String PROP_PACKAGING = "Packaging";
 
@@ -44,10 +45,12 @@ public abstract class BaseProduct  implements Serializable {
 	 */
 	public BaseProduct (
 		java.lang.Long id,
-		java.lang.String name) {
+		java.lang.String name,
+		boolean inshowcase) {
 
 		this.setId(id);
 		this.setName(name);
+		this.setInshowcase(inshowcase);
 		initialize();
 	}
 
@@ -69,13 +72,14 @@ public abstract class BaseProduct  implements Serializable {
 	private java.lang.String packaging;
 	private java.lang.String introduction;
 	private java.lang.Long categoryId;
+	private boolean inshowcase;
 
 
 
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="PRODUCT_ID"
      */
 	public java.lang.Long getId () {
@@ -226,6 +230,23 @@ public abstract class BaseProduct  implements Serializable {
 	 */
 	public void setCategoryId (java.lang.Long categoryId) {
 		this.categoryId = categoryId;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: INSHOWCASE
+	 */
+	public boolean isInshowcase () {
+		return inshowcase;
+	}
+
+	/**
+	 * Set the value related to the column: INSHOWCASE
+	 * @param inshowcase the INSHOWCASE value
+	 */
+	public void setInshowcase (boolean inshowcase) {
+		this.inshowcase = inshowcase;
 	}
 
 

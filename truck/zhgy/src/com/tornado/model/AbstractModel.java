@@ -137,6 +137,16 @@ public abstract class AbstractModel <T> {
 	}
 	
 	/**
+	 * 通过hql查询 
+	 * @param hql
+	 * @return
+	 */
+	public List<T> list(String hql)
+	{
+		return PMF.list(hql);
+	}
+	
+	/**
 	 * 通过hql获得所有数据
 	 * @param hql hql语句
 	 * @param map 参数

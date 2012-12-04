@@ -160,6 +160,12 @@ public class PMF {
 		}
 	}
 	
+	public static <T> List<T> list(String hql)
+	{
+		Query query=SessionFactoryHelper.getSession().createQuery(hql);
+		return query.list();
+	}
+	
 	public static <T> List<T> list(String hql,Map<String,Object> map)
 	{
 		Query query=SessionFactoryHelper.getSession().createQuery(hql);

@@ -26,38 +26,25 @@
 	request.setAttribute("infos",InformationService.getLatestInfos());
 	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
+	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
+	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
+	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
+	request.setAttribute("CompanyEmail",CompanyInfoService.getCompanyEmail());
+	request.setAttribute("CompanyQQ",CompanyInfoService.getCompanyQQ());
+	
+	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
+	
 %>
 
 <%@ include file="pages/header.jsp" %>
 
 <div id="content_wrapper">
 
-<!-- 	<div class="flexslider"> -->
-<!-- 	  <ul class="slides"> -->
-<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
-<!--   	    <li><img src="images/show/kitchen_adventurer_lemon.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_donut.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_caramel.jpg" /></li> -->
-<!-- 	  </ul> -->
-<!-- 	</div> -->
-
 	<div id="slideshow" class="slider">
 		<div class="conbox">
 			<c:forEach items="${slideshowPic}" var="pic">
 				<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="960" height="150" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div>
 			</c:forEach>
-		
-<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
-<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
-<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
-			
-<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-21/38.html" title="jquery 3D图片滚动一个漂亮的手机软件网站图片展示"><img width="620" height="340" alt="jquery 3D图片滚动一个漂亮的手机软件网站图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-21/c9cfb68c13cbe925d3c9a03912f3b1de.jpg"></a></div> -->
-<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-21/40.html" title="jquery 分类搜索框防谷歌网站搜索页面"><img width="620" height="340" alt="jquery 分类搜索框防谷歌网站搜索页面" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-21/310772035582a551c3afd8f6cc071409.jpg"></a></div> -->
-<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-22/46.html" title="jquery 文本框提示顶部弹跳框使用jQuery和CSS3的插件"><img width="620" height="340" alt="jquery 文本框提示顶部弹跳框使用jQuery和CSS3的插件" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-22/f4fe9dd611bd459c0244159163109bc4.jpg"></a></div> -->
-<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-08-13/120.html" title="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示"><img width="620" height="340" alt="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-13/323ce4b13f72648e096bd1a86cba762a.jpg"></a></div> -->
-<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-08-17/129.html" title="jquery评论星星打分特效、鼠标滑过星星显示评论信息"><img width="620" height="340" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg"></a></div> -->
 		</div>
 
 		<div class="slideshow-switcher">
@@ -99,10 +86,10 @@
 			<div class="information_box">
            		<h2>联系我们:</h2>
             </div>
-            <p>电话:0577-59877566</p>
-            <p>传真:0577-59877766</p>
-            <p>邮箱:wzzhgift@wzzhgift.com</p>
-            <p>QQ:87525384</p>
+            <p>电话:<c:out value="${CompanyPhone}"></c:out></p>
+            <p>传真:<c:out value="${CompanyFax}"></c:out></p>
+            <p>邮箱:<c:out value="${CompanyEmail}"></c:out></p>
+            <p>QQ:<c:out value="${CompanyQQ}"></c:out></p>
             
             <div class="cleaner"></div>
         
@@ -136,22 +123,6 @@
     	            <a href="#"><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
 	            </div>
         	</c:forEach>
-<!--         	<div class="information_box"> -->
-<!--                 <a href="#">在逆市中不断突破 期盼今年产值翻番</a><span>[2012-01-01]</span> -->
-<!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-<!--             </div> -->
-<!--             <div class="information_box"> -->
-<!--                 <a href="#">经济衰退使亚洲印刷出口额出现下降趋势</a><span>[2012-02-02]</span> -->
-<!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-<!--             </div> -->
-<!--             <div class="information_box"> -->
-<!--                 <a href="#"> 芬兰技术专长助力中国造纸工业现代化</a><span>[2012-03-03]</span> -->
-<!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-<!--             </div> -->
-<!--             <div class="information_box"> -->
-<!--                 <a href="#">国际印刷联盟发布欧洲印刷媒体及生产现状报...</a><span>[2012-04-04]</span> -->
-<!--                 <p class="post_info">Posted by <a href="#">Admin</a> on <span>April 30, 2048</span></p> -->
-<!--             </div> -->
             
         	<div class="cleaner"></div>
         </div>
@@ -166,22 +137,12 @@
         	
         	 <div id="hotproduct">
 		        <ul id="hotproductul">
-		            <li><img src="image/ZH-CS050.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS051.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS052.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS053.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS054.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS055.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS056.jpg" alt="" width="150" height="150" /></li>
-		            
-		            <li><img src="image/ZH-CS050.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS051.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS052.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS053.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS054.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS055.jpg" alt="" width="150" height="150" /></li>
-		            <li><img src="image/ZH-CS056.jpg" alt="" width="150" height="150" /></li>
-		            
+		        
+		        	<c:forEach begin="0" end="2" >
+		        		<c:forEach items="${showcasePic}" var="pic">
+		        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
+		        		</c:forEach>
+		        	</c:forEach>
 		        </ul>
 		     </div>
         

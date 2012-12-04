@@ -24,11 +24,13 @@ public class Product extends BaseProduct {
 	 */
 	public Product (
 		java.lang.Long id,
-		java.lang.String name) {
+		java.lang.String name,
+		boolean inshowcase) {
 
 		super (
 			id,
-			name);
+			name,
+			inshowcase);
 	}
 
 /*[CONSTRUCTOR MARKER END]*/

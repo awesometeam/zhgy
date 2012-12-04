@@ -15,6 +15,10 @@ public class CompanyInfoService
 	
 	public static final String companyAddressKeyword = "CompanyAddress";
 	
+	public static final String CompanyEmailKeyword = "CompanyEmail";
+	
+	public static final String CompanyQQKeyword = "CompanyQQ";
+	
 	/**
 	 * 获得公司简介信息
 	 */
@@ -57,6 +61,30 @@ public class CompanyInfoService
 	public static String getCompanyAddress()
 	{
 		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoService.companyAddressKeyword);
+		if(info == null)
+			return "";
+		else
+			return info.getVal();
+	}
+	
+	/**
+	 * 获得公司EMAIL
+	 */
+	public static String getCompanyEmail()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoService.CompanyEmailKeyword);
+		if(info == null)
+			return "";
+		else
+			return info.getVal();
+	}
+	
+	/**
+	 * 获得公司QQ
+	 */
+	public static String getCompanyQQ()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoService.CompanyQQKeyword);
 		if(info == null)
 			return "";
 		else
