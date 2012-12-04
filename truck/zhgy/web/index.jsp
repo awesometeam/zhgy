@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
+<%@ page import="com.tornado.model.PictureModel" %>
 <%@ page import="com.tornado.service.InformationService" %>
 <%@ page import="com.tornado.service.CompanyInfoService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
@@ -14,9 +15,9 @@
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/zhgy/css/flexslider.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/jquery.xslider.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="/zhgy/js/framework/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/jquery.Xslider.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/homepage.js"></script>
 </head>
@@ -24,21 +25,46 @@
 <%
 	request.setAttribute("infos",InformationService.getLatestInfos());
 	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
+	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 %>
 
 <%@ include file="pages/header.jsp" %>
 
 <div id="content_wrapper">
 
-	<div class="flexslider">
-	  <ul class="slides">
-	  	<li><img src="images/show/wrap1.jpg" /></li>
-	  	<li><img src="images/show/wrap1.jpg" /></li>
-	  	<li><img src="images/show/wrap1.jpg" /></li>
+<!-- 	<div class="flexslider"> -->
+<!-- 	  <ul class="slides"> -->
+<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
+<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
+<!-- 	  	<li><img src="images/show/wrap1.jpg" /></li> -->
 <!--   	    <li><img src="images/show/kitchen_adventurer_lemon.jpg" /></li> -->
 <!--   		<li><img src="images/show/kitchen_adventurer_donut.jpg" /></li> -->
 <!--   		<li><img src="images/show/kitchen_adventurer_caramel.jpg" /></li> -->
-	  </ul>
+<!-- 	  </ul> -->
+<!-- 	</div> -->
+
+	<div id="slideshow" class="slider">
+		<div class="conbox">
+			<c:forEach items="${slideshowPic}" var="pic">
+				<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="960" height="150" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div>
+			</c:forEach>
+		
+<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
+<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
+<!-- 			<div><a href="###" title="这是一张图片"><img width="960" height="150" alt="提示：这是一张图片" src="images/show/wrap1.jpg"></a></div> -->
+			
+<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-21/38.html" title="jquery 3D图片滚动一个漂亮的手机软件网站图片展示"><img width="620" height="340" alt="jquery 3D图片滚动一个漂亮的手机软件网站图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-21/c9cfb68c13cbe925d3c9a03912f3b1de.jpg"></a></div> -->
+<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-21/40.html" title="jquery 分类搜索框防谷歌网站搜索页面"><img width="620" height="340" alt="jquery 分类搜索框防谷歌网站搜索页面" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-21/310772035582a551c3afd8f6cc071409.jpg"></a></div> -->
+<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-02-22/46.html" title="jquery 文本框提示顶部弹跳框使用jQuery和CSS3的插件"><img width="620" height="340" alt="jquery 文本框提示顶部弹跳框使用jQuery和CSS3的插件" src="http://www.jsfoot.com/d/file/jquery/items/2011-02-22/f4fe9dd611bd459c0244159163109bc4.jpg"></a></div> -->
+<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-08-13/120.html" title="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示"><img width="620" height="340" alt="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-13/323ce4b13f72648e096bd1a86cba762a.jpg"></a></div> -->
+<!-- 			<div><a href="http://www.jsfoot.com/jquery/items/2011-08-17/129.html" title="jquery评论星星打分特效、鼠标滑过星星显示评论信息"><img width="620" height="340" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg"></a></div> -->
+		</div>
+
+		<div class="slideshow-switcher">
+			<a href="#" class="slideshow-cur">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+		</div>
 	</div>
 
 	<div id="sidebar">
@@ -90,7 +116,9 @@
         	<div class="information_box">
             	<h2>公司简介</h2>
             </div>
-            <p><c:out value="${companyIntroduction}" /></p>
+            <c:forEach items="${companyIntroduction}" var="line">
+            	<p><c:out value="${line}" /></p>
+        	</c:forEach>
         </div>
         
     	<div id="informations" class="content_box">

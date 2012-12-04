@@ -3,6 +3,7 @@ package com.tornado.model;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.Query;
 
@@ -25,6 +26,42 @@ public abstract class AbstractModel <T> {
 	public AbstractModel()
 	{
 		entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+	
+	/**
+	 * 保存这个模型
+	 */
+	public void save()
+	{
+		if(entity!=null)
+			PMF.save(entity);
+	}
+	
+	/**
+	 * 保存或者更新这个模型
+	 */
+	public void restore()
+	{
+		if(entity!=null)
+			PMF.restore(entity);
+	}
+	
+	/**
+	 * 更新这个模型
+	 */
+	public void modify()
+	{
+		if(entity!=null)
+			PMF.update(entity);
+	}
+	
+	/**
+	 * 删除这个模型
+	 */
+	public void remove()
+	{
+		if(entity!=null)
+			PMF.remove(entity);
 	}
 	
 	/**
@@ -97,6 +134,30 @@ public abstract class AbstractModel <T> {
 		String hql = "from "+entityClass.getName();
 		Query query=SessionFactoryHelper.getSession().createQuery(hql).setFirstResult(start).setMaxResults(count);
 		return query.list();
+	}
+	
+	/**
+	 * 通过hql获得所有数据
+	 * @param hql hql语句
+	 * @param map 参数
+	 * @return
+	 */
+	public List<T> list(String hql,Map map)
+	{
+		return PMF.list(hql,map);
+	}
+	
+	/**
+	 * 通过hql获得从s开始的c条数据
+	 * @param hql hql hql语句
+	 * @param map map 参数
+	 * @param s 其实index
+	 * @param c 取出数据量
+	 * @return
+	 */
+	public List<T> list(String hql,Map map,int s,int c)
+	{
+		return PMF.list(hql,map,s,c);
 	}
 	
 }

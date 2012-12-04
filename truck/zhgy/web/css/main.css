@@ -1,6 +1,7 @@
-/*
-Credit: http://www.cssmoban.com
-*/
+html
+{
+	overflow-x:visible;overflow-y:scroll;
+}
 
 body {
 	margin: 0;
@@ -282,7 +283,10 @@ h3 {
 
 #hotproduct {
 	width:100%;
+	position: relative;
 	overflow: hidden;
+	left:0px;
+	top:0px;
 }
 
 #hotproduct ul
@@ -291,9 +295,7 @@ h3 {
 	padding:0;
 	list-style-type:none;
 	width:9999px;
-	overflow: hidden;
-	position: relative;
-	left: 0px;
+	left:0px;
 }
 
 #hotproduct ul li

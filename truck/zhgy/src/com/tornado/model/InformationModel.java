@@ -17,12 +17,14 @@ public class InformationModel extends AbstractModel<Information>
 		this.entity = entity;
 	}
 	
-	public List<Information> getLatestInfos()
+	public List<Information> getLatestInfos(int count)
 	{
-		String hql = "select new Information(Id,Title,Author,Date) from Information";
+		String hql = "select new Information(Id,Title,Author,Date) from Information order by Date";
 		Query query = SessionFactoryHelper.getSession().createQuery(hql);
-		query.setFirstResult(0).setMaxResults(5);
+		query.setFirstResult(0).setMaxResults(count);
 		List<Information> result = query.list();
 		return result;
 	}
+	
+	
 }

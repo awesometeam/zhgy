@@ -4,11 +4,6 @@
 
 jQuery(function($) {
 	
-	
-	$('.flexslider').flexslider({
-		animation: "slide"
-	});
-	
 	$("#pager").jPages({
         containerID  : "itemContainer",
 		first: '首页',

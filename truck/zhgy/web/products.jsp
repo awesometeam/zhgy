@@ -21,7 +21,7 @@
 		var categories = Array();
 		<c:forEach items="${categories}" var="category">
 			categories.push({
-				'category_id':"${category.category_id}",
+				'category_id':"${category.id}",
 				'higherid':"${category.higherid}",
 				'havehigher':"${category.havehigher}",
 				'name':"${category.name}",

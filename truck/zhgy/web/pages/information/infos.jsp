@@ -15,7 +15,6 @@
 <link href="../../css/main.css" rel="stylesheet" type="text/css" />
 <link href="../../css/flexslider.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="../../js/framework/jquery.flexslider.js"></script>
 <script type="text/javascript" src="../../js/framework/jPages.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="../../js/module/info.js"></script>
@@ -29,7 +28,7 @@
 
 <div id="content_wrapper">
 
-	<div style=width:100%">
+	<div style=width:100%;margin-bottom:5px;">
 		<img src="../../images/show/wrap1.jpg" />
 	</div>
 
