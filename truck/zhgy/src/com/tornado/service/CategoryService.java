@@ -11,7 +11,6 @@ public class CategoryService
 	
 	public static List<Category> list()
 	{
-		return model.list(0, 1000);
+		return model.list();
 	}
-	
 }
