@@ -56,8 +56,9 @@
 	        	<div class="information_box">
 	            	<h2>产品</h2>
 	            </div>
-	            <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
         	</div>
+        	<iframe src="pages/query_products.jsp" frameborder="0"></iframe>
+        	<p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
 		</div>
 		<div class="cleaner"></div>
 	</div>

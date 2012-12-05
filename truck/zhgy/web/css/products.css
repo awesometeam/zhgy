@@ -29,3 +29,7 @@
 	position: relative;
 }
 
+#category-div ul li:hover > ul {
+	display: block;
+}
+
