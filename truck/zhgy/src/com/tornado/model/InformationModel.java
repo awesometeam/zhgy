@@ -12,6 +12,7 @@ import com.tornado.persistence.SessionFactoryHelper;
 
 public class InformationModel extends AbstractModel<Information>
 {
+	protected static final int LatestInfosCount = 5;
 	
 	public InformationModel() {}
 	
@@ -41,5 +42,9 @@ public class InformationModel extends AbstractModel<Information>
 			return result.get(0);
 	}
 	
+	public static List<Information> getLatestInfos()
+	{
+		return new InformationModel().getLatestInfos(InformationModel.LatestInfosCount);
+	}
 	
 }

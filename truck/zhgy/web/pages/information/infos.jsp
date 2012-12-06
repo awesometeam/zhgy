@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="com.tornado.entity.Information" %>
 <%@ page import="com.tornado.model.InformationModel" %>
+<%@ page import="com.tornado.model.CompanyInfoModel" %>
 <%@ page import="com.tornado.model.PictureModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -13,22 +13,21 @@
 <title>温州中昊工艺品有限公司</title>
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
-<link href="../../css/main.css" rel="stylesheet" type="text/css" />
-<link href="../../css/flexslider.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="../../js/framework/jPages.js"></script>
+<link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/flexslider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript" src="../../js/module/info.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/information/infos.js"></script>
 </head>
 <body>
 <%
 	request.setAttribute("infos",new InformationModel().list());
 
-	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
-	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
-	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
-	request.setAttribute("CompanyEmail",CompanyInfoService.getCompanyEmail());
-	request.setAttribute("CompanyQQ",CompanyInfoService.getCompanyQQ());
+	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
+	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
+	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
+	request.setAttribute("CompanyEmail",CompanyInfoModel.getCompanyEmail());
+	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
 	
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>

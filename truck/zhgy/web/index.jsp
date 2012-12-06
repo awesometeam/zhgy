@@ -3,8 +3,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.tornado.entity.Information" %>
 <%@ page import="com.tornado.model.PictureModel" %>
-<%@ page import="com.tornado.service.InformationService" %>
-<%@ page import="com.tornado.service.CompanyInfoService" %>
+<%@ page import="com.tornado.model.InformationModel" %>
+<%@ page import="com.tornado.model.CompanyInfoModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -23,15 +23,15 @@
 </head>
 <body>
 <%
-	request.setAttribute("infos",InformationService.getLatestInfos());
-	request.setAttribute("companyIntroduction",CompanyInfoService.getCompanyIntroduction());
+	request.setAttribute("infos",InformationModel.getLatestInfos());
+	request.setAttribute("companyIntroduction",CompanyInfoModel.getCompanyIntroduction());
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 	
-	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
-	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
-	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
-	request.setAttribute("CompanyEmail",CompanyInfoService.getCompanyEmail());
-	request.setAttribute("CompanyQQ",CompanyInfoService.getCompanyQQ());
+	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
+	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
+	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
+	request.setAttribute("CompanyEmail",CompanyInfoModel.getCompanyEmail());
+	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
 	
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 	

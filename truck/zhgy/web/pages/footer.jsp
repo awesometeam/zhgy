@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@ page import="com.tornado.service.CompanyInfoService" %>
+<%@ page import="com.tornado.model.CompanyInfoModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%
 if(request.getAttribute("CompanyPhone") == null)
-	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
+	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
 if(request.getAttribute("CompanyFax") == null)
-	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
+	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
 if(request.getAttribute("CompanyAddress") == null)
-	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
+	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
 if(request.getAttribute("CompanyEmail") == null)
-	request.setAttribute("CompanyEmail",CompanyInfoService.getCompanyEmail());
+	request.setAttribute("CompanyEmail",CompanyInfoModel.getCompanyEmail());
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <div id="footer">
