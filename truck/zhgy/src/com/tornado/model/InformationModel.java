@@ -1,10 +1,13 @@
 package com.tornado.model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.Query;
 
 import com.tornado.entity.Information;
+import com.tornado.persistence.PMF;
 import com.tornado.persistence.SessionFactoryHelper;
 
 public class InformationModel extends AbstractModel<Information>
@@ -24,6 +27,18 @@ public class InformationModel extends AbstractModel<Information>
 		query.setFirstResult(0).setMaxResults(count);
 		List<Information> result = query.list();
 		return result;
+	}
+	
+	public Information getInfo(String id)
+	{
+		String hql = "from Information where id=:id";
+		Map params=new HashMap<String,Object>();
+		params.put("id", id);
+		List<Information> result = PMF.list(hql, params);
+		if(result == null || result.size()  == 0)
+			return null;
+		else
+			return result.get(0);
 	}
 	
 	

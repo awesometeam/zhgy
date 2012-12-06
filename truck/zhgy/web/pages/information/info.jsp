@@ -13,17 +13,12 @@
 <title>温州中昊工艺品有限公司</title>
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
-<link href="../../css/main.css" rel="stylesheet" type="text/css" />
-<link href="../../css/flexslider.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="../../js/framework/jPages.js"></script>
+<link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript" src="../../js/module/info.js"></script>
 </head>
 <body>
 <%
-	request.setAttribute("infos",new InformationModel().list());
-
 	request.setAttribute("CompanyPhone",CompanyInfoService.getCompanyPhone());
 	request.setAttribute("CompanyFax",CompanyInfoService.getCompanyFax());
 	request.setAttribute("CompanyAddress",CompanyInfoService.getCompanyAddress());
@@ -38,19 +33,8 @@
 <div id="content_wrapper">
 
 	<div style=width:100%;margin-bottom:5px;">
-		<img src="../../images/show/wrap1.jpg" />
+		<img src="/zhgy/images/show/wrap1.jpg" />
 	</div>
-
-<!-- 	<div class="flexslider"> -->
-<!-- 	  <ul class="slides"> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!--   	    <li><img src="images/show/kitchen_adventurer_lemon.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_donut.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_caramel.jpg" /></li> -->
-<!-- 	  </ul> -->
-<!-- 	</div> -->
 
 	<div id="sidebar">
         
@@ -91,21 +75,18 @@
     	<div id="informations" class="content_box">
         	<div class="information_box">
 	        	<div  style="float:left;">
-	        		<h2>最新资讯</h2>
+	        		<h2>资讯</h2>
 	        	</div>
 <!-- 	        	<div  style="float:right;margin-top:5px;"> -->
 <!-- 	        		<h3>更多</h3> -->
 <!-- 	        	</div> -->
 	        	<div style="clear:both;"></div>
         	</div>
-        	<div id="itemContainer">
-	        	<c:forEach items="${infos}" var="info">
-	        		<div class="information_box">
-	    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
-		            </div>
-	        	</c:forEach>
+        	<div>
+        		<p class="title"><c:out value="${info.title}"></c:out></p>
+	        	<p class="line"><c:out value="${info.content}"></c:out></p>
         	</div>
-        	<div id="pager" class="pager"></div>
+<!--         	<div id="pager" class="pager"></div> -->
             
         	<div class="cleaner"></div>
         </div>
