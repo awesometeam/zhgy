@@ -28,7 +28,17 @@ insert  into `information`(`INFO_ID`,`TITLE`,`AUTHOR`,`CONTENT`,`DATE`) values (
 
 /*Data for the table `picture` */
 
-insert  into `picture`(`PICTURE_ID`,`PICTURE_PATH`,`PICTURE_DESCRIPTION`,`CORRELATION_ID`) values (2,'/zhgy/images/SlideshowPictures/wrap1.jpg','图片1',-1),(3,'/zhgy/images/SlideshowPictures/wrap2.jpg','图片2',-1),(4,'/zhgy/images/SlideshowPictures/wrap3.jpg','图片3',-1),(5,'/zhgy/images/product/1/6/ZH-CS050.jpg','产品图片1',1),(6,'/zhgy/images/product/1/6/ZH-CS051.jpg','产品图片2',2),(7,'/zhgy/images/product/1/6/ZH-CS052.jpg','产品图片3',3),(8,'/zhgy/images/product/1/6/ZH-CS053.jpg','产品图片4',4),(9,'/zhgy/images/product/1/7/ZH-CS054.jpg','产品图片5',5),(10,'/zhgy/images/product/1/7/ZH-CS055.jpg','产品图片6',6),(11,'/zhgy/images/product/1/7/ZH-CS056.jpg','产品图片7',7);
+INSERT INTO `PICTURE` (`PICTURE_ID`, `PICTURE_PATH`, `PICTURE_DESCRIPTION`, `CORRELATION_ID`, `IS_PRIMARY`) VALUES
+(2, '/zhgy/images/SlideshowPictures/wrap1.jpg', '图片1', -1, 0),
+(3, '/zhgy/images/SlideshowPictures/wrap2.jpg', '图片2', -1, 0),
+(4, '/zhgy/images/SlideshowPictures/wrap3.jpg', '图片3', -1, 0),
+(5, '/zhgy/images/product/1/6/ZH-CS050.jpg', '产品图片1', 1, 1),
+(6, '/zhgy/images/product/1/6/ZH-CS051.jpg', '产品图片2', 2, 1),
+(7, '/zhgy/images/product/1/6/ZH-CS052.jpg', '产品图片3', 3, 1),
+(8, '/zhgy/images/product/1/6/ZH-CS053.jpg', '产品图片4', 4, 1),
+(9, '/zhgy/images/product/1/7/ZH-CS054.jpg', '产品图片5', 5, 1),
+(10, '/zhgy/images/product/1/7/ZH-CS055.jpg', '产品图片6', 6, 1),
+(11, '/zhgy/images/product/1/7/ZH-CS056.jpg', '产品图片7', 7, 1);
 
 /*Data for the table `product` */
 
