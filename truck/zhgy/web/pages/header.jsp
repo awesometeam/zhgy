@@ -2,12 +2,16 @@
     pageEncoding="utf-8"%>
 <div id="header_wrapper">
     <div id="header">
-    	<div id="site_title">
-            <h1><a href="###">
-                <span>ZHGY LOGO</span>
-            </a></h1>
-        </div>
-    </div> <!-- end of templatemo_header -->
+<!--    		<div class="logo"> -->
+<!--    			<img src="/zhgy/images/resource/logo.jpg" width="90px" height="90px"></img> -->
+<!--    		</div> -->
+<!--     	<div id="site_title"> -->
+<!--             <h1> -->
+<!--             	<span>温州中昊工艺品有限公司</span> -->
+<!--             </h1> -->
+<!--         </div> -->
+<!--         <div class="cleaner"></div> -->
+    </div>
 
 </div> <!-- end of templatemo_menu_wrapper -->
 
@@ -18,8 +22,8 @@
             <li><a id="ci" href="/zhgy/pages/introduction/introduction.jsp">公司简介</a></li>
             <li><a href="###">产品</a></li>
             <li><a href="/zhgy/pages/information/infos.jsp">公司资讯</a></li>
+            <li><a href="###">在线留言</a></li>
             <li><a href="###">联系我们</a></li>
-            <li><a href="###">关于我们</a></li>
         </ul>    	
     </div>
 </div>

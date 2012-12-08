@@ -137,7 +137,7 @@
         	</div>
         	<c:forEach items="${infos}" var="info">
         		<div class="information_box">
-    	            <a href="#"><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
+    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
 	            </div>
         	</c:forEach>
             
