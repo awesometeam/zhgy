@@ -15,7 +15,7 @@
 </head>
 <body>
 <%
-	request.setAttribute("products",ProductService.list());
+	//request.setAttribute("products",ProductService.list());
 %>
 <c:forEach items="${products}" var="product">
 	<span>${product.name}</span>
