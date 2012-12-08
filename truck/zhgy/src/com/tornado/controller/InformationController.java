@@ -9,6 +9,7 @@ import com.tornado.core.control.Controller;
 import com.tornado.core.view.View;
 import com.tornado.entity.Information;
 import com.tornado.persistence.PMF;
+import com.tornado.util.TextUtil;
 
 public class InformationController extends Controller
 {
@@ -25,6 +26,7 @@ public class InformationController extends Controller
 			return view;
 		
 		content.getRequest().setAttribute("info", result.get(0));
+		content.getRequest().setAttribute("content", TextUtil.toHtmlString(result.get(0).getContent()));
 		return view;
 		
 	}

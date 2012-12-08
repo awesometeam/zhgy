@@ -84,7 +84,10 @@
         	</div>
         	<div id="infodetail">
         		<p class="title"><c:out value="${info.title}"></c:out></p>
-	        	<p class="line"><c:out value="${info.content}"></c:out></p>
+        		<c:forEach items="${content}" var="line">
+        			<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
+        		</c:forEach>
+	        	
         	</div>
 <!--         	<div id="pager" class="pager"></div> -->
             
