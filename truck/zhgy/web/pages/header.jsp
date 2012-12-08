@@ -15,9 +15,9 @@
     <div id="menu">
         <ul>
             <li><a href="/zhgy/index.jsp" class="current">首页</a></li>
-            <li><a id="ci" href="###">公司简介</a></li>
+            <li><a id="ci" href="/zhgy/pages/introduction/introduction.jsp">公司简介</a></li>
             <li><a href="###">产品</a></li>
-            <li><a href="###">公司资讯</a></li>
+            <li><a href="/zhgy/pages/information/infos.jsp">公司资讯</a></li>
             <li><a href="###">联系我们</a></li>
             <li><a href="###">关于我们</a></li>
         </ul>    	

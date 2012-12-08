@@ -1,4 +1,4 @@
-package com.vincesu.test.model;
+package com.tornado.test.model;
 
 
 import java.util.Date;

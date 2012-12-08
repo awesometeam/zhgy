@@ -24,7 +24,7 @@
 <body>
 <%
 	request.setAttribute("infos",InformationModel.getLatestInfos());
-	request.setAttribute("companyIntroduction",CompanyInfoModel.getCompanyIntroduction());
+	request.setAttribute("companyIntroduction",CompanyInfoModel.getShortCompanyIntroduction());
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 	
 	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
@@ -102,11 +102,27 @@
     
     	<div id="introduction" class="content_box">
         	<div class="information_box">
-            	<h2>公司简介</h2>
+            	<div  style="float:left;">
+	        		<h2>公司简介</h2>
+	        	</div>
+	        	<div  style="float:right;margin-top:5px;">
+	        		<h3><a href="/zhgy/pages/introduction/introduction.jsp">查看详细</a></h3>
+	        	</div>
+	        	<div style="clear:both;"></div>
             </div>
-            <c:forEach items="${companyIntroduction}" var="line">
-            	<p><c:out value="${line}" /></p>
-        	</c:forEach>
+            <div>
+	            <div  style="float:left;width:70%;">
+		            <c:forEach items="${companyIntroduction}" var="line">
+		            	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}" /></p>
+		        	</c:forEach>
+	        	</div>
+	        	<div  style="float:right;width:25%;">
+	        		<a href="/zhgy/pages/introduction/introduction.jsp">
+	        			<img alt="" src="/zhgy/images/companyPic/1.jpg" width="160px" height="120px"></img>
+	        		</a>
+	        	</div>
+	        	<div style="clear:both;"></div>
+        	</div>
         </div>
         
     	<div id="informations" class="content_box">

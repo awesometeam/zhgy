@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="com.tornado.model.InformationModel" %>
 <%@ page import="com.tornado.model.CompanyInfoModel" %>
 <%@ page import="com.tornado.model.PictureModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
@@ -15,13 +14,12 @@
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="/zhgy/js/framework/jPages.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript" src="/zhgy/js/module/information/infos.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/information/info.js"></script>
 </head>
 <body>
 <%
-	request.setAttribute("infos",new InformationModel().list());
+	request.setAttribute("CompanyIntroduction",CompanyInfoModel.getCompanyIntroduction());
 
 	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
 	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
@@ -37,19 +35,8 @@
 <div id="content_wrapper">
 
 	<div style=width:100%;margin-bottom:5px;">
-		<img src="../../images/show/wrap1.jpg" />
+		<img src="/zhgy/images/show/wrap1.jpg" />
 	</div>
-
-<!-- 	<div class="flexslider"> -->
-<!-- 	  <ul class="slides"> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!-- 	  	<li><img src="../../images/show/wrap1.jpg" /></li> -->
-<!--   	    <li><img src="images/show/kitchen_adventurer_lemon.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_donut.jpg" /></li> -->
-<!--   		<li><img src="images/show/kitchen_adventurer_caramel.jpg" /></li> -->
-<!-- 	  </ul> -->
-<!-- 	</div> -->
 
 	<div id="sidebar">
         
@@ -88,23 +75,36 @@
     <div id="content">
         
     	<div id="informations" class="content_box">
-        	<div class="information_box">
-	        	<div  style="float:left;">
-	        		<h2>最新资讯</h2>
-	        	</div>
-<!-- 	        	<div  style="float:right;margin-top:5px;"> -->
-<!-- 	        		<h3>更多</h3> -->
+<!--         	<div class="information_box"> -->
+<!-- 	        	<div  style="float:left;"> -->
+<!-- 	        		<h2>公司简介</h2> -->
 <!-- 	        	</div> -->
-	        	<div style="clear:both;"></div>
-        	</div>
-        	<div id="itemContainer">
-	        	<c:forEach items="${infos}" var="info">
-	        		<div class="information_box">
-	    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
-		            </div>
-	        	</c:forEach>
-        	</div>
-        	<div id="pager" class="pager"></div>
+<!-- 	        	<div style="clear:both;"></div> -->
+<!--         	</div> -->
+<!--         	<div id="infodetail"> -->
+<%--         		<p class="title"><c:out value="${info.title}"></c:out></p> --%>
+<%-- 	        	<p class="line"><c:out value="${info.content}"></c:out></p> --%>
+<!--         	</div> -->
+<!--         	<div id="pager" class="pager"></div> -->
+<!-- 			<p class="title">公司简介</p> -->
+			<div style="width:100%;">
+<!-- 				<img alt="" src="/zhgy/images/companyPic/cf.jpg" ></img> -->
+			</div>
+			<c:forEach items="${CompanyIntroduction}" var="line">
+				<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
+			</c:forEach>
+			<div style="width:100%;">
+				<ul style="list-style-type: none;margin:0px;padding: 0px;">
+					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/1.jpg" width="200px" height="150px"></img></li>
+					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/2.jpg" width="200px" height="150px"></img></li>
+					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="200px" height="150px"></img></li>
+				</ul>
+			</div>
+<!-- 			<div style="margin:auto;width:640px;"> -->
+<!-- 				<img alt="" src="/zhgy/images/companyPic/1.jpg" width="640px" height="480px"></img> -->
+<!-- 				<img alt="" src="/zhgy/images/companyPic/2.jpg" width="640px" height="480px"></img> -->
+<!-- 				<img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="640px" height="480px"></img> -->
+<!-- 			</div> -->
             
         	<div class="cleaner"></div>
         </div>

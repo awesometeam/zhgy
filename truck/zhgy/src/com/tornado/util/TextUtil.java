@@ -4,7 +4,8 @@ public class TextUtil
 {
 	public static String [] toHtmlString(String value)
 	{
-		return value.split(System.getProperty("line.separator"));
+		String [] values = value.split(System.getProperty("line.separator"));
+		return values;
 	}
 
 }

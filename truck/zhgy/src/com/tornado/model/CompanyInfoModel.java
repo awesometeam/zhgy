@@ -10,6 +10,8 @@ import com.tornado.util.TextUtil;
 
 public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 {
+	public static final String shortCompanyIntroductionKeyword = "shortCompanyIntroductionKeyword";
+	
 	public static final String companyIntroductionKeyword = "CompanyIntroduction";
 	
 	public static final String companyPhoneKeyword = "CompanyPhone";
@@ -69,6 +71,18 @@ public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 	public static String [] getCompanyIntroduction()
 	{
 		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.companyIntroductionKeyword);
+		if(info == null)
+			return new String [] {};
+		else
+			return TextUtil.toHtmlString(info.getVal());
+	}
+	
+	/**
+	 * 获得公司简短简介信息
+	 */
+	public static String [] getShortCompanyIntroduction()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.shortCompanyIntroductionKeyword);
 		if(info == null)
 			return new String [] {};
 		else
