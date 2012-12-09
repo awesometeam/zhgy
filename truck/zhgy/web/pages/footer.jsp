@@ -20,6 +20,7 @@ if(request.getAttribute("CompanyEmail") == null)
 			<li><a href="/zhgy/pages/introduction/introduction.jsp">公司简介</a></li>
 			<li><a href="###">产品</a></li>
 			<li><a href="/zhgy/pages/information/infos.jsp"">资讯</a></li>
+			<li><a href="/zhgy/pages/contactus/feedback.jsp">在线留言</a></li>
 			<li class="last_menu"><a href="###">联系我们</a></li>
 		</ul>
 		地 址:<c:out value="${CompanyAddress}"></c:out> | 电话:<c:out value="${CompanyPhone}"></c:out> | 传真:<c:out value="${CompanyFax}"></c:out> | 邮箱:<c:out value="${CompanyEmail}"></c:out><br />
