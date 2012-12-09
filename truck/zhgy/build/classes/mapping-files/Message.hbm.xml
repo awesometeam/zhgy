@@ -14,7 +14,7 @@
 			type="java.lang.Long"
 			column="MESSAGE_ID"
 		>
-			<generator class="sequence"/>
+			<generator class="increment"/>
 		</id>
 
 		<property

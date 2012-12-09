@@ -59,7 +59,7 @@ public abstract class BaseMessage  implements Serializable {
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="MESSAGE_ID"
      */
 	public java.lang.Long getId () {
