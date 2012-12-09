@@ -73,7 +73,7 @@ h3 {
 
 #header_wrapper {
 	width: 100%;
-	background: #fff;
+	background: url(../images/header-bg2.png) repeat-x;
 }
 
 #header {
@@ -82,7 +82,7 @@ h3 {
 	height: 110px;
 	margin: 0 auto;
 	padding: 0px;
-	background: url(../images/header_bg3.png) no-repeat;
+	background: url(../images/header-bg.png) no-repeat;
 }
 
 #header p {

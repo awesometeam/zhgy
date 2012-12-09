@@ -5,12 +5,12 @@
 <!--    		<div class="logo"> -->
 <!--    			<img src="/zhgy/images/resource/logo.jpg" width="90px" height="90px"></img> -->
 <!--    		</div> -->
-<!--     	<div id="site_title"> -->
-<!--             <h1> -->
-<!--             	<span>温州中昊工艺品有限公司</span> -->
-<!--             </h1> -->
-<!--         </div> -->
-<!--         <div class="cleaner"></div> -->
+    	<div id="site_title">
+            <h1>
+            	<span>&nbsp;</span>
+            </h1>
+        </div>
+        <div class="cleaner"></div>
     </div>
 
 </div> <!-- end of templatemo_menu_wrapper -->

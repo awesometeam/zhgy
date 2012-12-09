@@ -2,3 +2,4 @@
 *.war
 .*
 .DS_Store
+*.psd
