@@ -18,4 +18,12 @@ jQuery(function($) {
 	
 	hotPorductInterval = setInterval(hotProductMove, 20);
 	
+	$("#feedback-form-submit").click(function() {
+		if(FormUtil.checkForEmpty(document.getElementById("feedback")))
+		{
+			$("#feedback-form").submit();
+		}
+		return false;
+	});
+	
 });

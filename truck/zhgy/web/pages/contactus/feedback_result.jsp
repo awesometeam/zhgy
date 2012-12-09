@@ -102,7 +102,7 @@
 						<p class="label">内容：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
 					</div>
 					<div class="item">
-						<input type="submit" accesskey="s" id="feedback-submit" value="修改留言">
+						<input required="true" type="submit" accesskey="s" id="feedback-submit" value="修改留言">
 					</div>
 					<input type="hidden" name="action" value="updateMessage">
 					<input type="hidden" name="messageid" value='<c:out value="${data.id}"></c:out>'>

@@ -15,6 +15,7 @@
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <link href="/zhgy/css/feedback.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/CoreUtil.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/contactus/feedback.js"></script>
 </head>
@@ -84,22 +85,22 @@
         		<div id="feedback">
 					<form id="feedback-form" method="post" action="MessageController.do">
 					<div class="item">
-						<p class="label">姓名：</p><input type="text" name="author" id="author">(*必填)
+						<p class="label">姓名：</p><input type="text" alertmsg="请填写姓名" required="true" name="author" id="author">(*必填)
 					</div>
 					<div class="item">
-						<p class="label">Email：</p><input type="text" name="email" id="email" style="width:300px;"><p class="label"></p>(*必填)
+						<p class="label">Email：</p><input type="text" alertmsg="请填写Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>(*必填)
 					</div>
 					<div class="item">
-						<p class="label">电话：</p><input type="text" name="phone" id="phone" style="width:300px;"><p class="label"></p>(*必填)
+						<p class="label">电话：</p><input type="text" alertmsg="请填写电话" required="true" name="phone" id="phone" style="width:300px;"><p class="label"></p>(*必填)
 					</div>
 					<div class="item">
 						<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>
 					</div>
 					<div class="item">
-						<p class="label">内容：</p><textarea rows="5" name="content" ></textarea>
+						<p>内容(*必填)：</p><textarea rows="5" alertmsg="请填写内容" required="true" name="content" ></textarea>
 					</div>
 					<div class="item">
-						<input type="submit" accesskey="s" id="feedback-submit" value="留言">
+						<input type=submit id="feedback-form-submit" accesskey="s" id="feedback-submit" value="留言">
 					</div>
 					<input type="hidden" name="action" value="leaveMessage">
 					<input type="hidden" name="messageid">
