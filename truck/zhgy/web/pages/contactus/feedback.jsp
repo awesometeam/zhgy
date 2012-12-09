@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="com.tornado.entity.Information" %>
-<%@ page import="com.tornado.model.PictureModel" %>
-<%@ page import="com.tornado.model.InformationModel" %>
 <%@ page import="com.tornado.model.CompanyInfoModel" %>
+<%@ page import="com.tornado.model.PictureModel" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,18 +13,14 @@
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/zhgy/css/jquery.xslider.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/feedback.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="/zhgy/js/framework/jquery.Xslider.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/CoreUtil.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript" src="/zhgy/js/module/homepage.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/contactus/feedback.js"></script>
 </head>
 <body>
 <%
-	request.setAttribute("infos",InformationModel.getLatestInfos());
-	request.setAttribute("companyIntroduction",CompanyInfoModel.getShortCompanyIntroduction());
-	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
-	
 	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
 	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
 	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
@@ -34,30 +28,20 @@
 	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
 	
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
-	
 %>
 
-<%@ include file="pages/header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <div id="content_wrapper">
 
-	<div id="slideshow" class="slider">
-		<div class="conbox">
-			<c:forEach items="${slideshowPic}" var="pic">
-				<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="960" height="150" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div>
-			</c:forEach>
-		</div>
-
-		<div class="slideshow-switcher">
-			<a href="#" class="slideshow-cur">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-		</div>
+	<div style=width:100%;margin-bottom:5px;">
+		<img src="/zhgy/images/show/wrap1.jpg" />
 	</div>
 
 	<div id="sidebar">
         
         <div class="sidebar_box">
+			
 			<div class="information_box">
            		<h2>搜索:</h2>
             </div>
@@ -69,17 +53,7 @@
             </form>
             
             <div class="cleaner"></div>
-        </div>
         
-        <div class="sidebar_box">
-			<div class="information_box">
-           		<h2>公司风采:</h2>
-            </div>
-            
-            <label>这是公司风采模块</label>
-            <label>将以图片形式显示</label>
-            
-            <div class="cleaner"></div>
         </div>
         
         <div class="sidebar_box">
@@ -99,54 +73,48 @@
     </div> 
     
     <div id="content">
-    
-    	<div id="introduction" class="content_box">
-        	<div class="information_box">
-            	<div  style="float:left;">
-	        		<h2>公司简介</h2>
-	        	</div>
-	        	<div  style="float:right;margin-top:5px;">
-	        		<h3><a href="/zhgy/pages/introduction/introduction.jsp">查看详细</a></h3>
-	        	</div>
-	        	<div style="clear:both;"></div>
-            </div>
-            <div>
-	            <div  style="float:left;width:70%;">
-		            <c:forEach items="${companyIntroduction}" var="line">
-		            	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}" /></p>
-		        	</c:forEach>
-	        	</div>
-	        	<div  style="float:right;width:25%;">
-	        		<a href="/zhgy/pages/introduction/introduction.jsp">
-	        			<img alt="" src="/zhgy/images/companyPic/1.jpg" width="160px" height="120px"></img>
-	        		</a>
-	        	</div>
-	        	<div style="clear:both;"></div>
-        	</div>
-        </div>
         
     	<div id="informations" class="content_box">
         	<div class="information_box">
 	        	<div  style="float:left;">
-	        		<h2>最新资讯</h2>
-	        	</div>
-	        	<div  style="float:right;margin-top:5px;">
-	        		<h3><a href="pages/information/infos.jsp">更多</a></h3>
+	        		<h2>在线留言</h2>
 	        	</div>
 	        	<div style="clear:both;"></div>
         	</div>
-        	<c:forEach items="${infos}" var="info">
-        		<div class="information_box">
-    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
-	            </div>
-        	</c:forEach>
-            
+        	<div id="infodetail">
+        		<div id="feedback">
+					<form id="feedback-form" method="post" action="MessageController.do">
+					<div class="item">
+						<p class="label">姓名：</p><input type="text" alertmsg="请填写姓名" required="true" name="author" id="author">(*必填)
+					</div>
+					<div class="item">
+						<p class="label">Email：</p><input type="text" alertmsg="请填写Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>(*必填)
+					</div>
+					<div class="item">
+						<p class="label">电话：</p><input type="text" alertmsg="请填写电话" required="true" name="phone" id="phone" style="width:300px;"><p class="label"></p>(*必填)
+					</div>
+					<div class="item">
+						<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>
+					</div>
+					<div class="item">
+						<p>内容(*必填)：</p><textarea rows="5" alertmsg="请填写内容" required="true" name="content" ></textarea>
+					</div>
+					<div class="item">
+						<input type=submit id="feedback-form-submit" accesskey="s" id="feedback-submit" value="留言">
+					</div>
+					<input type="hidden" name="action" value="leaveMessage">
+					<input type="hidden" name="messageid">
+					</form>
+				</div>
+        	</div>
         	<div class="cleaner"></div>
         </div>
+        <div class="cleaner"></div>
     
     </div>
-    
-    <div class="hotproduct_box">
+	<div class="cleaner"></div>
+	
+	<div class="hotproduct_box">
         
         	<div class="information_box">
         		<h2 id="hotproducttitle">热门产品</h2>
@@ -167,10 +135,10 @@
         </div>
     
     <div class="cleaner"></div>
-
+    
 </div>
 
-<%@ include file="pages/footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 
 </body>
 </html>

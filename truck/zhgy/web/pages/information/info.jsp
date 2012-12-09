@@ -75,7 +75,10 @@
     	<div id="informations" class="content_box">
         	<div class="information_box">
 	        	<div  style="float:left;">
-	        		<h2>资讯</h2>
+	        		<h2><a href="/zhgy/pages/information/infos.jsp">资讯</a></h2>
+	        	</div>
+	        	<div style="float:left;">
+	        		&nbsp;&nbsp;&gt;&nbsp;&nbsp;<c:out value="${info.title}"></c:out>
 	        	</div>
 <!-- 	        	<div  style="float:right;margin-top:5px;"> -->
 <!-- 	        		<h3>更多</h3> -->
@@ -89,10 +92,9 @@
         		</c:forEach>
 	        	
         	</div>
-<!--         	<div id="pager" class="pager"></div> -->
-            
         	<div class="cleaner"></div>
         </div>
+        <div align="right" style="width:100%;"><a href="/zhgy/pages/information/infos.jsp">[返回]</a></div>
         <div class="cleaner"></div>
     
     </div>

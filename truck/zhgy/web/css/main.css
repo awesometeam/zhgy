@@ -57,7 +57,6 @@ img { margin: 0px; padding: 0px; border: none; }
 h2 {
 	margin: 0px;
 	padding: 0px;
-	font-size: 20px;
 	font-weight: normal;
 	color: #106fb8;
 }
@@ -73,7 +72,7 @@ h3 {
 
 #header_wrapper {
 	width: 100%;
-	background: #fff;
+	background: url(../images/header-bg2.png) repeat-x;
 }
 
 #header {
@@ -82,7 +81,7 @@ h3 {
 	height: 110px;
 	margin: 0 auto;
 	padding: 0px;
-	background: url(../images/header_bg.jpg) no-repeat;
+	background: url(../images/header-bg.png) no-repeat;
 }
 
 #header p {
@@ -94,12 +93,21 @@ h3 {
 	line-height: 26px;
 }
 
+#header .logo
+{
+	float: left;
+	margin-left: 70px;
+	width: 100px;
+	height: 100px;
+}
+
 #header #site_title {
+	font-size: 15px;
+	font-weight: bold;	
 	float: left;
 	padding-top: 10px;
-	margin-left: 50px;
+	margin-left: 150px;
 	margin-bottom: 10px;	
-	width: 280px;
 	height: 100px;
 	text-align: center;	
 	overflow: hidden;	
@@ -110,25 +118,10 @@ h3 {
 	padding: 15px 0 0 0;	
 }
 
-#site_title h1 a {
-	font-size: 30px;
-	color: #ffffff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#site_title h1 a:hover {
-	font-weight: bold;	
-	text-decoration: none;
-}
-
-#site_title h1 a span {
+#site_title h1 span {
 	display: block;
 	margin-top: 10px;
 	margin-left: 5px;
-	font-size: 14px;
-	color: #999;
-	font-weight: normal;
 	letter-spacing: 2px;
 }
 
@@ -206,6 +199,8 @@ h3 {
 
 .sidebar_box {
 	padding: 10px 15px;
+	margin: 15px 8px;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 /* 	background: #fff; */
 }
 
@@ -274,6 +269,7 @@ h3 {
 	clear: both;
 	width: 100%px;
 	padding: 10px 10px;
+	margin:15px 10px;
 }
 
 .content_box .image_fl {
