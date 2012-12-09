@@ -91,12 +91,13 @@
 <!-- 				<img alt="" src="/zhgy/images/companyPic/cf.jpg" ></img> -->
 			</div>
 			<div style="width:100%;">
-				<ul style="list-style-type: none;margin:0px;padding: 0px;">
-					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/1.jpg" width="200px" height="150px"></img></li>
-					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/2.jpg" width="200px" height="150px"></img></li>
-					<li style="float:left;margin:0px 3px;"><img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="200px" height="150px"></img></li>
+				<ul style="width:100%;list-style-type: none;margin:0px;padding: 0px;">
+					<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/1.jpg" width="100%"></img></li>
+					<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/2.jpg" width="100%"></img></li>
+					<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="100%"></img></li>
 				</ul>
 			</div>
+			<div class="cleaner"></div>
 			<c:forEach items="${CompanyIntroduction}" var="line">
 				<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
 			</c:forEach>

@@ -57,7 +57,6 @@ img { margin: 0px; padding: 0px; border: none; }
 h2 {
 	margin: 0px;
 	padding: 0px;
-	font-size: 20px;
 	font-weight: normal;
 	color: #106fb8;
 }
@@ -200,6 +199,8 @@ h3 {
 
 .sidebar_box {
 	padding: 10px 15px;
+	margin: 15px 8px;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 /* 	background: #fff; */
 }
 
@@ -268,6 +269,7 @@ h3 {
 	clear: both;
 	width: 100%px;
 	padding: 10px 10px;
+	margin:15px 10px;
 }
 
 .content_box .image_fl {
