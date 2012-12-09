@@ -19,6 +19,7 @@
 %>
 <c:forEach items="${products}" var="product">
 	<span>${product.name}</span>
+	<span>${product.primaryImage}</span>
 </c:forEach>
 </body>
 </html>

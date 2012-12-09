@@ -59,6 +59,7 @@ public abstract class BasePicture  implements Serializable {
 	private java.lang.String picturePath;
 	private java.lang.String pictureDescription;
 	private java.lang.Long correlationId;
+	private java.lang.Short isPrimary;
 
 
 
@@ -134,7 +135,13 @@ public abstract class BasePicture  implements Serializable {
 	}
 
 
+	public java.lang.Short getIsPrimary () {
+		return isPrimary;
+	}
 
+	public void setIsPrimary (java.lang.Short isPrimary) {
+		this.isPrimary = isPrimary;
+	}
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;

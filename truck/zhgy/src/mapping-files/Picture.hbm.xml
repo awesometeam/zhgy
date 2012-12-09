@@ -38,6 +38,13 @@
 			not-null="false"
 			length="19"
 		/>
+		<property
+			name="IsPrimary"
+			column="IS_PRIMARY"
+			type="java.lang.Short"
+			not-null="false"
+			length="4"
+		/>
 
 
 	</class>	
