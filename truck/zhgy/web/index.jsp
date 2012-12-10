@@ -27,14 +27,7 @@
 	request.setAttribute("companyIntroduction",CompanyInfoModel.getShortCompanyIntroduction());
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 	
-	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
-	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
-	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
-	request.setAttribute("CompanyEmail",CompanyInfoModel.getCompanyEmail());
-	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
-	
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
-	
 %>
 
 <%@ include file="pages/header.jsp" %>
@@ -56,45 +49,12 @@
 	</div>
 
 	<div id="sidebar">
+	
+        <%@ include file="pages/module/searchModule.jsp" %>
         
-        <div class="sidebar_box">
-			<div class="information_box">
-           		<h2>搜索:</h2>
-            </div>
-            
-            <form action="#" method="get">
-            <label>您可以输入产品或资讯关键词进行搜索</label>
-            <input type="text" value="" name="keyword" size="10" id="input_field" title="search" />
-            <input type="submit" name="search" value="搜索" alt="search" id="submit_btn" title="Search" />
-            </form>
-            
-            <div class="cleaner"></div>
-        </div>
+        <%@ include file="pages/module/companyCharismaModule.jsp" %>
         
-        <div class="sidebar_box">
-			<div class="information_box">
-           		<h2>公司风采:</h2>
-            </div>
-            
-            <label>这是公司风采模块</label>
-            <label>将以图片形式显示</label>
-            
-            <div class="cleaner"></div>
-        </div>
-        
-        <div class="sidebar_box">
-			
-			<div class="information_box">
-           		<h2>联系我们:</h2>
-            </div>
-            <p>电话:<c:out value="${CompanyPhone}"></c:out></p>
-            <p>传真:<c:out value="${CompanyFax}"></c:out></p>
-            <p>邮箱:<c:out value="${CompanyEmail}"></c:out></p>
-            <p>QQ:<c:out value="${CompanyQQ}"></c:out></p>
-            
-            <div class="cleaner"></div>
-        
-        </div>
+        <%@ include file="pages/module/contactUsModule.jsp" %>
     
     </div> 
     
