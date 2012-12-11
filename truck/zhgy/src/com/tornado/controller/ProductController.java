@@ -1,5 +1,6 @@
 package com.tornado.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.Map;
 import com.tornado.core.control.Content;
 import com.tornado.core.control.Controller;
 import com.tornado.core.view.View;
+import com.tornado.entity.Category;
 import com.tornado.entity.Information;
 import com.tornado.entity.Picture;
 import com.tornado.entity.Product;
@@ -26,10 +28,17 @@ public class ProductController extends Controller
 			result = PMF.list(hql);
 		}
 		else{
-			hql = "select p from Product p,Category c where p.CategoryId = c.Id and p.CategoryId = :id";
+			ArrayList<Long> ids = new ArrayList<Long>();
+			ids.add(new Long(id));
+			hql = "select c from Category c where c.Higherid = "+id;
+			List<Category> categories = PMF.list(hql);
+			for(int i =0;i < categories.size(); i ++){
+				ids.add(categories.get(i).getId());
+			}
+			hql = "select p from Product p,Category c where p.CategoryId = c.Id and p.CategoryId in ";
 			Map params=new HashMap<String,Object>();
-			params.put("id", new Long(id));
-			result = PMF.list(hql, params);
+			hql += ids.toString().replace('[', '(').replace(']', ')');
+			result = PMF.list(hql);
 		}
 		
 		for(int i = 0; i < result.size(); i++){
