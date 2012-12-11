@@ -38,36 +38,10 @@
 
 	<div id="sidebar">
         
-        <div class="sidebar_box">
-			
-			<div class="information_box">
-           		<h2>搜索:</h2>
-            </div>
-            
-            <form action="#" method="get">
-            <label>您可以输入产品或资讯关键词进行搜索</label>
-            <input type="text" value="" name="keyword" size="10" id="input_field" title="search" />
-            <input type="submit" name="search" value="搜索" alt="search" id="submit_btn" title="Search" />
-            </form>
-            
-            <div class="cleaner"></div>
+        <%@ include file="../module/searchModule.jsp" %>
         
-        </div>
+        <%@ include file="../module/contactUsModule.jsp" %>
         
-        <div class="sidebar_box">
-			
-			<div class="information_box">
-           		<h2>联系我们:</h2>
-            </div>
-            <p>电话:<c:out value="${CompanyPhone}"></c:out></p>
-            <p>传真:<c:out value="${CompanyFax}"></c:out></p>
-            <p>邮箱:<c:out value="${CompanyEmail}"></c:out></p>
-            <p>QQ:<c:out value="${CompanyQQ}"></c:out></p>
-            
-            <div class="cleaner"></div>
-        
-        </div>
-    
     </div> 
     
     <div id="content">
