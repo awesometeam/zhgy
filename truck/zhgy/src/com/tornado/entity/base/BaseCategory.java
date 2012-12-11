@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the CATEGORY table.
+ * This is an object that contains data related to the category table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="CATEGORY"
+ *  table="category"
  */
 
 public abstract class BaseCategory  implements Serializable {
@@ -69,7 +69,7 @@ public abstract class BaseCategory  implements Serializable {
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="CATEGORY_ID"
      */
 	public java.lang.Long getId () {

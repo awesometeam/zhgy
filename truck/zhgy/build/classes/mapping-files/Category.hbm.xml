@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.tornado.entity">
 	<class
 		name="Category"
-		table="CATEGORY"
+		table="category"
 	>
 		<meta attribute="sync-DAO">false</meta>
 		<id
