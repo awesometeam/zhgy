@@ -7,5 +7,8 @@ $(document).ready(function (){
 			jQuery('#products_frame').attr("src","/zhgy/ProductController.do?action=getProdcutsByCategory&id="+id);
 		});
 	});
+	$('li.category-li').hover(
+			function() { $('ul', this).css('display', 'block'); },
+			function() { $('ul', this).css('display', 'none'); });
 	
 });

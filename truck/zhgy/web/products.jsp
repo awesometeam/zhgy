@@ -24,7 +24,7 @@
 	
 	<div id="content_wrapper">
 		<div id="sidebar">
-			<div id="category-div" class="sidebar_box" >
+			<div id="category-div2" class="sidebar_box" >
 				<div class="information_box">
 					<h2>产品分类</h2>
 				</div>

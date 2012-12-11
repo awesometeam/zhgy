@@ -18,7 +18,7 @@
  
  
 #category-div ul ul{
-	display: none;
+	#display: none;
 	left: 100%;
 	top:0;
 }
@@ -41,3 +41,9 @@
 	display: inline;
 }
 
+li.category-li ul{ 
+	display: none;
+}
+li.category-li:hover ul { 
+	display: block;
+}
