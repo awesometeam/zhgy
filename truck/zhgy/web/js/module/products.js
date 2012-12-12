@@ -7,8 +7,10 @@ $(document).ready(function (){
 			jQuery('#products_frame').attr("src","/zhgy/ProductController.do?action=getProdcutsByCategory&id="+id);
 		});
 	});
-	$('li.category-li').hover(
-			function() { $('ul', this).css('display', 'block'); },
-			function() { $('ul', this).css('display', 'none'); });
-	
+	$("ul.sf-menu").superfish({ 
+        animation: {height:'show'},   // slide-down effect without fade-in 
+        delay:     500,               // 1.2 second delay on mouseout 
+        speed: 'fast'
+    }); 
+	jQuery('#products_showbox').load('/zhgy/ProductController.do?action=getProdcutsByCategory');
 });
