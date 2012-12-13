@@ -16,3 +16,12 @@ function hotProductMove() {
 	
 	$("#hotproductul").css({position: "relative",'left':currentL});
 }
+
+jQuery(function($) {
+	var header = $("#header");
+	if(header!=null)
+	{
+		var left = (1900 - $(window).width())/2;
+		header.css("left","-"+left+"px");
+	}
+});
