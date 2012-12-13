@@ -18,8 +18,10 @@
 	//request.setAttribute("products",ProductService.list());
 %>
 <c:forEach items="${products}" var="product">
-	<span>${product.name}</span>
-	<span>${product.primaryImage}</span>
+	<div class="product-box">
+		<img src="${product.primaryImage}" alt="${product.name}" width="150" height="150" />
+		<div>${product.name}</div>
+	</div>
 </c:forEach>
 </body>
 </html>
