@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the PRODUCT_LOG table.
+ * This is an object that contains data related to the product_log table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="PRODUCT_LOG"
+ *  table="product_log"
  */
 
 public abstract class BaseProductLog  implements Serializable {
@@ -85,7 +85,7 @@ public abstract class BaseProductLog  implements Serializable {
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="PRODUCT_LOG_ID"
      */
 	public java.lang.Long getId () {

@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the INFORMATION table.
+ * This is an object that contains data related to the information table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="INFORMATION"
+ *  table="information"
  */
 
 public abstract class BaseInformation  implements Serializable {
@@ -80,7 +80,7 @@ public abstract class BaseInformation  implements Serializable {
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="INFO_ID"
      */
 	public java.lang.Long getId () {

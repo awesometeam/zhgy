@@ -1,35 +1,42 @@
 #category-div{
- 	position: relative;
+  position: relative;
  }
  
  
 #category-div ul{
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	float: left;
-	margin: 0;
-	position: absolute;
-	top: 3.333em;
-	left: 0;
-	width: 188px;
-	z-index: 99999;
+-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+float: left;
+margin: 0;
+position: absolute;
+top: 3.333em;
+left: 0;
+width: 188px;
+z-index: 99999;
 }
  
  
 #category-div ul ul{
-	display: none;
-	left: 100%;
-	top:0;
+display: none;
+left: 100%;
+top:0;
 }
 
 
 #category-div li{
-	#floast: left;
-	position: relative;
+#floast: left;
+position: relative;
 }
 
 #category-div ul li:hover > ul {
-	display: block;
+display: block;
 }
 
+#products_frame{
+width: 100%;
+}
+
+.product-box{
+display: inline;
+}

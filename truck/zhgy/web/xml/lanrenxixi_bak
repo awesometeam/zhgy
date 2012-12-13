@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<main
+
+bannerWidth="590" 
+bannerHeight="300"
+
+slidesBuffer="2"
+
+tumbnailTooltips="true"
+tooltipDelay="1"
+
+hideButtons="true"
+timerBar="true"
+timerBarColor="ff0000"
+bgColor="000000"
+
+playOnce="false"
+
+>
+
+<!--///////////////////////SLIDE SHOW AUTO DELAY HERE///////////////////////////////////-->
+
+<slideDelay autodelay="true" autoplay="true">8000</slideDelay> <!-- use autodelay | time in miliseconds between each slide-->
+
+<autoDelay timePerWord="500" minimumDelay="4000"></autoDelay> <!--auto delay time in miliseconds added for each word | minimum delay allowed for autodelay-->
+
+
+<!--///////////////////////BEGIN SLIDES HERE///////////////////////////////////-->
+
+<!--////////slide 01/////////-->
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "160" tweenTo= "200" tweenDelay="1" >XML SLIDE SHOW</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "190" tweenTo= "200" tweenDelay="0.5" width = "300">A minimal yet feature rich new component from iamdok. Featuring..</captionBody>
+<url>images/pic1c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 02/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "70" Ypos = "80" tweenTo="200" tweenDelay="1">AUTO DELAY</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "70" Ypos = "110" tweenTo="200" tweenDelay="0.5" width = "300">The delay between slides depends on  the number of words in your caption.</captionBody>
+<url>images/pic7c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 03/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "100" tweenTo="200" tweenDelay="1">MAN OF FEW WORDS?</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "130" tweenTo="200" tweenDelay="0.5" width = "300">That's OK, if the delay is less than the minimum set in the XML, it's overwritten.</captionBody>
+<url>images/pic3c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 04/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "50" tweenTo="200" tweenDelay="1">AUTO THUMBNAILS</captionTitle>
+<captionBody embedFont="false" tweenFrom="-20" Xpos = "100" Ypos = "80" tweenTo="200" tweenDelay="0.5" width = "300"><![CDATA[<p><font face="Myriad Pro, Arial, sans-serif" size="12" color="#222222"><textformat leftmargin="0">An optional preview thumbnail is <a href="http://flashden.net/user/iamdok"><font color="#ffffff">automatically</font></a> generated on mouse-over of the slide numbers.</textformat></font></p>]]></captionBody>
+<url>images/pic4c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg  <font color="#ff0000"></font>-->
+<link linkText="External Link" linkBGColor="000000" linkBGRolloverColor="008fff">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 05/////////-->
+
+
+<slide media="swf" swfThumb="assets/swf/thumb.jpg"><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "120" Ypos = "120" tweenTo="200" tweenDelay="1">SWF SUPPORT</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "120" Ypos = "150" tweenTo="200" tweenDelay="0.5" width = "300">Load jpg, png, gif and SWF. Also supports an optional jpeg preview tooltip for the SWF file.</captionBody>
+<url>images/circlesswf1.swf</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000"></link>
+
+</slide>
+
+
+<!--////////slide 06/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "160" tweenTo="200" tweenDelay="1">YOUR CAPTION</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "190" tweenTo="200" tweenDelay="0.5" width = "300">Enter a caption for each slide and choose it's X and Y position and text field width. (optional)</captionBody>
+<url>images/pic5c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 07/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "80" Ypos = "50" tweenTo="200" tweenDelay="1">HIDE CONTROLS</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "80" Ypos = "80" tweenTo="200" tweenDelay="0.5" width = "300">For a clean look, you can choose to hide controls on mouse-out.</captionBody>
+<url>images/pic6c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 08/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "180" Ypos = "120" tweenTo="200" tweenDelay="1">RESIZE WITH EASE</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "180" Ypos = "150" tweenTo="200" tweenDelay="0.5" width = "300">Change width + height settings in XML only and the component resizes to fit.</captionBody>
+<url>images/pic7c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 09/////////-->
+
+
+<slide media="swf" swfThumb="assets/swf/thumb1.jpg"><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "200" Ypos = "160" tweenTo="200" tweenDelay="1">VISUAL TIMER</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "200" Ypos = "190" tweenTo="200" tweenDelay="0.5" width = "300">Choose color and visibility of the timer bar via XML.</captionBody>
+<url>images/circlesswf1.swf</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 10/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "100" tweenTo="200" tweenDelay="1">A HAPPY SNAPPER?</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "130" tweenTo="200" tweenDelay="0.5" width = "300">If the slide numbers run out of space, navigation controls magically appear.</captionBody>
+<url>images/pic1c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 11/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "100" tweenTo="200" tweenDelay="1">AUTO SCROLL</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "130" tweenTo="200" tweenDelay="0.5" width = "300">Image numbers scroll automatically with the slideshow progress.</captionBody>
+<url>images/pic2c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 12/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "180" Ypos = "170" tweenTo="200" tweenDelay="1">HTML TAGS</captionTitle>
+<captionBody embedFont="false" tweenFrom="-20" Xpos = "180" Ypos = "200" tweenTo="200" tweenDelay="0.5"width = "300"><![CDATA[<p><font face="Myriad Pro, Arial, sans-serif" size="12" color="#222222"><textformat leftmargin="0"><a href="http://flashden.net/user/iamdok"><font color="#ffffff">Hyperlinks</font></a> and other tags are supported. <b>Fonts</b> and <b>colors</b> are edited in the XML file.</textformat></font></p>]]></captionBody>
+<url>images/pic3c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="000000" linkBGRolloverColor="ff0066">http://www.lanrentuku.com/</link>
+
+</slide>
+
+
+<!--////////slide 13/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "180" Ypos = "100" tweenTo="200" tweenDelay="1">FLASHVARS</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "180" Ypos = "130" tweenTo="200" tweenDelay="0.5" width = "300">XML file path passed via FlashVars thus allowing multiple same-page use of item but with different content.</captionBody>
+<url>images/pic4c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+<!--////////slide 14/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "160" tweenTo="200" tweenDelay="1">LIKE TO EMBED?</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "190" tweenTo="200" tweenDelay="0.5" width = "300">Embed font option in the XML allows for hassle-free font management.</captionBody>
+<url>images/pic5c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+
+<!--////////slide 15/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "90" Ypos = "70" tweenTo="200" tweenDelay="1">TEXT TWEEN</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "90" Ypos = "100" tweenTo="200" tweenDelay="0.5" width = "300">Adjust "tweenFrom", "tweenTo" & "tweenDelay" via XML for the caption transitions.</captionBody>
+<url>images/pic6c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.lanrentuku.com/</link>
+
+</slide>
+<!--///////////////////////END SLIDES HERE///////////////////////////////////-->
+</main>
+
+ 

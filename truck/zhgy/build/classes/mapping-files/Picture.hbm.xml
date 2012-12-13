@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.tornado.entity">
 	<class
 		name="Picture"
-		table="PICTURE"
+		table="picture"
 	>
 		<meta attribute="sync-DAO">false</meta>
 		<id
@@ -41,9 +41,8 @@
 		<property
 			name="IsPrimary"
 			column="IS_PRIMARY"
-			type="java.lang.Short"
+			type="boolean"
 			not-null="false"
-			length="4"
 		/>
 
 

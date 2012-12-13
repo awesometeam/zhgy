@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the PICTURE table.
+ * This is an object that contains data related to the picture table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="PICTURE"
+ *  table="picture"
  */
 
 public abstract class BasePicture  implements Serializable {
@@ -18,6 +18,7 @@ public abstract class BasePicture  implements Serializable {
 	public static String PROP_CORRELATION_ID = "CorrelationId";
 	public static String PROP_PICTURE_DESCRIPTION = "PictureDescription";
 	public static String PROP_ID = "Id";
+	public static String PROP_IS_PRIMARY = "IsPrimary";
 	public static String PROP_PICTURE_PATH = "PicturePath";
 
 
@@ -59,14 +60,14 @@ public abstract class BasePicture  implements Serializable {
 	private java.lang.String picturePath;
 	private java.lang.String pictureDescription;
 	private java.lang.Long correlationId;
-	private java.lang.Short isPrimary;
+	private boolean isPrimary;
 
 
 
 	/**
 	 * Return the unique identifier of this class
      * @hibernate.id
-     *  generator-class="sequence"
+     *  generator-class="increment"
      *  column="PICTURE_ID"
      */
 	public java.lang.Long getId () {
@@ -135,13 +136,24 @@ public abstract class BasePicture  implements Serializable {
 	}
 
 
-	public java.lang.Short getIsPrimary () {
+
+	/**
+	 * Return the value associated with the column: IS_PRIMARY
+	 */
+	public boolean isIsPrimary () {
 		return isPrimary;
 	}
 
-	public void setIsPrimary (java.lang.Short isPrimary) {
+	/**
+	 * Set the value related to the column: IS_PRIMARY
+	 * @param isPrimary the IS_PRIMARY value
+	 */
+	public void setIsPrimary (boolean isPrimary) {
 		this.isPrimary = isPrimary;
 	}
+
+
+
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;

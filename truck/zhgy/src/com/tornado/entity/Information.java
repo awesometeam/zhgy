@@ -1,7 +1,5 @@
 package com.tornado.entity;
 
-import java.util.Date;
-
 import com.tornado.entity.base.BaseInformation;
 
 
@@ -39,7 +37,11 @@ public class Information extends BaseInformation {
 			java.lang.String author,
 			java.util.Date date) {
 
-			super(id,title,author,date);
+			super (
+				id,
+				title,
+				author,
+				date);
 		}
 
 /*[CONSTRUCTOR MARKER END]*/

@@ -30,6 +30,14 @@ public class Category extends BaseCategory {
 			id,
 			havehigher);
 	}
+	
+	public boolean equals(Object obj)
+	{
+		if(getId().equals(new Long(obj.toString())))
+			return true;
+		else
+			return false;
+	}
 
 /*[CONSTRUCTOR MARKER END]*/
 

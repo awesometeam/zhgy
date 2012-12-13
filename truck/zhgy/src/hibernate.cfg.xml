@@ -8,15 +8,27 @@
 
 		<!-- local connection properties -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-<!-- 		<property name="hibernate.connection.url">jdbc:mysql://vincesu.cloudapp.net/zhgyDB</property> -->
-<!-- 		<property name="hibernate.connection.username">zhgy</property> -->
-<!-- 		<property name="hibernate.connection.password">zhgy</property> -->
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/zhgydb</property>
+		<property name="hibernate.connection.username">zhgy</property>
+		<property name="hibernate.connection.password">zhgy</property>
 
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/zhgyDB</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">root</property>
+<!-- 		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/zhgydb</property> -->
+<!-- 		<property name="hibernate.connection.username">root</property> -->
+<!-- 		<property name="hibernate.connection.password">root</property> -->
 
 		<!-- property name="hibernate.connection.pool_size"></property -->
+		
+		<!-- 使用c3p0连接池 -->
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">30</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">120</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.validate">true</property>
+<!-- 		<property name="hibernate.c3p0.validate">false</property> -->
+		 
 
 		<!-- dialect for MySQL -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<main
+
+bannerWidth="590" 
+bannerHeight="300"
+
+slidesBuffer="2"
+
+tumbnailTooltips="true"
+tooltipDelay="1"
+
+hideButtons="true"
+timerBar="true"
+timerBarColor="ff0000"
+bgColor="000000"
+
+playOnce="false"
+
+>
+
+<!--///////////////////////SLIDE SHOW AUTO DELAY HERE///////////////////////////////////-->
+
+<slideDelay autodelay="true" autoplay="true">8000</slideDelay> <!-- use autodelay | time in miliseconds between each slide-->
+
+<autoDelay timePerWord="500" minimumDelay="4000"></autoDelay> <!--auto delay time in miliseconds added for each word | minimum delay allowed for autodelay-->
+
+
+<!--///////////////////////BEGIN SLIDES HERE///////////////////////////////////-->
+
+<!--////////slide 01/////////-->
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "160" tweenTo= "200" tweenDelay="1" >WENZHOU ZHONG HAO GI CRAFTS</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "190" tweenTo= "200" tweenDelay="0.5" width = "300">Innovation, Enthusiasm, Persist...</captionBody>
+<url>images/pic1c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">index.jsp</link>
+
+</slide>
+
+
+<!--////////slide 02/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "70" Ypos = "80" tweenTo="200" tweenDelay="1">WENZHOU ZHONG HAO GI CRAFTS</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "70" Ypos = "110" tweenTo="200" tweenDelay="0.5" width = "300">Introduction</captionBody>
+<url>images/pic7c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">pages/introduction/introduction.jsp</link>
+
+</slide>
+
+
+<!--////////slide 03/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "100" tweenTo="200" tweenDelay="1">WENZHOU ZHONG HAO GI CRAFTS</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "50" Ypos = "130" tweenTo="200" tweenDelay="0.5" width = "300">Products</captionBody>
+<url>images/pic3c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">/pages/product/products.jsp</link>
+
+</slide>
+
+
+<!--////////slide 04/////////-->
+
+
+<slide media="image" swfThumb=""><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "100" Ypos = "50" tweenTo="200" tweenDelay="1">WENZHOU ZHONG HAO GI CRAFTS</captionTitle>
+<captionBody embedFont="false" tweenFrom="-20" Xpos = "100" Ypos = "80" tweenTo="200" tweenDelay="0.5" width = "300"><![CDATA[<p><font face="Myriad Pro, Arial, sans-serif" size="12" color="#222222"><textformat leftmargin="0">Feedback</textformat></font></p>]]></captionBody>
+<url>images/pic4c.jpg</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg  <font color="#ff0000"></font>-->
+<link linkText="External Link" linkBGColor="000000" linkBGRolloverColor="008fff">pages/contactus/feedback.jsp</link>
+
+</slide>
+
+
+<!--////////slide 05/////////-->
+
+
+<slide media="swf" swfThumb="assets/swf/thumb.jpg"><!--only use swfThumb when inserting an swf file-->
+
+<captionTitle embedFont="true" tweenFrom="-20" Xpos = "120" Ypos = "120" tweenTo="200" tweenDelay="1">Power by</captionTitle>
+<captionBody embedFont="true" tweenFrom="-20" Xpos = "120" Ypos = "150" tweenTo="200" tweenDelay="0.5" width = "300">vince su</captionBody>
+<url>images/circlesswf1.swf</url><!--580 x 400--><!--example_swf.swf / assets/slideshow_pics/pic1.jpg-->
+<link linkText="External Link" linkBGColor="ff0066" linkBGRolloverColor="000000">http://www.vincesu.com/</link>
+
+</slide>
+
+<!--///////////////////////END SLIDES HERE///////////////////////////////////-->
+</main>
+
+ 

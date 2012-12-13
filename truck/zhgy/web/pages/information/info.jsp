@@ -37,6 +37,8 @@
 	</div>
 
 	<div id="sidebar">
+	
+		<%@ include file="../module/categoryModule.jsp" %>
         
         <%@ include file="../module/searchModule.jsp" %>
         

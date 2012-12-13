@@ -40,6 +40,8 @@
 
 	<div id="sidebar">
         
+        <%@ include file="../module/categoryModule.jsp" %>
+        
         <%@ include file="../module/searchModule.jsp" %>
         
         <%@ include file="../module/contactUsModule.jsp" %>

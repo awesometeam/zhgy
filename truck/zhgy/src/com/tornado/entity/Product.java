@@ -6,6 +6,7 @@ import com.tornado.entity.base.BaseProduct;
 
 public class Product extends BaseProduct {
 	private static final long serialVersionUID = 1L;
+	
 	private String primaryImage = "";
 
 /*[CONSTRUCTOR MARKER BEGIN]*/
@@ -34,15 +35,14 @@ public class Product extends BaseProduct {
 			inshowcase);
 	}
 	
+/*[CONSTRUCTOR MARKER END]*/
+	
 	public void setPrimaryImage(String s){
 		primaryImage = s;
 	}
-	
+
 	public String getPrimaryImage(){
 		return primaryImage;
 	}
-
-/*[CONSTRUCTOR MARKER END]*/
-
 
 }

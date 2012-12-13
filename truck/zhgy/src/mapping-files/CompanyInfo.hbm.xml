@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.tornado.entity">
 	<class
 		name="CompanyInfo"
-		table="COMPANY_INFO"
+		table="company_info"
 	>
 		<meta attribute="sync-DAO">false</meta>
 		<id
