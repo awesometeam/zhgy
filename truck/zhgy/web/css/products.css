@@ -16,3 +16,11 @@
     
 }
 
+#products_list{
+	margin: 0;
+	padding: 0;
+}
+
+#products_list li{
+	vertical-align:bottom
+}

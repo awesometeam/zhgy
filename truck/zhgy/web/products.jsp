@@ -19,7 +19,6 @@
 <link href="css/products/superfish-vertical.css" rel="stylesheet" type="text/css" />
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/module/products/superfish.js"></script>
-<script type="text/javascript" src="js/module/products/hoverIntent.js"></script>
 
 <title>产品</title>
 </head>
@@ -64,8 +63,8 @@
 	        	<div class="information_box">
 	            	<h2>产品</h2>
 	            </div>
+        		<div id="products_showbox"></div>
         	</div>
-        	<div id="products_showbox"></div>
 		</div>
 		<div class="cleaner"></div>
 	</div>

@@ -4,14 +4,16 @@
 <%@ page import="com.tornado.service.ProductService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ page trimDirectiveWhitespaces="true" %>
 <ul id="products_list">
+<!--yes 
 <c:forEach items="${products}" var="product">
-	<li>
+	--><li>
 		<div class="product-box">
 			<img src="${product.primaryImage}" alt="${product.name}" width="150" height="150" />
 			<div>${product.name}</div>
 		</div>
-	</li>
+ 	</li><!--
 </c:forEach>
+-->
 </ul>
