@@ -4,7 +4,8 @@ $(document).ready(function (){
 	jQuery('.category-li a').each(function (){
 		jQuery(this).click(function (obj){
 			var id = $(this).parent().attr('id').substr(9);
-			jQuery('#products_frame').attr("src","/zhgy/ProductController.do?action=getProdcutsByCategory&id="+id);
+
+			jQuery('#products_showbox').load('/zhgy/ProductController.do?action=getProdcutsByCategory&id='+id);
 		});
 	});
 	$("ul.sf-menu").superfish({ 

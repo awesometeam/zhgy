@@ -5,3 +5,14 @@
 	zoom: 1;
     *display: inline;
 }
+
+#category_tree li a {
+	display: inline-block;
+	zoom: 1;
+    *display: inline;
+    margin: 0;
+    padding-top:0;
+    padding-bottom:0;
+    
+}
+

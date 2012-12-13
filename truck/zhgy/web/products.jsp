@@ -17,6 +17,7 @@
 
 <link href="css/products/superfish.css" rel="stylesheet" type="text/css" />
 <link href="css/products/superfish-vertical.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/module/products/superfish.js"></script>
 <script type="text/javascript" src="js/module/products/hoverIntent.js"></script>
 
@@ -38,11 +39,13 @@
 					<c:forEach items="${categories}" var="category">
 						<c:if test="${category.havehigher==0}">
 							<li class="category-li" id="category-${category.id}">
+							<span class="arrow"></span>
 								<a href="#">${category.name}</a>
 								<ul>
 									<c:forEach items="${categories}" var="subCategory">
 										<c:if test="${subCategory.higherid == category.id}">
 											<li class="category-li" id="category-${subCategory.id}">
+												<span class="arrow_b"></span>
 												<a href="#">${subCategory.name}</a>
 											</li>
 										</c:if>

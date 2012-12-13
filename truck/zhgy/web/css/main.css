@@ -491,24 +491,24 @@ h3 {
 /* 	display: block; */
 /* } */
 
-/* .arrow { */
-/* 	display:-moz-inline-box; */
-/*   	display:inline-block; */
-/* 	width: 12px; */
-/* 	height: 12px; */
-/* 	background-image: url(/zhgy/images/lna.gif); */
-/* 	background-repeat: repeat-x; */
-/* 	margin: 0px 2px; */
-/* } */
+ .arrow { 
+	display:-moz-inline-box;
+  	display:inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url(/zhgy/images/lna.gif);
+	background-repeat: repeat-x;
+	margin: 0px 2px;
+} 
 
-/* .arrow_b { */
-/* 	display:-moz-inline-box; */
-/*   	display:inline-block; */
-/* 	width: 12px; */
-/* 	height: 12px; */
-/* 	background-image: url(/zhgy/images/lna_b.gif); */
-/* 	background-repeat: repeat-x; */
-/* 	margin: 0px 2px; */
-/* } */
+ .arrow_b { 
+	display:-moz-inline-box;
+  	display:inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url(/zhgy/images/lna_b.gif);
+	background-repeat: repeat-x;
+	margin: 0px 2px;
+} */
 
 
