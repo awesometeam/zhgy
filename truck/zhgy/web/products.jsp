@@ -14,6 +14,12 @@
 <link href="css/products.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/products.js"></script>
+
+<link href="css/products/superfish.css" rel="stylesheet" type="text/css" />
+<link href="css/products/superfish-vertical.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/module/products/superfish.js"></script>
+<script type="text/javascript" src="js/module/products/hoverIntent.js"></script>
+
 <title>产品</title>
 </head>
 <body>
@@ -28,7 +34,7 @@
 				<div class="information_box">
 					<h2>产品分类</h2>
 				</div>
-				<ul id="category_tree">
+				<ul id="category_tree" class="sf-menu sf-vertical">
 					<c:forEach items="${categories}" var="category">
 						<c:if test="${category.havehigher==0}">
 							<li class="category-li" id="category-${category.id}">
@@ -46,6 +52,7 @@
 						</c:if>
 					</c:forEach>
 				</ul>
+				<div class="cleaner"></div>
 			</div>
 			<div class="cleaner"></div>
 		</div>
@@ -55,8 +62,7 @@
 	            	<h2>产品</h2>
 	            </div>
         	</div>
-        	<iframe scrolling="no" onload="this.height=products_frame.document.body.scrollHeight" id="products_frame" src="/zhgy/ProductController.do?action=getProdcutsByCategory" frameborder="0"></iframe>
-        	<p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+        	<div id="products_showbox"></div>
 		</div>
 		<div class="cleaner"></div>
 	</div>

@@ -4,24 +4,14 @@
 <%@ page import="com.tornado.service.ProductService" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%
-    String id = request.getParameter("id");
-%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<%
-	//request.setAttribute("products",ProductService.list());
-%>
+
+<ul id="products_list">
 <c:forEach items="${products}" var="product">
-	<div class="product-box">
-		<img src="${product.primaryImage}" alt="${product.name}" width="150" height="150" />
-		<div>${product.name}</div>
-	</div>
+	<li>
+		<div class="product-box">
+			<img src="${product.primaryImage}" alt="${product.name}" width="150" height="150" />
+			<div>${product.name}</div>
+		</div>
+	</li>
 </c:forEach>
-</body>
-</html>
+</ul>
