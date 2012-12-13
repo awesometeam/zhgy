@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <div id="header_wrapper">
-    <div id="header">
-<!--    		<div class="logo"> -->
-<!--    			<img src="/zhgy/images/resource/logo.jpg" width="90px" height="90px"></img> -->
-<!--    		</div> -->
-    	<div id="site_title">
-            <h1>
-            	<span>&nbsp;</span>
-            </h1>
-        </div>
-        <div class="cleaner"></div>
-    </div>
+	<div id="header">
+	</div>
+<!--     <div id="header"> -->
+<!--     	<div id="site_title"> -->
+<!--             <h1> -->
+<!--             	<span>&nbsp;</span> -->
+<!--             </h1> -->
+<!--         </div> -->
+<!--         <div class="cleaner"></div> -->
+<!--     </div> -->
 
-</div> <!-- end of templatemo_menu_wrapper -->
+</div>
 
 <div id="menu_wrapper">
     <div id="menu">
