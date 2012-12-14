@@ -13,9 +13,10 @@ $(document).ready(function (){
 		});
 	});
 	$("ul.sf-menu").superfish({ 
-        animation: {height:'show'},   // slide-down effect without fade-in 
-        delay:     500,               // 1.2 second delay on mouseout 
-        speed: 'fast'
+        animation: 	{height:'show'},
+        delay:		500,
+        speed:		'fast',
+        autoArrows:	true
     }); 
 	jQuery('#products_showbox').load('/zhgy/ProductController.do?action=getProdcutsByCategory');
 });
