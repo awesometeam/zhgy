@@ -30,32 +30,7 @@
 	
 	<div id="content_wrapper">
 		<div id="sidebar">
-			<div id="category-div" class="sidebar_box" >
-				<div class="information_box">
-					<h2>产品分类</h2>
-				</div>
-				<ul id="category_tree" class="sf-menu sf-vertical">
-					<c:forEach items="${categories}" var="category">
-						<c:if test="${category.havehigher==0}">
-							<li class="category-li" id="category-${category.id}">
-							<span class="arrow"></span>
-								<a href="#">${category.name}</a>
-								<ul>
-									<c:forEach items="${categories}" var="subCategory">
-										<c:if test="${subCategory.higherid == category.id}">
-											<li class="category-li" id="category-${subCategory.id}">
-												<span class="arrow_b"></span>
-												<a href="#">${subCategory.name}</a>
-											</li>
-										</c:if>
-									</c:forEach>
-								</ul>
-							</li>
-						</c:if>
-					</c:forEach>
-				</ul>
-				<div class="cleaner"></div>
-			</div>
+			<%@ include file="pages/module/categoryModule.jsp" %>
 			<div class="cleaner"></div>
 		</div>
 		<div id="content">

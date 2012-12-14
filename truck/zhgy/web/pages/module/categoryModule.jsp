@@ -8,12 +8,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body>
+
 <%
 	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
 %>
@@ -22,16 +17,15 @@
 		<div class="information_box">
 			<h2>产品分类</h2>
 		</div>
-		<ul>
+		<ul id="category_tree" class="sf-menu sf-vertical">
 			<c:forEach items="${categories}" var="category">
-				
-					<li id="category-${category.data.id}">
+					<li id="category-${category.data.id}" class="category-li">
 						<span class="arrow"></span>
-						<a href="###">${category.data.name}</a>
+						<a href="#">${category.data.name}</a>
 						<c:if test="${fn:length(category.children) != 0}">
 							<ul>
 								<c:forEach items="${category.children}" var="subcategory">
-									<li id="${subcategory.data.id}">
+									<li id="${subcategory.data.id}" class="category-li">
 										<span class="arrow_b"></span>
 										<a href="###">${subcategory.data.name}</a>
 									</li>
@@ -41,7 +35,5 @@
 					</li>
 			</c:forEach>
 		</ul>
+		<div class="cleaner"></div>
 	</div>
-	<div class="cleaner"></div>
-</body>
-</html>
