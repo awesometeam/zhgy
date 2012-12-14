@@ -17,3 +17,6 @@
 </c:forEach>
 -->
 </ul>
+<c:if test="${empty(products)}">    
+	<p>暂无产品</p>   
+</c:if>
