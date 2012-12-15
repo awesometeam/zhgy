@@ -11,7 +11,7 @@
 .sf-menu ul {
 	position:		absolute;
 	top:			-999em;
-	width:			12em; /* left offset of submenus need to match (see below) */
+	width:			10em; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
 	width:			100%;
@@ -39,7 +39,7 @@ ul.sf-menu li.sfHover li ul {
 }
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-	left:			12em; /* match ul width */
+	left:			10em; /* match ul width */
 	top:			0;
 }
 ul.sf-menu li li:hover li ul,
@@ -48,7 +48,7 @@ ul.sf-menu li li.sfHover li ul {
 }
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-	left:			12em; /* match ul width */
+	left:			10em; /* match ul width */
 	top:			0;
 }
 
@@ -58,6 +58,8 @@ ul.sf-menu li li li.sfHover ul {
 	margin-bottom:	1em;
 }
 .sf-menu a {
+	border-left:	1px solid #fff;
+	border-top:		1px solid #CFDEFF;
 	padding: 		.75em 1em;
 	text-decoration:none;
 }
@@ -65,14 +67,10 @@ ul.sf-menu li li li.sfHover ul {
 	color:			#13a;
 }
 .sf-menu li {
-	margin: 0px;
-	padding: 0px;
-	font-size: 14px;
-	line-height: 25px;
-	border-bottom: thin dashed #D0D0D0;
-	background-color: white;
+	background:		#BDD2FF;
 }
 .sf-menu li li {
+	background:		#AABDE6;
 }
 .sf-menu li li li {
 	background:		#9AAEDB;
