@@ -56,7 +56,7 @@ public class ProductController extends Controller
 		params.put("id", product.getId());
 		List<Picture> result = PMF.list(hql, params);
 		if(result == null || result.size() == 0)
-			product.setPrimaryImage("no_picture.gif");
+			product.setPrimaryImage("/zhgy/images/NoPicture.jpg");
 		else
 			product.setPrimaryImage(result.get(0).getPicturePath());
 	}
