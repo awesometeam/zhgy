@@ -6,7 +6,7 @@
     *display: inline;
 }
 
-#category_tree li a {
+/* #category_tree li a {
 	display: inline-block;
 	zoom: 1;
     *display: inline;
@@ -14,7 +14,7 @@
     padding-top:0;
     padding-bottom:0;
     
-}
+} */
 
 #products_list{
 	margin: 0;
@@ -24,3 +24,14 @@
 #products_list li{
 	vertical-align:bottom
 }
+
+.sf-menu li{
+	background: tranparent;
+}
+
+.sf-menu a{
+	background: white;
+	border: 1px solid #8A9BA8;
+	border-radius: 0 5px 5px 0; 
+}
+

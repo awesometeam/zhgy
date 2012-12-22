@@ -65,14 +65,10 @@ ul.sf-menu li li li.sfHover ul {
 	color:			#13a;
 }
 .sf-menu li {
-	margin: 0px;
-	padding: 0px;
-	font-size: 14px;
-	line-height: 25px;
-	border-bottom: thin dashed #D0D0D0;
-	background-color: white;
+	background:		tranparent;
 }
 .sf-menu li li {
+	background:		tranparent;
 }
 .sf-menu li li li {
 	background:		#9AAEDB;

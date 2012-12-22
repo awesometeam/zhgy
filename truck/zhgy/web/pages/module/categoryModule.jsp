@@ -20,13 +20,11 @@
 		<ul id="category_tree" class="sf-menu sf-vertical">
 			<c:forEach items="${categories}" var="category">
 					<li id="category-${category.data.id}" class="category-li">
-						<span class="arrow"></span>
 						<a href="#">${category.data.name}</a>
 						<c:if test="${fn:length(category.children) != 0}">
 							<ul>
 								<c:forEach items="${category.children}" var="subcategory">
 									<li id="category-${subcategory.data.id}" class="category-li">
-										<span class="arrow_b"></span>
 										<a href="#">${subcategory.data.name}</a>
 									</li>
 								</c:forEach>
