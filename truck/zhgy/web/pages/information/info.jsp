@@ -30,74 +30,76 @@
 
 <%@ include file="../header.jsp" %>
 
-<div id="content_wrapper">
-
-	<div style=width:100%;margin-bottom:5px;">
-		<img src="/zhgy/images/show/wrap1.jpg" />
-	</div>
-
-	<div id="sidebar">
+<div id="contentPanel">
+	<div id="content_wrapper">
 	
-		<%@ include file="../module/categoryModule.jsp" %>
-        
-        <%@ include file="../module/searchModule.jsp" %>
-        
-        <%@ include file="../module/contactUsModule.jsp" %>
-        
-    </div> 
-    
-    <div id="content">
-        
-    	<div id="informations" class="content_box">
-        	<div class="information_box">
-	        	<div  style="float:left;">
-	        		<h2><a href="/zhgy/pages/information/infos.jsp">资讯</a></h2>
+		<div style=width:100%;margin-bottom:5px;">
+			<img src="/zhgy/images/show/wrap1.jpg" />
+		</div>
+	
+		<div id="sidebar">
+		
+			<%@ include file="../module/categoryModule.jsp" %>
+	        
+	        <%@ include file="../module/searchModule.jsp" %>
+	        
+	        <%@ include file="../module/contactUsModule.jsp" %>
+	        
+	    </div> 
+	    
+	    <div id="content">
+	        
+	    	<div id="informations" class="content_box">
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2><a href="/zhgy/pages/information/infos.jsp">资讯</a></h2>
+		        	</div>
+		        	<div style="float:left;">
+		        		&nbsp;&nbsp;&gt;&nbsp;&nbsp;<c:out value="${info.title}"></c:out>
+		        	</div>
+	<!-- 	        	<div  style="float:right;margin-top:5px;"> -->
+	<!-- 	        		<h3>更多</h3> -->
+	<!-- 	        	</div> -->
+		        	<div style="clear:both;"></div>
 	        	</div>
-	        	<div style="float:left;">
-	        		&nbsp;&nbsp;&gt;&nbsp;&nbsp;<c:out value="${info.title}"></c:out>
+	        	<div id="infodetail">
+	        		<p class="title"><c:out value="${info.title}"></c:out></p>
+	        		<c:forEach items="${content}" var="line">
+	        			<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
+	        		</c:forEach>
+		        	
 	        	</div>
-<!-- 	        	<div  style="float:right;margin-top:5px;"> -->
-<!-- 	        		<h3>更多</h3> -->
-<!-- 	        	</div> -->
-	        	<div style="clear:both;"></div>
-        	</div>
-        	<div id="infodetail">
-        		<p class="title"><c:out value="${info.title}"></c:out></p>
-        		<c:forEach items="${content}" var="line">
-        			<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
-        		</c:forEach>
+	        	<div class="cleaner"></div>
+	        </div>
+	        <div align="right" style="width:100%;"><a href="/zhgy/pages/information/infos.jsp">[返回]</a></div>
+	        <div class="cleaner"></div>
+	    
+	    </div>
+		<div class="cleaner"></div>
+		
+		<div class="hotproduct_box">
+	        
+	        	<div class="information_box">
+	        		<h2 id="hotproducttitle">热门产品</h2>
+	        	</div>
 	        	
-        	</div>
-        	<div class="cleaner"></div>
-        </div>
-        <div align="right" style="width:100%;"><a href="/zhgy/pages/information/infos.jsp">[返回]</a></div>
-        <div class="cleaner"></div>
-    
-    </div>
-	<div class="cleaner"></div>
-	
-	<div class="hotproduct_box">
-        
-        	<div class="information_box">
-        		<h2 id="hotproducttitle">热门产品</h2>
-        	</div>
-        	
-        	<div id="hotproduct">
-		    	<ul id="hotproductul">
-		        
-		        	<c:forEach begin="0" end="2" >
-		        		<c:forEach items="${showcasePic}" var="pic">
-		        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
-		        		</c:forEach>
-		        	</c:forEach>
-		        </ul>
-		    </div>
-        
-        	<div class="cleaner"></div>
-        </div>
-    
-    <div class="cleaner"></div>
-    
+	        	<div id="hotproduct">
+			    	<ul id="hotproductul">
+			        
+			        	<c:forEach begin="0" end="2" >
+			        		<c:forEach items="${showcasePic}" var="pic">
+			        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
+			        		</c:forEach>
+			        	</c:forEach>
+			        </ul>
+			    </div>
+	        
+	        	<div class="cleaner"></div>
+	        </div>
+	    
+	    <div class="cleaner"></div>
+	    
+	</div>
 </div>
 
 <%@ include file="../footer.jsp" %>

@@ -34,72 +34,74 @@
 
 <%@ include file="../header.jsp" %>
 
-<div id="content_wrapper">
-
-	<div style=width:100%;margin-bottom:5px;">
-		<img src="../../images/show/wrap1.jpg" />
-	</div>
-
-	<div id="sidebar">
-        
-        <%@ include file="../module/categoryModule.jsp" %>
-        
-        <%@ include file="../module/searchModule.jsp" %>
-        
-        <%@ include file="../module/contactUsModule.jsp" %>
-    
-    </div> 
-    
-    <div id="content">
-        
-    	<div id="informations" class="content_box">
-        	<div class="information_box">
-	        	<div  style="float:left;">
-	        		<h2>最新资讯</h2>
-	        	</div>
-<!-- 	        	<div  style="float:right;margin-top:5px;"> -->
-<!-- 	        		<h3>更多</h3> -->
-<!-- 	        	</div> -->
-	        	<div style="clear:both;"></div>
-        	</div>
-        	<div id="itemContainer">
-	        	<c:forEach items="${infos}" var="info">
-	        		<div class="information_box">
-	    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
-		            </div>
-	        	</c:forEach>
-        	</div>
-        	<div id="pager" class="pager"></div>
-            
-        	<div class="cleaner"></div>
-        </div>
-        <div class="cleaner"></div>
-    
-    </div>
-	<div class="cleaner"></div>
+<div id="contentPanel">
+	<div id="content_wrapper">
 	
-	<div class="hotproduct_box">
-        
-        	<div class="information_box">
-        		<h2 id="hotproducttitle">热门产品</h2>
-        	</div>
-        	
-        	<div id="hotproduct">
-		    	<ul id="hotproductul">
-		        
-		        	<c:forEach begin="0" end="2" >
-		        		<c:forEach items="${showcasePic}" var="pic">
-		        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
-		        		</c:forEach>
+		<div style=width:100%;margin-bottom:5px;">
+			<img src="../../images/show/wrap1.jpg" />
+		</div>
+	
+		<div id="sidebar">
+	        
+	        <%@ include file="../module/categoryModule.jsp" %>
+	        
+	        <%@ include file="../module/searchModule.jsp" %>
+	        
+	        <%@ include file="../module/contactUsModule.jsp" %>
+	    
+	    </div> 
+	    
+	    <div id="content">
+	        
+	    	<div id="informations" class="content_box">
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2>最新资讯</h2>
+		        	</div>
+	<!-- 	        	<div  style="float:right;margin-top:5px;"> -->
+	<!-- 	        		<h3>更多</h3> -->
+	<!-- 	        	</div> -->
+		        	<div style="clear:both;"></div>
+	        	</div>
+	        	<div id="itemContainer">
+		        	<c:forEach items="${infos}" var="info">
+		        		<div class="information_box">
+		    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
+			            </div>
 		        	</c:forEach>
-		        </ul>
-		    </div>
-        
-        	<div class="cleaner"></div>
-        </div>
-    
-    <div class="cleaner"></div>
-    
+	        	</div>
+	        	<div id="pager" class="pager"></div>
+	            
+	        	<div class="cleaner"></div>
+	        </div>
+	        <div class="cleaner"></div>
+	    
+	    </div>
+		<div class="cleaner"></div>
+		
+		<div class="hotproduct_box">
+	        
+	        	<div class="information_box">
+	        		<h2 id="hotproducttitle">热门产品</h2>
+	        	</div>
+	        	
+	        	<div id="hotproduct">
+			    	<ul id="hotproductul">
+			        
+			        	<c:forEach begin="0" end="2" >
+			        		<c:forEach items="${showcasePic}" var="pic">
+			        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
+			        		</c:forEach>
+			        	</c:forEach>
+			        </ul>
+			    </div>
+	        
+	        	<div class="cleaner"></div>
+	        </div>
+	    
+	    <div class="cleaner"></div>
+	    
+	</div>
 </div>
 
 <%@ include file="../footer.jsp" %>

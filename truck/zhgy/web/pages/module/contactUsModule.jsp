@@ -24,7 +24,7 @@ if(request.getAttribute("CompanyQQ") == null)
 	<div class="sidebar_box">
 
 		<div class="information_box">
-			<h2>联系我们:</h2>
+			<h2>联系我们&nbsp;|&nbsp;contact&nbsp;us:</h2>
 		</div>
 		<p>
 			电话:

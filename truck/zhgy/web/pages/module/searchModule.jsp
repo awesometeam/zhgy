@@ -7,15 +7,16 @@
 </head>
 <body>
 	<div class="sidebar_box">
-		<div class="information_box">
-			<h2>搜索:</h2>
-		</div>
+<!-- 		<div class="information_box"> -->
+<!-- 			<h2>搜索:</h2> -->
+<!-- 		</div> -->
 
-		<form action="#" method="get">
-			<label>您可以输入产品或资讯关键词进行搜索</label> <input type="text" value=""
-				name="keyword" size="10" id="input_field" title="search" /> <input
-				type="submit" name="search" value="搜索" alt="search" id="submit_btn"
-				title="Search" />
+		<form id="search_form" action="#" method="get">
+			<span class="left-cap"></span>
+			<input type="text" name="keywords" id="keywords" maxlength="30" 
+			value="搜索产品或关键字" onclick="if(this.value=='搜索产品或关键字')
+			this.value='';" onblur="if(this.value=='搜索产品或关键字'||
+			this.value=='')this.value='搜索产品或关键字';" />
 		</form>
 
 		<div class="cleaner"></div>

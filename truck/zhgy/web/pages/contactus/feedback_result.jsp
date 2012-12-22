@@ -34,89 +34,91 @@
 
 <%@ include file="../header.jsp" %>
 
-<div id="content_wrapper">
-
-	<div style=width:100%;margin-bottom:5px;">
-		<img src="/zhgy/images/show/wrap1.jpg" />
-	</div>
-
-	<div id="sidebar">
-        
-        <%@ include file="../module/categoryModule.jsp" %>
-        
-        <%@ include file="../module/searchModule.jsp" %>
-        
-        <%@ include file="../module/contactUsModule.jsp" %>
-    
-    </div> 
-    
-    <div id="content">
-        
-    	<div id="informations" class="content_box">
-        	<div class="information_box">
-	        	<div  style="float:left;">
-	        		<h2>在线留言</h2>
-	        	</div>
-	        	<div style="clear:both;"></div>
-        	</div>
-        	<div id="infodetail">
-        		<div id="feedback">
-					<form id="feedback-form" method="post" action="MessageController.do">
-					<div class="item">
-						<p class="label">姓名：</p><input type="text" name="author" id="author" value='<c:out value="${data.author}"></c:out>'>(*必填)
-					</div>
-					<div class="item">
-						<p class="label">Email：</p><input type="text" name="email" id="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;"><p class="label"></p>(*必填)
-					</div>
-					<div class="item">
-						<p class="label">电话：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p>(*必填)
-					</div>
-					<div class="item">
-						<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p>
-					</div>
-					<div class="item">
-						<p class="label">内容：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
-					</div>
-					<div class="item">
-						<input required="true" type="submit" accesskey="s" id="feedback-submit" value="修改留言">
-					</div>
-					<input type="hidden" name="action" value="updateMessage">
-					<input type="hidden" name="messageid" value='<c:out value="${data.id}"></c:out>'>
-					</form>
-					<script type="text/javascript">
-						alert("留言成功！我们将尽快处理该信息并与您联系。");
-					</script>
-				</div>
-        	</div>
-        	<div class="cleaner"></div>
-        </div>
-        <div class="cleaner"></div>
-    
-    </div>
-	<div class="cleaner"></div>
+<div id="contentPanel">
+	<div id="content_wrapper">
 	
-	<div class="hotproduct_box">
-        
-        	<div class="information_box">
-        		<h2 id="hotproducttitle">热门产品</h2>
-        	</div>
-        	
-        	<div id="hotproduct">
-		    	<ul id="hotproductul">
-		        
-		        	<c:forEach begin="0" end="2" >
-		        		<c:forEach items="${showcasePic}" var="pic">
-		        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
-		        		</c:forEach>
-		        	</c:forEach>
-		        </ul>
-		    </div>
-        
-        	<div class="cleaner"></div>
-        </div>
-    
-    <div class="cleaner"></div>
-    
+		<div style=width:100%;margin-bottom:5px;">
+			<img src="/zhgy/images/show/wrap1.jpg" />
+		</div>
+	
+		<div id="sidebar">
+	        
+	        <%@ include file="../module/categoryModule.jsp" %>
+	        
+	        <%@ include file="../module/searchModule.jsp" %>
+	        
+	        <%@ include file="../module/contactUsModule.jsp" %>
+	    
+	    </div> 
+	    
+	    <div id="content">
+	        
+	    	<div id="informations" class="content_box">
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2>在线留言</h2>
+		        	</div>
+		        	<div style="clear:both;"></div>
+	        	</div>
+	        	<div id="infodetail">
+	        		<div id="feedback">
+						<form id="feedback-form" method="post" action="MessageController.do">
+						<div class="item">
+							<p class="label">姓名：</p><input type="text" name="author" id="author" value='<c:out value="${data.author}"></c:out>'>(*必填)
+						</div>
+						<div class="item">
+							<p class="label">Email：</p><input type="text" name="email" id="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;"><p class="label"></p>(*必填)
+						</div>
+						<div class="item">
+							<p class="label">电话：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p>(*必填)
+						</div>
+						<div class="item">
+							<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p>
+						</div>
+						<div class="item">
+							<p class="label">内容：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
+						</div>
+						<div class="item">
+							<input required="true" type="submit" accesskey="s" id="feedback-submit" value="修改留言">
+						</div>
+						<input type="hidden" name="action" value="updateMessage">
+						<input type="hidden" name="messageid" value='<c:out value="${data.id}"></c:out>'>
+						</form>
+						<script type="text/javascript">
+							alert("留言成功！我们将尽快处理该信息并与您联系。");
+						</script>
+					</div>
+	        	</div>
+	        	<div class="cleaner"></div>
+	        </div>
+	        <div class="cleaner"></div>
+	    
+	    </div>
+		<div class="cleaner"></div>
+		
+		<div class="hotproduct_box">
+	        
+	        	<div class="information_box">
+	        		<h2 id="hotproducttitle">热门产品</h2>
+	        	</div>
+	        	
+	        	<div id="hotproduct">
+			    	<ul id="hotproductul">
+			        
+			        	<c:forEach begin="0" end="2" >
+			        		<c:forEach items="${showcasePic}" var="pic">
+			        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
+			        		</c:forEach>
+			        	</c:forEach>
+			        </ul>
+			    </div>
+	        
+	        	<div class="cleaner"></div>
+	        </div>
+	    
+	    <div class="cleaner"></div>
+	    
+	</div>
 </div>
 
 <%@ include file="../footer.jsp" %>

@@ -15,7 +15,7 @@
 	
 	<div id="category-div" class="sidebar_box" >
 		<div class="information_box">
-			<h2>产品分类</h2>
+			<h2>产品分类&nbsp;|&nbsp;categories:</h2>
 		</div>
 		<ul id="category_tree" class="sf-menu sf-vertical">
 			<c:forEach items="${categories}" var="category">
