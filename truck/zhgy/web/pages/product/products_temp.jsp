@@ -21,7 +21,7 @@
 	
 	<div id="content_wrapper">
 		<div id="sidebar">
-			<%@ include file="../module/categoryModule.jsp" %>
+			<%@ include file="../module/categoryModule2.jsp" %>
 		</div>
 		<div id="content">
 			<div id="introduction" class="content_box">

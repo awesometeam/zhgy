@@ -18,21 +18,8 @@ jQuery(function($) {
 		current:'slideshow-cur', //当前切换器样式名称
 		rand:false //是否随机指定默认幻灯图片
 	});
-
 	
-//	$('.flexslider').flexslider({
-//		animation: "slide"
-//	});
 	
-	minL = 0- $("#hotproductul").children().length*$("#hotproductul").children()[0].offsetWidth/2;
-	
-	$("#hotproductul").mouseover(function() {
-		clearInterval(hotPorductInterval);
-	}).mouseout(function() {
-		hotPorductInterval = setInterval(hotProductMove, 20);
-	});
-	
-	hotPorductInterval = setInterval(hotProductMove, 20);
 
 //	if($("#informations").height()<$("#introduction").height())
 //		$("#informations").height($("#introduction").height());

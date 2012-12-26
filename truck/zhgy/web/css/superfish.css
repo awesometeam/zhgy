@@ -11,7 +11,7 @@
 .sf-menu ul {
 	position:		absolute;
 	top:			-999em;
-	width:			12em; /* left offset of submenus need to match (see below) */
+	width:			192px; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
 	width:			100%;
@@ -39,7 +39,7 @@ ul.sf-menu li.sfHover li ul {
 }
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-	left:			12em; /* match ul width */
+	left:			192px; /* match ul width */
 	top:			0;
 }
 ul.sf-menu li li:hover li ul,
@@ -48,7 +48,7 @@ ul.sf-menu li li.sfHover li ul {
 }
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-	left:			12em; /* match ul width */
+	left:			192px; /* match ul width */
 	top:			0;
 }
 
@@ -56,27 +56,57 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu {
 	float:			left;
 	margin-bottom:	1em;
+	border: 4px solid rgb(210, 210, 210);
+	border-radius: 0px 0px 8px 8px;
+/* 	border-top: medium none; */
+/* 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2); */
 }
 .sf-menu a {
+/* 	border-left:	1px solid #fff; */
+/* 	border-top:		1px solid #CFDEFF; */
 	padding: 		.75em 1em;
 	text-decoration:none;
 }
+
+
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:			#13a;
+	color:			#000;
+	padding-left: 1em;
 }
 .sf-menu li {
-	background:		tranparent;
+/* 	background:		#356aa0; */
+/* 	border-bottom: thin dotted #8E8E8E; */
+	border-bottom: 1px solid rgb(210, 210, 210);
 }
-.sf-menu li li {
-	background:		tranparent;
+.sf-menu li ul {
+/* 	background:		#fff; */
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+	border: 4px solid rgb(210, 210, 210);
+	background: none repeat scroll 0% 0% #f3f3f3;
+	border-radius: 7px 7px 7px 7px;
+}
+.sf-menu li li a:HOVER {
+/* 	background:		#366bc1; */
+/* 	border: none; */
+/* 	background: none; */
 }
 .sf-menu li li li {
-	background:		#9AAEDB;
+/* 	background:		#4096ee; */
+}
+.sf-menu li li li li {
+/* 	background:		#40c6ee; */
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
-	background:		#8E8E8E;
-	outline:		0;
+	background:		#4096ee;
+	color: white;
+/* 	outline:		0; */
+/* 	background: url("/zhgy/images/sprite_wmNav.png") repeat-x scroll 0% 0% transparent; */
+/* 	background-repeat: no-repeat; */
+/* 	background-position: 198px  */
 }
 
 /*** arrows **/
@@ -122,13 +152,17 @@ li.sfHover > a > .sf-sub-indicator {
 
 /*** shadows for all but IE6 ***/
 .sf-shadow ul {
-	background:	url('../images/shadow.png') no-repeat bottom right;
-	padding: 0 8px 9px 0;
+/* 	background:	url('../images/shadow.png') no-repeat bottom right; */
+/* 	padding: 0 8px 9px 0; */
 	-moz-border-radius-bottomleft: 17px;
 	-moz-border-radius-topright: 17px;
 	-webkit-border-top-right-radius: 17px;
 	-webkit-border-bottom-left-radius: 17px;
+	border: 4px solid rgb(210, 210, 210);
+	background: none repeat scroll 0% 0% #f3f3f3;
+	border-radius: 7px 7px 7px 7px;
 }
 .sf-shadow ul.sf-shadow-off {
 	background: transparent;
 }
+

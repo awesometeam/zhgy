@@ -41,7 +41,7 @@
 	
 		<div id="sidebar">
 	        
-	        <%@ include file="../module/categoryModule.jsp" %>
+	        <%@ include file="../module/categoryModule2.jsp" %>
 	        
 	        <%@ include file="../module/searchModule.jsp" %>
 	        

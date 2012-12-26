@@ -78,7 +78,7 @@ h3 {
 	width:100%;
 	min-width: 920px;
 	overflow: hidden;
-	height: 374px;
+	height: 529px;
 }
 
 #header {
@@ -144,11 +144,11 @@ h3 {
 /* menu */
 
 #menu_wrapper {
-	width: 100%;
+	width: 1900px;
 	min-width: 920px;
-	height: 53px;
-	margin: 0 auto;
-	background: url(../images/menu_bg_.jpg) repeat-x;
+	height: 155px;
+	background: url(../images/menu2.png) no-repeat;
+	position: relative;
 }
 
 #menu {
@@ -203,7 +203,8 @@ h3 {
 #contentPanel {
 	width: 100%;
 /* 	min-width: 920px; */
-	background: url("../images/bg.gif") repeat-x scroll left top rgb(255, 255, 255);
+	background: url("../images/content_bg.png") repeat-x scroll left top rgb(255, 255, 255);
+	padding:2px 0px 0px 0px;
 }
 
 #content_wrapper {
@@ -214,7 +215,7 @@ h3 {
 
 #sidebar {
 	float: left;
-	width: 30%;
+	width: 22%;
 	line-height: 1.7em;
 }
 
@@ -223,6 +224,11 @@ h3 {
 	margin: 15px 8px;
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 /* 	background: #fff; */
+}
+
+.sidebar_box_no_shadow 
+{
+	margin: 15px 8px;
 }
 
 .information_box {
@@ -283,7 +289,7 @@ h3 {
 
 #content {
 	float:right;
-	width: 70%;
+	width: 78%;
 }
 
 .content_box {
@@ -535,3 +541,76 @@ width: 18px; height: 37px;
 background: url("/zhgy/images/search-bg-left.png") no-repeat top right}
 #search_form #indicator{
 position: absolute; top: 9px; right: 5px}
+
+#productlist ul
+{
+	list-style: none outside none;
+	padding: 0px;
+}
+
+#productlist ul li
+{
+	width:165px;
+	position: relative;
+	float: left;
+	padding: 15px 6px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#productlist .item
+{
+	border: 1px solid rgb(229, 229, 229);
+	background-color: white;
+	padding: 3px;
+}
+
+#productlist .item-cescription
+{
+	text-align: center;
+	padding: 8px 0px;
+}
+
+#categorytitle
+{
+	margin-top: 25px;
+	width:200px;
+	height: 28px;
+	background: url("/zhgy/images/category_title.gif") no-repeat;
+}
+
+#productdetail .pic
+{
+	width: 100%;
+	margin: 15px 0px;
+	padding-bottom:20px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#productdetail .pic div
+{
+	margin: 0px auto;
+	width: 350px;
+	height: 350px;
+	padding: 10px;
+	border: 2px solid rgb(229, 229, 229);
+}
+
+#productdetail .detail
+{
+	width:100%;
+	height:300px;
+}
+
+#productdetail .detail ul
+{
+	margin: 0px auto;
+/* 	padding-top:10px; */
+	width: 350px;
+}
+
+#productdetail .detail ul li h2
+{
+	line-height: 25px;
+	color: #000;
+	font-size: 15px;
+}

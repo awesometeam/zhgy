@@ -167,11 +167,13 @@ public class TreeNode
 			if(data.equals(key))
 				return this;
 		}
-		
+	
+		TreeNode result = null;
 		for(TreeNode tn : children)
 		{
-			if(tn.findNode(key) != null)
-				return tn;
+			result = tn.findNode(key);
+			if(result!= null)
+				return result;
 		}
 		return null;
 	}

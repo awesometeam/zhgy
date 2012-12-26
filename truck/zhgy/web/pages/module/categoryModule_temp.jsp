@@ -9,6 +9,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
+<script type="text/javascript" src="/zhgy/js/module/products/superfish.js"></script>
+<link href="/zhgy/css/products/superfish.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/products/superfish-vertical.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/module/products.js"></script>
+<link rel="stylesheet" type="text/css"  href="/zhgy/css/products.css" />
+
 <%
 	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
 %>

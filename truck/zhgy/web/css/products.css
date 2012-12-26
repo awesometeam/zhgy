@@ -30,8 +30,27 @@
 }
 
 .sf-menu a{
-	background: white;
+/* 	background: #D1E9E9; */
 	border: 1px solid #8A9BA8;
 	border-radius: 0 5px 5px 0; 
+	color: black;
+}
+
+.sf-menu a:hover {
+	border: 1px solid #8A9BA8;
+	border-radius: 0 5px 5px 0; 
+	color: black;
+	background: url("/zhgy/images/sprite_wmNav.png") repeat-x scroll 0% 0% transparent;
+}
+
+.sf-menu a:visited {
+	border: 1px solid #8A9BA8;
+	border-radius: 0 5px 5px 0; 
+	color: black;
+	
+}
+
+.sf-menu li ul li {
+	background: #E0E0E0;
 }
 

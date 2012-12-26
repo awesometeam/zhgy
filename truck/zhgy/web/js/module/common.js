@@ -18,10 +18,32 @@ function hotProductMove() {
 }
 
 jQuery(function($) {
-	var header = $("#header");
-	if(header!=null)
+	
+	if($("#hotproductul").length > 0)
 	{
-		var left = (1900 - $(document).width())/2;
-		header.css("left","-"+left+"px");
+		minL = 0- $("#hotproductul").children().length*$("#hotproductul").children()[0].offsetWidth/2;
+		
+		$("#hotproductul").mouseover(function() {
+			clearInterval(hotPorductInterval);
+		}).mouseout(function() {
+			hotPorductInterval = setInterval(hotProductMove, 20);
+		});
+		
+		hotPorductInterval = setInterval(hotProductMove, 20);
 	}
+	
+	var left = (1900 - $(document).width())/2;
+
+	//header pic
+	$("#header").css("left","-"+left+"px");
+	//menu pic
+	$("#menu_wrapper").css("left","-"+left+"px");
+	//category list
+	$('ul.sf-menu').superfish({
+		animation: 	{height:'show'},
+        delay:		300,
+        speed:		'fast',
+        autoArrows:	true
+	});
+	
 });

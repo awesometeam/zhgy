@@ -11,9 +11,9 @@ public class CategoryModel extends AbstractModel<Category>
 {
 	public Tree getCategoryTree()
 	{
-		List<Category> allCategory = list();
+		boolean gohead = false;
 		
-		int curRemainingAmount = allCategory.size();
+		List<Category> allCategory = list();
 		
 		Tree tree = new Tree();
 		
@@ -25,18 +25,15 @@ public class CategoryModel extends AbstractModel<Category>
 			if(category.getHavehigher()==0)
 			{
 				tree.getRoot().add(new TreeNode(category));
-				curRemainingAmount--;
 				iter.remove();
 			}
 		}
-		
-		int befRemainingAmount = curRemainingAmount;
 		
 		TreeNode parCategory = null;
 		
 		do
 		{
-			befRemainingAmount = curRemainingAmount;
+			gohead = false;
 			iter = allCategory.iterator();
 			while(iter.hasNext())
 			{
@@ -45,12 +42,12 @@ public class CategoryModel extends AbstractModel<Category>
 				if(parCategory != null)
 				{
 					parCategory.add(new TreeNode(category));
-					curRemainingAmount--;
+					gohead = true;
 					iter.remove();
 				}
 			}
 		}
-		while(curRemainingAmount<befRemainingAmount && curRemainingAmount>0);
+		while(gohead);
 		
 		return tree;
 	}

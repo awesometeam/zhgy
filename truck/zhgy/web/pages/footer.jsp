@@ -18,7 +18,7 @@ if(request.getAttribute("CompanyEmail") == null)
         <ul class="footer_menu">
 			<li><a href="/zhgy/index.jsp">主页</a></li>
 			<li><a href="/zhgy/pages/introduction/introduction.jsp">公司简介</a></li>
-			<li><a href="/zhgy/pages/product/products_temp.jsp">产品</a></li>
+			<li><a href="/zhgy/pages/product/products.jsp">产品</a></li>
 			<li><a href="/zhgy/pages/information/infos.jsp"">资讯</a></li>
 			<li><a href="/zhgy/pages/contactus/feedback.jsp">在线留言</a></li>
 			<li class="last_menu"><a href="###">联系我们</a></li>

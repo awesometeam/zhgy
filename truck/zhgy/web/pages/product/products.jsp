@@ -9,25 +9,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="css/main.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
-
-
-
-<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zhgy/js/module/common.js"></script>
+<link rel="stylesheet" type="text/css"  href="/zhgy/css/main.css"  />
 
 <title>产品</title>
 </head>
 <body>
 
-<%@ include file="pages/header.jsp" %>
+<%@ include file="../header.jsp" %>
 	
 <div id="contentPanel">
 	
 	<div id="content_wrapper">
 		<div id="sidebar">
-			<%@ include file="pages/module/categoryModule2.jsp" %>
+			<%@ include file="../module/categoryModule2.jsp" %>
 			<div class="cleaner"></div>
 		</div>
 		<div id="content">
@@ -42,6 +39,6 @@
 	</div>
 	
 </div>
-<%@ include file="pages/footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>
