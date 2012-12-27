@@ -13,8 +13,25 @@
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/jquery.jqzoom.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/jquery.jqzoom-core.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){  
+    $('.productitem').jqzoom({  
+           zoomType: 'standard',  
+           alwaysOn : false,  
+           zoomWidth: 200,  
+           zoomHeight:200,  
+           position:'left',  
+           xOffset: 30,  
+           yOffset:0,  
+           showEffect : 'fadein',  
+           hideEffect: 'fadeout'  
+       });  
+ }); 
+</script>
 </head>
 <body>
 <%
@@ -69,25 +86,25 @@
 	        			<ul>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>		
+		        					<a title="ZH-CS050" href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>		
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>	
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>	
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>	
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>	
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
@@ -98,25 +115,25 @@
 	        			<ul>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>		
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>		
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>	
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>	
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>
 	        				<li>
 		        				<div class="item">
-		        					<img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>	
+		        					<a href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>	
 		        				</div>
 		        				<div class="item-cescription"> ZH-CS050--贴纸</div>
 	        				</li>

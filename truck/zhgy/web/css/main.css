@@ -546,6 +546,7 @@ position: absolute; top: 9px; right: 5px}
 {
 	list-style: none outside none;
 	padding: 0px;
+	z-index: 1;
 }
 
 #productlist ul li
