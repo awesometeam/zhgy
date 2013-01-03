@@ -23,6 +23,12 @@ public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 	public static final String CompanyEmailKeyword = "CompanyEmail";
 	
 	public static final String CompanyQQKeyword = "CompanyQQ";
+	
+	public static final String shortCompanyIntroductionKeyword_en = "shortCompanyIntroductionKeyword_en";
+	
+	public static final String companyIntroductionKeyword_en = "CompanyIntroduction_en";
+	
+	public static final String companyAddressKeyword_en = "CompanyAddress_en";
 
 	public CompanyInfoModel() { }
 	
@@ -78,11 +84,35 @@ public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 	}
 	
 	/**
+	 * 获得英文公司简介信息
+	 */
+	public static String [] getCompanyIntroduction_en()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.companyIntroductionKeyword_en);
+		if(info == null)
+			return new String [] {};
+		else
+			return TextUtil.toHtmlString(info.getVal());
+	}
+	
+	/**
 	 * 获得公司简短简介信息
 	 */
 	public static String [] getShortCompanyIntroduction()
 	{
 		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.shortCompanyIntroductionKeyword);
+		if(info == null)
+			return new String [] {};
+		else
+			return TextUtil.toHtmlString(info.getVal());
+	}
+	
+	/**
+	 * 获得英文公司简短简介信息
+	 */
+	public static String [] getShortCompanyIntroduction_en()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.shortCompanyIntroductionKeyword_en);
 		if(info == null)
 			return new String [] {};
 		else
@@ -119,6 +149,18 @@ public class CompanyInfoModel extends AbstractModel<CompanyInfo>
 	public static String getCompanyAddress()
 	{
 		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.companyAddressKeyword);
+		if(info == null)
+			return "";
+		else
+			return info.getVal();
+	}
+	
+	/**
+	 * 获得英文公司地址
+	 */
+	public static String getCompanyAddress_en()
+	{
+		CompanyInfo info = CompanyInfoModel.getCompanyInfo(CompanyInfoModel.companyAddressKeyword_en);
 		if(info == null)
 			return "";
 		else

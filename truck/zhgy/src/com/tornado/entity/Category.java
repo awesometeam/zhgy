@@ -24,19 +24,13 @@ public class Category extends BaseCategory {
 	 */
 	public Category (
 		java.lang.Long id,
-		java.lang.Integer havehigher) {
+		java.lang.Integer havehigher,
+		java.lang.String language) {
 
 		super (
 			id,
-			havehigher);
-	}
-	
-	public boolean equals(Object obj)
-	{
-		if(getId().equals(new Long(obj.toString())))
-			return true;
-		else
-			return false;
+			havehigher,
+			language);
 	}
 
 /*[CONSTRUCTOR MARKER END]*/

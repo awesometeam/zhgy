@@ -38,12 +38,15 @@ jQuery(function($) {
 	$("#header").css("left","-"+left+"px");
 	//menu pic
 	$("#menu_wrapper").css("left","-"+left+"px");
-	//category list
-	$('ul.sf-menu').superfish({
-		animation: 	{height:'show'},
-        delay:		300,
-        speed:		'fast',
-        autoArrows:	true
-	});
+	
+	if($("ul.sf-menu").length > 0)
+	{//category list
+		$('ul.sf-menu').superfish({
+			animation: 	{height:'show'},
+	        delay:		300,
+	        speed:		'fast',
+	        autoArrows:	true
+		});
+	}
 	
 });

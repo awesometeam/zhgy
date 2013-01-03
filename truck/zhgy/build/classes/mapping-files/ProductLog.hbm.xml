@@ -9,6 +9,9 @@
 		table="product_log"
 	>
 		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
 		<id
 			name="Id"
 			type="java.lang.Long"
@@ -100,6 +103,13 @@
 			type="string"
 			not-null="false"
 			length="50"
+		/>
+		<property
+			name="Language"
+			column="LANGUAGE"
+			type="string"
+			not-null="true"
+			length="2"
 		/>
 
 

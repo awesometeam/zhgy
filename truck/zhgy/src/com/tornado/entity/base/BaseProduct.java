@@ -21,6 +21,7 @@ public abstract class BaseProduct  implements Serializable {
 	public static String PROP_MATERIALS = "Materials";
 	public static String PROP_NUMBER = "Number";
 	public static String PROP_ID = "Id";
+	public static String PROP_LANGUAGE = "Language";
 	public static String PROP_PROCESSES = "Processes";
 	public static String PROP_INSHOWCASE = "Inshowcase";
 	public static String PROP_SPECIFICATIONS = "Specifications";
@@ -46,11 +47,13 @@ public abstract class BaseProduct  implements Serializable {
 	public BaseProduct (
 		java.lang.Long id,
 		java.lang.String name,
-		boolean inshowcase) {
+		boolean inshowcase,
+		java.lang.String language) {
 
 		this.setId(id);
 		this.setName(name);
 		this.setInshowcase(inshowcase);
+		this.setLanguage(language);
 		initialize();
 	}
 
@@ -64,15 +67,16 @@ public abstract class BaseProduct  implements Serializable {
 	private java.lang.Long id;
 
 	// fields
-	private java.lang.String name;
-	private java.lang.String number;
-	private java.lang.String specifications;
-	private java.lang.String materials;
-	private java.lang.String processes;
-	private java.lang.String packaging;
-	private java.lang.String introduction;
 	private java.lang.Long categoryId;
 	private boolean inshowcase;
+	private java.lang.String introduction;
+	private java.lang.String language;
+	private java.lang.String materials;
+	private java.lang.String name;
+	private java.lang.String number;
+	private java.lang.String packaging;
+	private java.lang.String processes;
+	private java.lang.String specifications;
 
 
 
@@ -95,6 +99,91 @@ public abstract class BaseProduct  implements Serializable {
 		this.hashCode = Integer.MIN_VALUE;
 	}
 
+
+
+
+	/**
+	 * Return the value associated with the column: CATEGORY_ID
+	 */
+	public java.lang.Long getCategoryId () {
+		return categoryId;
+	}
+
+	/**
+	 * Set the value related to the column: CATEGORY_ID
+	 * @param categoryId the CATEGORY_ID value
+	 */
+	public void setCategoryId (java.lang.Long categoryId) {
+		this.categoryId = categoryId;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: INSHOWCASE
+	 */
+	public boolean isInshowcase () {
+		return inshowcase;
+	}
+
+	/**
+	 * Set the value related to the column: INSHOWCASE
+	 * @param inshowcase the INSHOWCASE value
+	 */
+	public void setInshowcase (boolean inshowcase) {
+		this.inshowcase = inshowcase;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: INTRODUCTION
+	 */
+	public java.lang.String getIntroduction () {
+		return introduction;
+	}
+
+	/**
+	 * Set the value related to the column: INTRODUCTION
+	 * @param introduction the INTRODUCTION value
+	 */
+	public void setIntroduction (java.lang.String introduction) {
+		this.introduction = introduction;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: LANGUAGE
+	 */
+	public java.lang.String getLanguage () {
+		return language;
+	}
+
+	/**
+	 * Set the value related to the column: LANGUAGE
+	 * @param language the LANGUAGE value
+	 */
+	public void setLanguage (java.lang.String language) {
+		this.language = language;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: MATERIALS
+	 */
+	public java.lang.String getMaterials () {
+		return materials;
+	}
+
+	/**
+	 * Set the value related to the column: MATERIALS
+	 * @param materials the MATERIALS value
+	 */
+	public void setMaterials (java.lang.String materials) {
+		this.materials = materials;
+	}
 
 
 
@@ -133,35 +222,18 @@ public abstract class BaseProduct  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: SPECIFICATIONS
+	 * Return the value associated with the column: PACKAGING
 	 */
-	public java.lang.String getSpecifications () {
-		return specifications;
+	public java.lang.String getPackaging () {
+		return packaging;
 	}
 
 	/**
-	 * Set the value related to the column: SPECIFICATIONS
-	 * @param specifications the SPECIFICATIONS value
+	 * Set the value related to the column: PACKAGING
+	 * @param packaging the PACKAGING value
 	 */
-	public void setSpecifications (java.lang.String specifications) {
-		this.specifications = specifications;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: MATERIALS
-	 */
-	public java.lang.String getMaterials () {
-		return materials;
-	}
-
-	/**
-	 * Set the value related to the column: MATERIALS
-	 * @param materials the MATERIALS value
-	 */
-	public void setMaterials (java.lang.String materials) {
-		this.materials = materials;
+	public void setPackaging (java.lang.String packaging) {
+		this.packaging = packaging;
 	}
 
 
@@ -184,69 +256,18 @@ public abstract class BaseProduct  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: PACKAGING
+	 * Return the value associated with the column: SPECIFICATIONS
 	 */
-	public java.lang.String getPackaging () {
-		return packaging;
+	public java.lang.String getSpecifications () {
+		return specifications;
 	}
 
 	/**
-	 * Set the value related to the column: PACKAGING
-	 * @param packaging the PACKAGING value
+	 * Set the value related to the column: SPECIFICATIONS
+	 * @param specifications the SPECIFICATIONS value
 	 */
-	public void setPackaging (java.lang.String packaging) {
-		this.packaging = packaging;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: INTRODUCTION
-	 */
-	public java.lang.String getIntroduction () {
-		return introduction;
-	}
-
-	/**
-	 * Set the value related to the column: INTRODUCTION
-	 * @param introduction the INTRODUCTION value
-	 */
-	public void setIntroduction (java.lang.String introduction) {
-		this.introduction = introduction;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: CATEGORY_ID
-	 */
-	public java.lang.Long getCategoryId () {
-		return categoryId;
-	}
-
-	/**
-	 * Set the value related to the column: CATEGORY_ID
-	 * @param categoryId the CATEGORY_ID value
-	 */
-	public void setCategoryId (java.lang.Long categoryId) {
-		this.categoryId = categoryId;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: INSHOWCASE
-	 */
-	public boolean isInshowcase () {
-		return inshowcase;
-	}
-
-	/**
-	 * Set the value related to the column: INSHOWCASE
-	 * @param inshowcase the INSHOWCASE value
-	 */
-	public void setInshowcase (boolean inshowcase) {
-		this.inshowcase = inshowcase;
+	public void setSpecifications (java.lang.String specifications) {
+		this.specifications = specifications;
 	}
 
 

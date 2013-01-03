@@ -25,12 +25,14 @@ public class ProductLog extends BaseProductLog {
 	public ProductLog (
 		java.lang.Long id,
 		java.lang.Long productId,
-		java.lang.String name) {
+		java.lang.String name,
+		java.lang.String language) {
 
 		super (
 			id,
 			productId,
-			name);
+			name,
+			language);
 	}
 
 /*[CONSTRUCTOR MARKER END]*/

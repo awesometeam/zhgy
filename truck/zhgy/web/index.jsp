@@ -35,77 +35,77 @@
 <div id="contentPanel">
 	<div id="content_wrapper">
 	
-		<div id="slideshow" class="slider">
-			<div class="conbox">
-				<c:forEach items="${slideshowPic}" var="pic">
-					<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="920" height="579" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div>
-				</c:forEach>
-			</div>
+<!-- 		<div id="slideshow" class="slider"> -->
+<!-- 			<div class="conbox"> -->
+<%-- 				<c:forEach items="${slideshowPic}" var="pic"> --%>
+<%-- 					<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="920" height="579" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div> --%>
+<%-- 				</c:forEach> --%>
+<!-- 			</div> -->
 	
-			<div class="slideshow-switcher">
-				<a href="#" class="slideshow-cur">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-			</div>
-		</div>
+<!-- 			<div class="slideshow-switcher"> -->
+<!-- 				<a href="#" class="slideshow-cur">1</a> -->
+<!-- 				<a href="#">2</a> -->
+<!-- 				<a href="#">3</a> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 	
-<!-- 		<div id="sidebar"> -->
+		<div id="sidebar">
 		
-<%-- 	        <%@ include file="pages/module/searchModule.jsp" %> --%>
+	        <%@ include file="pages/module/searchModule.jsp" %>
 	        
-<%-- 	        <%@ include file="pages/module/companyCharismaModule.jsp" %> --%>
+	        <%@ include file="pages/module/companyCharismaModule.jsp" %>
 	        
 <%-- 	        <%@ include file="pages/module/contactUsModule.jsp" %> --%>
 	    
-<!-- 	    </div>  -->
+	    </div> 
 	    
-<!-- 	    <div id="content"> -->
+	    <div id="content">
 	    
-<!-- 	    	<div id="introduction" class="content_box"> -->
-<!-- 	        	<div class="information_box"> -->
-<!-- 	            	<div  style="float:left;"> -->
-<!-- 		        		<h2>公司简介</h2> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div  style="float:right;margin-top:5px;"> -->
-<!-- 		        		<h3><a href="/zhgy/pages/introduction/introduction.jsp">查看详细</a></h3> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div style="clear:both;"></div> -->
-<!-- 	            </div> -->
-<!-- 	            <div> -->
-<!-- 		            <div  style="float:left;width:70%;"> -->
-<%-- 			            <c:forEach items="${companyIntroduction}" var="line"> --%>
-<%-- 			            	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}" /></p> --%>
-<%-- 			        	</c:forEach> --%>
-<!-- 		        	</div> -->
-<!-- 		        	<div  style="float:right;width:25%;"> -->
-<!-- 		        		<a href="/zhgy/pages/introduction/introduction.jsp"> -->
-<!-- 		        			<img alt="" src="/zhgy/images/companyPic/1.jpg" width="160px" height="120px"></img> -->
-<!-- 		        		</a> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div style="clear:both;"></div> -->
-<!-- 	        	</div> -->
-<!-- 	        </div> -->
+	    	<div id="introduction" class="content_box">
+	        	<div class="information_box">
+	            	<div  style="float:left;">
+		        		<h2>公司简介</h2>
+		        	</div>
+		        	<div  style="float:right;margin-top:5px;">
+		        		<h3><a href="/zhgy/pages/introduction/introduction.jsp">查看详细</a></h3>
+		        	</div>
+		        	<div style="clear:both;"></div>
+	            </div>
+	            <div>
+		            <div  style="float:left;width:70%;">
+			            <c:forEach items="${companyIntroduction}" var="line">
+			            	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}" /></p>
+			        	</c:forEach>
+		        	</div>
+		        	<div  style="float:right;width:25%;">
+		        		<a href="/zhgy/pages/introduction/introduction.jsp">
+		        			<img alt="" src="/zhgy/images/companyPic/1.jpg" width="160px" height="120px"></img>
+		        		</a>
+		        	</div>
+		        	<div style="clear:both;"></div>
+	        	</div>
+	        </div>
 	        
-<!-- 	    	<div id="informations" class="content_box"> -->
-<!-- 	        	<div class="information_box"> -->
-<!-- 		        	<div  style="float:left;"> -->
-<!-- 		        		<h2>最新资讯</h2> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div  style="float:right;margin-top:5px;"> -->
-<!-- 		        		<h3><a href="pages/information/infos.jsp">更多</a></h3> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div style="clear:both;"></div> -->
-<!-- 	        	</div> -->
-<%-- 	        	<c:forEach items="${infos}" var="info"> --%>
-<!-- 	        		<div class="information_box"> -->
-<%-- 	    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span> --%>
-<!-- 		            </div> -->
-<%-- 	        	</c:forEach> --%>
+	    	<div id="informations" class="content_box">
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2>最新资讯</h2>
+		        	</div>
+		        	<div  style="float:right;margin-top:5px;">
+		        		<h3><a href="pages/information/infos.jsp">更多</a></h3>
+		        	</div>
+		        	<div style="clear:both;"></div>
+	        	</div>
+	        	<c:forEach items="${infos}" var="info">
+	        		<div class="information_box">
+	    	            <a href='/zhgy/InformationController.do?action=getInfo&id=<c:out value="${info.id}" />'><c:out value="${info.title}"/></a><span>[<fmt:formatDate value="${info.date}" pattern="yyyy-MM-dd" type="date" dateStyle="long"/>]</span>
+		            </div>
+	        	</c:forEach>
 	            
-<!-- 	        	<div class="cleaner"></div> -->
-<!-- 	        </div> -->
+	        	<div class="cleaner"></div>
+	        </div>
 	    
-<!-- 	    </div> -->
+	    </div>
 	    
 	    <div class="hotproduct_box">
 	        

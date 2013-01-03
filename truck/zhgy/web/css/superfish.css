@@ -103,6 +103,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
 	background:		#4096ee;
 	color: white;
+	z-index: 999;
 /* 	outline:		0; */
 /* 	background: url("/zhgy/images/sprite_wmNav.png") repeat-x scroll 0% 0% transparent; */
 /* 	background-repeat: no-repeat; */

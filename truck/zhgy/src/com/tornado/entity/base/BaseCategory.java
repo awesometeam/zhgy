@@ -21,6 +21,7 @@ public abstract class BaseCategory  implements Serializable {
 	public static String PROP_HAVEHIGHER = "Havehigher";
 	public static String PROP_NUMBER = "Number";
 	public static String PROP_ID = "Id";
+	public static String PROP_LANGUAGE = "Language";
 
 
 	// constructors
@@ -41,10 +42,12 @@ public abstract class BaseCategory  implements Serializable {
 	 */
 	public BaseCategory (
 		java.lang.Long id,
-		java.lang.Integer havehigher) {
+		java.lang.Integer havehigher,
+		java.lang.String language) {
 
 		this.setId(id);
 		this.setHavehigher(havehigher);
+		this.setLanguage(language);
 		initialize();
 	}
 
@@ -60,9 +63,10 @@ public abstract class BaseCategory  implements Serializable {
 	// fields
 	private java.lang.Integer havehigher;
 	private java.lang.Long higherid;
+	private java.lang.String introduction;
+	private java.lang.String language;
 	private java.lang.String name;
 	private java.lang.String number;
-	private java.lang.String introduction;
 
 
 
@@ -123,6 +127,40 @@ public abstract class BaseCategory  implements Serializable {
 
 
 	/**
+	 * Return the value associated with the column: INTRODUCTION
+	 */
+	public java.lang.String getIntroduction () {
+		return introduction;
+	}
+
+	/**
+	 * Set the value related to the column: INTRODUCTION
+	 * @param introduction the INTRODUCTION value
+	 */
+	public void setIntroduction (java.lang.String introduction) {
+		this.introduction = introduction;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: LANGUAGE
+	 */
+	public java.lang.String getLanguage () {
+		return language;
+	}
+
+	/**
+	 * Set the value related to the column: LANGUAGE
+	 * @param language the LANGUAGE value
+	 */
+	public void setLanguage (java.lang.String language) {
+		this.language = language;
+	}
+
+
+
+	/**
 	 * Return the value associated with the column: NAME
 	 */
 	public java.lang.String getName () {
@@ -152,23 +190,6 @@ public abstract class BaseCategory  implements Serializable {
 	 */
 	public void setNumber (java.lang.String number) {
 		this.number = number;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: INTRODUCTION
-	 */
-	public java.lang.String getIntroduction () {
-		return introduction;
-	}
-
-	/**
-	 * Set the value related to the column: INTRODUCTION
-	 * @param introduction the INTRODUCTION value
-	 */
-	public void setIntroduction (java.lang.String introduction) {
-		this.introduction = introduction;
 	}
 
 
