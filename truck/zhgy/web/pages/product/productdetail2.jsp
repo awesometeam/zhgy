@@ -44,36 +44,40 @@
 <div id="contentPanel" style="backgroup:#8E8E8E">
 	<div id="content_wrapper">
 	
-		<div id="sidebar">
+		<div id="sidebar" style="width:22%;">
 	        
-	       <%@ include file="../module/categoryModule2.jsp" %>
+	        <div id="categorytitle"></div>
+	        <ul id="categorylist" class="sf-menu sf-vertical">
+			<c:forEach items="${categories}" var="category">
+				<li>
+					<a href="#">${category.data.name}</a>
+					<c:if test="${fn:length(category.children) != 0}">
+						<ul>
+							<c:forEach items="${category.children}" var="subcategory">
+								<li>
+									<a href="#">${subcategory.data.name}</a>
+								</li>
+							</c:forEach>
+						</ul>
+					</c:if>
+				</li>
+			</c:forEach>
+		</ul>
 	    
 	    </div> 
 	    
-	    <div id="content">
+	    <div id="content" style="width:78%;">
 	        
 	        <div id="products" class="content_box">
-	        	<div class="information_box_title">
-	        		
-	        		<ul>
-	        			<li>主页</li>
-	        			<li>产品</li>
-	        			<li>纹身贴纸</li>
-	        			<li>纹身贴子分类一</li>
-	        			<li class="last">XXXX贴纸</li>
-	        		</ul>
-	        	
-<!-- 		        	<div  style="float:left;"> -->
-<!-- 		        		<h2>纹身贴纸</h2> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div style="float:left;"> -->
-<!-- 		        		&nbsp;&nbsp;&gt;&nbsp;&nbsp;纹身贴子分类一&nbsp;&nbsp;&gt;&nbsp;&nbsp;XXXX贴纸 -->
-<!-- 		        	</div> -->
-<!-- 		        	<div style="clear:both;"></div> -->
-
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2>纹身贴纸</h2>
+		        	</div>
+		        	<div style="float:left;">
+		        		&nbsp;&nbsp;&gt;&nbsp;&nbsp;纹身贴子分类一&nbsp;&nbsp;&gt;&nbsp;&nbsp;XXXX贴纸
+		        	</div>
+		        	<div style="clear:both;"></div>
 	        	</div>
-	        	<div class="cleaner"></div>
-	        	<div class="separation-line"></div>
 	        	
 	        	<div id="productdetail">
 	        	
@@ -83,28 +87,12 @@
 	        			</div>
 	        		</div>
 	        		<div class="detail">
-	        			<table>
-		        			<tr>
-		        				<th>Name:</th>
-		        				<td>name</td>
-		        			</tr>
-		        			<tr>
-		        				<th>Item Number:</th>
-		        				<td>item number</td>
-		        			</tr>
-		        			<tr>
-		        				<th>Size:</th>
-		        				<td>size</td>
-		        			</tr>
-		        			<tr>
-		        				<th>Packing:</th>
-		        				<td>packing</td>
-		        			</tr>
-		        			<tr>
-		        				<th>Material:</th>
-		        				<td>material</td>
-		        			</tr>
-	        			</table>
+	        			<ul>
+	        				<li><h2>类别：XXX</h2></li>
+	        				<li><h2>原料：XXX</h2></li>
+	        				<li><h2>流程：XXX</h2></li>
+	        				<li><h2>包装：XXX</h2></li>
+	        			</ul>
 	        		</div>
 	        		
 	        		<div class="cleaner"></div>		
@@ -120,7 +108,7 @@
 	    
 	</div>
 </div>
-<%@ include file="../module/hotproducts.jsp" %>
+
 <%@ include file="../footer.jsp" %>
 
 </body>

@@ -13,9 +13,11 @@
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/zhgy/css/feedback.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/CoreUtil.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript" src="/zhgy/js/module/information/info.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/contactus/feedback.js"></script>
 </head>
 <body>
 <%
@@ -28,7 +30,7 @@
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header_en.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">
@@ -38,32 +40,48 @@
 		</div>
 	
 		<div id="sidebar">
-		
-			<%@ include file="../module/categoryModule2.jsp" %>
 	        
+	        <%@ include file="../module/categoryModule2.jsp" %>
+	    
 	    </div> 
 	    
 	    <div id="content">
 	        
 	    	<div id="informations" class="content_box">
-	    		<div class="information_box_title">
-	        		<ul>
-	        			<li><a href="/zhgy/pages/information/infos.jsp">资讯</a></li>
-	        			<li class="last"><c:out value="${info.title}"></c:out></li>
-	        		</ul>
+	        	<div class="information_box">
+		        	<div  style="float:left;">
+		        		<h2>Feedback</h2>
+		        	</div>
+		        	<div style="clear:both;"></div>
 	        	</div>
-		        <div class="cleaner"></div>
-	        	<div class="separation-line"></div>
 	        	<div id="infodetail">
-	        		<p class="title"><c:out value="${info.title}"></c:out></p>
-	        		<c:forEach items="${content}" var="line">
-	        			<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
-	        		</c:forEach>
-		        	
+	        		<div id="feedback">
+						<form id="feedback-form" method="post" action="MessageController.do">
+						<div class="item">
+							<p class="label">Name：</p><input type="text" alertmsg="Please enter your name" required="true" name="author" id="author">
+						</div>
+						<div class="item">
+							<p class="label">Email：</p><input type="text" alertmsg="Please enter your Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>
+						</div>
+						<div class="item">
+							<p class="label">Phone Number：</p><input type="text" alertmsg="Please enter your phone number" required="true" name="phone" id="phone" style="width:300px;"><p class="label"></p>
+						</div>
+						<div class="item">
+							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>
+						</div>
+						<div class="item">
+							<p>Content：</p><textarea rows="5" alertmsg="Please enter your content" required="true" name="content" ></textarea>
+						</div>
+						<div class="item">
+							<input type=submit id="feedback-form-submit" accesskey="s" id="feedback-submit" value="Send Message">
+						</div>
+						<input type="hidden" name="action" value="leaveMessage_en">
+						<input type="hidden" name="messageid">
+						</form>
+					</div>
 	        	</div>
 	        	<div class="cleaner"></div>
 	        </div>
-	        <div align="right" style="width:100%;"><a href="/zhgy/pages/information/infos.jsp">[返回]</a></div>
 	        <div class="cleaner"></div>
 	    
 	    </div>

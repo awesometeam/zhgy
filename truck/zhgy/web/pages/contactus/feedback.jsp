@@ -42,10 +42,6 @@
 		<div id="sidebar">
 	        
 	        <%@ include file="../module/categoryModule2.jsp" %>
-	        
-	        <%@ include file="../module/searchModule.jsp" %>
-	        
-	        <%@ include file="../module/contactUsModule.jsp" %>
 	    
 	    </div> 
 	    
@@ -90,32 +86,10 @@
 	    
 	    </div>
 		<div class="cleaner"></div>
-		
-		<div class="hotproduct_box">
-	        
-	        	<div class="information_box">
-	        		<h2 id="hotproducttitle">热门产品</h2>
-	        	</div>
-	        	
-	        	<div id="hotproduct">
-			    	<ul id="hotproductul">
-			        
-			        	<c:forEach begin="0" end="2" >
-			        		<c:forEach items="${showcasePic}" var="pic">
-			        			<li><a href='/zhgy/product.jsp?<c:out value="${pic.correlationId}"/>'><img src='<c:out value="${pic.picturePath}"/>' alt='<c:out value="${pic.pictureDescription}"/>' width='150' height='150' /></a></li>
-			        		</c:forEach>
-			        	</c:forEach>
-			        </ul>
-			    </div>
-	        
-	        	<div class="cleaner"></div>
-	        </div>
-	    
-	    <div class="cleaner"></div>
 	    
 	</div>
 </div>
-
+<%@ include file="../module/hotproducts.jsp" %>
 <%@ include file="../footer.jsp" %>
 
 </body>

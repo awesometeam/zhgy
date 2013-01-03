@@ -27,21 +27,24 @@ public class Product extends BaseProduct {
 	public Product (
 		java.lang.Long id,
 		java.lang.String name,
-		boolean inshowcase) {
+		boolean inshowcase,
+		java.lang.String language) {
 
 		super (
 			id,
 			name,
-			inshowcase);
+			inshowcase,
+			language);
 	}
-	
+
 /*[CONSTRUCTOR MARKER END]*/
-	
-	public void setPrimaryImage(String s){
+	public void setPrimaryImage(String s)
+	{
 		primaryImage = s;
 	}
 
-	public String getPrimaryImage(){
+	public String getPrimaryImage()
+	{
 		return primaryImage;
 	}
 

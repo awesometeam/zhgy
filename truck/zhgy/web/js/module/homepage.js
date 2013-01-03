@@ -19,6 +19,10 @@ jQuery(function($) {
 		rand:false //是否随机指定默认幻灯图片
 	});
 	
+	$('.flexslider').flexslider({
+	    animation: "slide"
+	});
+	
 	
 
 //	if($("#informations").height()<$("#introduction").height())

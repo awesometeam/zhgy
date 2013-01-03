@@ -47,7 +47,7 @@ p{line-height:24px}
 	</DIV>
 	<p>&nbsp;</p>
 	<div style="width:100%;height:30px;BACKGROUND-COLOR:#9D9D9D;">
-		<p><a href="index.jsp">中文</a> | <a href="index.jsp">English</a> </p>
+		<p><a href="index.jsp">中文</a> | <a href="index_en.jsp">English</a> </p>
 	</div>
 </DIV>
 

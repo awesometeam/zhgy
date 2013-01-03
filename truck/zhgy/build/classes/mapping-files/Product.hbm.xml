@@ -9,6 +9,9 @@
 		table="product"
 	>
 		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
 		<id
 			name="Id"
 			type="java.lang.Long"
@@ -78,6 +81,13 @@
 			column="INSHOWCASE"
 			type="boolean"
 			not-null="true"
+		/>
+		<property
+			name="Language"
+			column="LANGUAGE"
+			type="string"
+			not-null="true"
+			length="2"
 		/>
 
 

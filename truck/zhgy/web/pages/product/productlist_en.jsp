@@ -38,7 +38,7 @@ $(document).ready(function(){
 	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
 %>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header_en.jsp" %>
 
 <div id="contentPanel" style="backgroup:#8E8E8E">
 	<div id="content_wrapper">

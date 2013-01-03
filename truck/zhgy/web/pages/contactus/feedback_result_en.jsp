@@ -32,7 +32,7 @@
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header_en.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">
@@ -52,7 +52,7 @@
 	    	<div id="informations" class="content_box">
 	        	<div class="information_box">
 		        	<div  style="float:left;">
-		        		<h2>在线留言</h2>
+		        		<h2>Feedback</h2>
 		        	</div>
 		        	<div style="clear:both;"></div>
 	        	</div>
@@ -60,28 +60,28 @@
 	        		<div id="feedback">
 						<form id="feedback-form" method="post" action="MessageController.do">
 						<div class="item">
-							<p class="label">姓名：</p><input type="text" name="author" id="author" value='<c:out value="${data.author}"></c:out>'>(*必填)
+							<p class="label">Name：</p><input type="text" name="author" id="author" value='<c:out value="${data.author}"></c:out>'>
 						</div>
 						<div class="item">
-							<p class="label">Email：</p><input type="text" name="email" id="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;"><p class="label"></p>(*必填)
+							<p class="label">Email：</p><input type="text" name="email" id="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;"><p class="label"></p>
 						</div>
 						<div class="item">
-							<p class="label">电话：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p>(*必填)
+							<p class="label">Phone：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p>
 						</div>
 						<div class="item">
-							<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p>
+							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p>
 						</div>
 						<div class="item">
-							<p class="label">内容：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
+							<p class="label">Content：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
 						</div>
 						<div class="item">
-							<input required="true" type="submit" accesskey="s" id="feedback-submit" value="修改留言">
+							<input required="true" type="submit" accesskey="s" id="feedback-submit" value="Modify Message">
 						</div>
-						<input type="hidden" name="action" value="updateMessage">
+						<input type="hidden" name="action" value="updateMessage_en">
 						<input type="hidden" name="messageid" value='<c:out value="${data.id}"></c:out>'>
 						</form>
 						<script type="text/javascript">
-							alert("留言成功！我们将尽快处理该信息并与您联系。");
+							alert("Thank you for your comment! We will as soon as possible to deal with the information and contact you.");
 						</script>
 					</div>
 	        	</div>

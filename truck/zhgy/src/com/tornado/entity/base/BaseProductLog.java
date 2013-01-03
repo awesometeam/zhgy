@@ -26,6 +26,7 @@ public abstract class BaseProductLog  implements Serializable {
 	public static String PROP_MODIFY_BY = "ModifyBy";
 	public static String PROP_INTRODUCTION = "Introduction";
 	public static String PROP_ID = "Id";
+	public static String PROP_LANGUAGE = "Language";
 	public static String PROP_CATEGORYID = "Categoryid";
 	public static String PROP_PACKAGING = "Packaging";
 
@@ -49,11 +50,13 @@ public abstract class BaseProductLog  implements Serializable {
 	public BaseProductLog (
 		java.lang.Long id,
 		java.lang.Long productId,
-		java.lang.String name) {
+		java.lang.String name,
+		java.lang.String language) {
 
 		this.setId(id);
 		this.setProductId(productId);
 		this.setName(name);
+		this.setLanguage(language);
 		initialize();
 	}
 
@@ -67,18 +70,19 @@ public abstract class BaseProductLog  implements Serializable {
 	private java.lang.Long id;
 
 	// fields
-	private java.lang.Long productId;
-	private java.lang.String name;
-	private java.lang.String number;
-	private java.lang.String specifications;
-	private java.lang.String materials;
-	private java.lang.String processes;
-	private java.lang.String packaging;
-	private java.lang.String introduction;
 	private java.lang.Long categoryid;
+	private java.lang.String introduction;
+	private java.lang.String language;
+	private java.lang.String materials;
+	private java.lang.String modifyBy;
 	private java.util.Date modifyDate;
 	private java.lang.Integer modifyType;
-	private java.lang.String modifyBy;
+	private java.lang.String name;
+	private java.lang.String number;
+	private java.lang.String packaging;
+	private java.lang.String processes;
+	private java.lang.Long productId;
+	private java.lang.String specifications;
 
 
 
@@ -105,120 +109,18 @@ public abstract class BaseProductLog  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: PRODUCT_ID
+	 * Return the value associated with the column: CATEGORYID
 	 */
-	public java.lang.Long getProductId () {
-		return productId;
+	public java.lang.Long getCategoryid () {
+		return categoryid;
 	}
 
 	/**
-	 * Set the value related to the column: PRODUCT_ID
-	 * @param productId the PRODUCT_ID value
+	 * Set the value related to the column: CATEGORYID
+	 * @param categoryid the CATEGORYID value
 	 */
-	public void setProductId (java.lang.Long productId) {
-		this.productId = productId;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: NAME
-	 */
-	public java.lang.String getName () {
-		return name;
-	}
-
-	/**
-	 * Set the value related to the column: NAME
-	 * @param name the NAME value
-	 */
-	public void setName (java.lang.String name) {
-		this.name = name;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: NUMBER
-	 */
-	public java.lang.String getNumber () {
-		return number;
-	}
-
-	/**
-	 * Set the value related to the column: NUMBER
-	 * @param number the NUMBER value
-	 */
-	public void setNumber (java.lang.String number) {
-		this.number = number;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: SPECIFICATIONS
-	 */
-	public java.lang.String getSpecifications () {
-		return specifications;
-	}
-
-	/**
-	 * Set the value related to the column: SPECIFICATIONS
-	 * @param specifications the SPECIFICATIONS value
-	 */
-	public void setSpecifications (java.lang.String specifications) {
-		this.specifications = specifications;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: MATERIALS
-	 */
-	public java.lang.String getMaterials () {
-		return materials;
-	}
-
-	/**
-	 * Set the value related to the column: MATERIALS
-	 * @param materials the MATERIALS value
-	 */
-	public void setMaterials (java.lang.String materials) {
-		this.materials = materials;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: PROCESSES
-	 */
-	public java.lang.String getProcesses () {
-		return processes;
-	}
-
-	/**
-	 * Set the value related to the column: PROCESSES
-	 * @param processes the PROCESSES value
-	 */
-	public void setProcesses (java.lang.String processes) {
-		this.processes = processes;
-	}
-
-
-
-	/**
-	 * Return the value associated with the column: PACKAGING
-	 */
-	public java.lang.String getPackaging () {
-		return packaging;
-	}
-
-	/**
-	 * Set the value related to the column: PACKAGING
-	 * @param packaging the PACKAGING value
-	 */
-	public void setPackaging (java.lang.String packaging) {
-		this.packaging = packaging;
+	public void setCategoryid (java.lang.Long categoryid) {
+		this.categoryid = categoryid;
 	}
 
 
@@ -241,18 +143,52 @@ public abstract class BaseProductLog  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: CATEGORYID
+	 * Return the value associated with the column: LANGUAGE
 	 */
-	public java.lang.Long getCategoryid () {
-		return categoryid;
+	public java.lang.String getLanguage () {
+		return language;
 	}
 
 	/**
-	 * Set the value related to the column: CATEGORYID
-	 * @param categoryid the CATEGORYID value
+	 * Set the value related to the column: LANGUAGE
+	 * @param language the LANGUAGE value
 	 */
-	public void setCategoryid (java.lang.Long categoryid) {
-		this.categoryid = categoryid;
+	public void setLanguage (java.lang.String language) {
+		this.language = language;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: MATERIALS
+	 */
+	public java.lang.String getMaterials () {
+		return materials;
+	}
+
+	/**
+	 * Set the value related to the column: MATERIALS
+	 * @param materials the MATERIALS value
+	 */
+	public void setMaterials (java.lang.String materials) {
+		this.materials = materials;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: MODIFY_BY
+	 */
+	public java.lang.String getModifyBy () {
+		return modifyBy;
+	}
+
+	/**
+	 * Set the value related to the column: MODIFY_BY
+	 * @param modifyBy the MODIFY_BY value
+	 */
+	public void setModifyBy (java.lang.String modifyBy) {
+		this.modifyBy = modifyBy;
 	}
 
 
@@ -292,18 +228,103 @@ public abstract class BaseProductLog  implements Serializable {
 
 
 	/**
-	 * Return the value associated with the column: MODIFY_BY
+	 * Return the value associated with the column: NAME
 	 */
-	public java.lang.String getModifyBy () {
-		return modifyBy;
+	public java.lang.String getName () {
+		return name;
 	}
 
 	/**
-	 * Set the value related to the column: MODIFY_BY
-	 * @param modifyBy the MODIFY_BY value
+	 * Set the value related to the column: NAME
+	 * @param name the NAME value
 	 */
-	public void setModifyBy (java.lang.String modifyBy) {
-		this.modifyBy = modifyBy;
+	public void setName (java.lang.String name) {
+		this.name = name;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: NUMBER
+	 */
+	public java.lang.String getNumber () {
+		return number;
+	}
+
+	/**
+	 * Set the value related to the column: NUMBER
+	 * @param number the NUMBER value
+	 */
+	public void setNumber (java.lang.String number) {
+		this.number = number;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: PACKAGING
+	 */
+	public java.lang.String getPackaging () {
+		return packaging;
+	}
+
+	/**
+	 * Set the value related to the column: PACKAGING
+	 * @param packaging the PACKAGING value
+	 */
+	public void setPackaging (java.lang.String packaging) {
+		this.packaging = packaging;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: PROCESSES
+	 */
+	public java.lang.String getProcesses () {
+		return processes;
+	}
+
+	/**
+	 * Set the value related to the column: PROCESSES
+	 * @param processes the PROCESSES value
+	 */
+	public void setProcesses (java.lang.String processes) {
+		this.processes = processes;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: PRODUCT_ID
+	 */
+	public java.lang.Long getProductId () {
+		return productId;
+	}
+
+	/**
+	 * Set the value related to the column: PRODUCT_ID
+	 * @param productId the PRODUCT_ID value
+	 */
+	public void setProductId (java.lang.Long productId) {
+		this.productId = productId;
+	}
+
+
+
+	/**
+	 * Return the value associated with the column: SPECIFICATIONS
+	 */
+	public java.lang.String getSpecifications () {
+		return specifications;
+	}
+
+	/**
+	 * Set the value related to the column: SPECIFICATIONS
+	 * @param specifications the SPECIFICATIONS value
+	 */
+	public void setSpecifications (java.lang.String specifications) {
+		this.specifications = specifications;
 	}
 
 

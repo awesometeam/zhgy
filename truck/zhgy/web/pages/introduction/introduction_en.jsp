@@ -19,18 +19,15 @@
 </head>
 <body>
 <%
-	request.setAttribute("CompanyIntroduction",CompanyInfoModel.getCompanyIntroduction());
-
+	request.setAttribute("CompanyIntroduction",CompanyInfoModel.getCompanyIntroduction_en());
 	request.setAttribute("CompanyPhone",CompanyInfoModel.getCompanyPhone());
 	request.setAttribute("CompanyFax",CompanyInfoModel.getCompanyFax());
-	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress());
+	request.setAttribute("CompanyAddress",CompanyInfoModel.getCompanyAddress_en());
 	request.setAttribute("CompanyEmail",CompanyInfoModel.getCompanyEmail());
 	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
-	
-	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header_en.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">
