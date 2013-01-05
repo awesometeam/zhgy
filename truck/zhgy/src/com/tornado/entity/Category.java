@@ -32,6 +32,15 @@ public class Category extends BaseCategory {
 			havehigher,
 			language);
 	}
+	
+	public boolean equals(Object obj)
+	{
+		Long rhs = (Long)obj;
+		if(getId().equals(rhs))
+			return true;
+		else
+			return false;
+	}
 
 /*[CONSTRUCTOR MARKER END]*/
 

@@ -30,7 +30,7 @@
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 %>
 
-<%@ include file="pages/header_en.jsp" %>
+<%@ include file="pages/header_en2.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">

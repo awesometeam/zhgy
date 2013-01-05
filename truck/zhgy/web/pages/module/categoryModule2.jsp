@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="/zhgy/css/superfish-vertical.css" media="screen">
 
 <%
-	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
+	request.setAttribute("categories",new CategoryModel().getCategoryTree_en().getRoot().getChildren());
 %>
 
 <div class="sidebar_box_no_shadow">

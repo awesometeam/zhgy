@@ -9,15 +9,13 @@ import com.tornado.entity.Category;;
 
 public class CategoryModel extends AbstractModel<Category>
 {
-	public Tree getCategoryTree()
+	protected Tree getCategoryTree(List<Category> categorys)
 	{
 		boolean gohead = false;
 		
-		List<Category> allCategory = list();
-		
 		Tree tree = new Tree();
 		
-		Iterator<Category> iter = allCategory.iterator();
+		Iterator<Category> iter = categorys.iterator();
 		Category category = null;
 		while(iter.hasNext())
 		{
@@ -34,7 +32,7 @@ public class CategoryModel extends AbstractModel<Category>
 		do
 		{
 			gohead = false;
-			iter = allCategory.iterator();
+			iter = categorys.iterator();
 			while(iter.hasNext())
 			{
 				category = iter.next();
@@ -51,4 +49,17 @@ public class CategoryModel extends AbstractModel<Category>
 		
 		return tree;
 	}
+	
+	public Tree getCategoryTree()
+	{
+		String hql = "from Category where language='cn'";
+		return getCategoryTree(list(hql));
+	}
+	
+	public Tree getCategoryTree_en()
+	{
+		String hql = "from Category where language='en'";
+		return getCategoryTree(list(hql));
+	}
+	
 }

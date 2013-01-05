@@ -27,7 +27,7 @@
 	request.setAttribute("CompanyQQ",CompanyInfoModel.getCompanyQQ());
 %>
 
-<%@ include file="../header_en.jsp" %>
+<%@ include file="../header_en_small.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">
@@ -87,7 +87,7 @@
 	    
 	</div>
 </div>
-<%@ include file="../module/hotproducts.jsp" %>
+<%@ include file="../module/hotproducts_en.jsp" %>
 
 <%@ include file="../footer.jsp" %>
 

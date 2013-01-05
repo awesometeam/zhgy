@@ -35,9 +35,13 @@ jQuery(function($) {
 	var left = (1900 - $(document).width())/2;
 
 	//header pic
-	$("#header").css("left","-"+left+"px");
+	if($("#header").length>0)
+		$("#header").css("left","-"+left+"px");
 	//menu pic
-	$("#menu_wrapper").css("left","-"+left+"px");
+	if($("#menu_wrapper").length>0)
+	{
+		$("#menu_wrapper").css("left","-"+left+"px");
+	}
 	
 	if($("ul.sf-menu").length > 0)
 	{//category list

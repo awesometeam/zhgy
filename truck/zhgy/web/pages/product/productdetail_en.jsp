@@ -39,7 +39,7 @@
 	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
 %>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../header_en_small.jsp" %>
 
 <div id="contentPanel" style="backgroup:#8E8E8E">
 	<div id="content_wrapper">
@@ -56,11 +56,11 @@
 	        	<div class="information_box_title">
 	        		
 	        		<ul>
-	        			<li>主页</li>
-	        			<li>产品</li>
-	        			<li>纹身贴纸</li>
-	        			<li>纹身贴子分类一</li>
-	        			<li class="last">XXXX贴纸</li>
+	        			<li>Home</li>
+	        			<li>Products</li>
+	        			<li>Tattoo Sticker</li>
+	        			<li>Tattoo Sticker_1</li>
+	        			<li class="last">a example Tattoo Sticker</li>
 	        		</ul>
 	        	
 <!-- 		        	<div  style="float:left;"> -->
@@ -120,7 +120,7 @@
 	    
 	</div>
 </div>
-<%@ include file="../module/hotproducts.jsp" %>
+<%@ include file="../module/hotproducts_en.jsp" %>
 <%@ include file="../footer.jsp" %>
 
 </body>

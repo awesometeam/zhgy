@@ -18,5 +18,11 @@ public class CategoryModelTest extends TestCase {
 		Tree tree = new CategoryModel().getCategoryTree();
 		assertEquals(true, true);
 	}
+	
+	public void testGetCategoryTree_en()
+	{
+		Tree tree = new CategoryModel().getCategoryTree_en();
+		assertEquals(true, true);
+	}
 
 }

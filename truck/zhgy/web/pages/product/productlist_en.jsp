@@ -22,14 +22,20 @@ $(document).ready(function(){
     $('.productitem').jqzoom({  
            zoomType: 'standard',  
            alwaysOn : false,  
-           zoomWidth: 200,  
-           zoomHeight:200,  
+           zoomWidth: 210,  
+           zoomHeight:210,  
            position:'left',  
-           xOffset: 30,  
-           yOffset:0,  
+           xOffset: 15,  
+           yOffset: 0,  
            showEffect : 'fadein',  
            hideEffect: 'fadeout'  
        });  
+    
+    $('.productitem').click(function(){
+		window.location.href="/zhgy/pages/product/productdetail_en.jsp";
+    	return false;
+    });
+    
  }); 
 </script>
 </head>
@@ -38,7 +44,7 @@ $(document).ready(function(){
 	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
 %>
 
-<%@ include file="../header_en.jsp" %>
+<%@ include file="../header_en_small.jsp" %>
 
 <div id="contentPanel" style="backgroup:#8E8E8E">
 	<div id="content_wrapper">
@@ -86,7 +92,7 @@ $(document).ready(function(){
 			        			<c:forEach begin="1" end="4" step="1">
 				        			<li>
 				        				<div class="item">
-				        					<a title="ZH-CS050" href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>		
+				        					<a title="ZH-CS050" href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>
 				        				</div>
 				        				<div class="item-cescription"> 贴纸</div>
 				        				<div class="item-cescription"> ZH-CS050</div>

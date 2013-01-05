@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<div id="header_wrapper">
-	<div id="header">
+<div id="header_wrapper_small">
+	<div id="header_small">
 	</div>
 <!--     <div id="header"> -->
 <!--     	<div id="site_title"> -->

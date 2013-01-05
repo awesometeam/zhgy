@@ -69,10 +69,12 @@ h3 {
 
 /* header */
 
-/* #header_wrapper { */
-/* 	width: 100%; */
-/* 	background: url(../images/header-bg2.png) repeat-x; */
-/* } */
+#header_wrapper_small {
+	width: 100%;
+	min-width: 920px;
+	overflow: hidden;
+	background: url(../images/header-bg2.png) repeat-x;
+}
 
 #header_wrapper {
 	width:100%;
@@ -89,14 +91,14 @@ h3 {
 	background: url(../images/bg.jpg) no-repeat;
 }
 
-/* #header { */
-/* 	clear: both; */
-/* 	width: 960px; */
-/* 	height: 110px; */
-/* 	margin: 0 auto; */
-/* 	padding: 0px; */
-/* 	background: url(../images/header-bg.png) no-repeat; */
-/* } */
+#header_small {
+	clear: both;
+	width: 960px;
+	height: 110px;
+	margin: 0 auto;
+	padding: 0px;
+	background: url(../images/header-bg.png) no-repeat;
+}
 
 #header p {
 	clear: both;
@@ -662,3 +664,13 @@ position: absolute; top: 9px; right: 5px}
 	width: 5%;
 	float:left;
 }
+
+#contactus {
+	line-height: 20px;
+	padding-left: 20px;
+}
+
+#contactus div {
+	margin-top: 10px;
+}
+

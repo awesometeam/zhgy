@@ -15,7 +15,7 @@
 	<div class="hotproduct_box">
 
 		<div class="information_box">
-			<h2 id="hotproducttitle"></h2>
+			<h2 id="hotproducttitle">latest products</h2>
 		</div>
 		<div>
 			<div class="hotproduct-Navigation">

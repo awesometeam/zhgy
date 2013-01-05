@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <div id="header_wrapper">
-	<div id="header">
+	<div id="header" style="background: url(/zhgy/images/bg2.jpg) no-repeat;">
 	</div>
 <!--     <div id="header"> -->
 <!--     	<div id="site_title"> -->
