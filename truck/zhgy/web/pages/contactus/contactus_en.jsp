@@ -56,16 +56,26 @@
 	        	</div>
 	        	<div id="infodetail">
 	        		<div id="contactus">
-						<div>John Chen</div>
-						<div>Sells director</div>
-						<div>Wenzhou Zhonghao Crafts & Gifts Co.,Ltd<br />
-						     Bldg.7,Section 5<br />
-						     Longgang Demonstration Industrial Zone<br />
-							 Wenzhou City<br />
-						     China</div>
-						<div>Tel. 86-0577-59877766</div>
-						<div>Fax 86-0577-59877666</div>
-						<div>Mail wzzhgift@wzzhgift.com</div>
+	        			<table width="100%">
+	        				<tr>
+	        					<td width="200px" valign="top">
+	        						<img alt="" src="/zhgy/images/contactus.jpg" />
+	        					</td>
+	        					<td>
+									<div>John Chen</div>
+									<div>Sells director</div>
+									<div>Wenzhou Zhonghao Crafts & Gifts Co.,Ltd<br />
+									     Bldg.7,Section 5<br />
+									     Longgang Demonstration Industrial Zone<br />
+										 Wenzhou City<br />
+									     China</div>
+									<div>Tel: 86-0577-59877766</div>
+									<div>Fax: 86-0577-59877666</div>
+									<div>Mail: <a href="mailto:wzzhgift@wzzhgift.com">wzzhgift@wzzhgift.com</a></div>
+									<div>Web: <a href="http://www.zhonghaogift.com">www.zhonghaogift.com</a></div>
+								</td>
+							</tr>
+						</table>
 					</div>
 	        	</div>
 	        	<div class="cleaner"></div>

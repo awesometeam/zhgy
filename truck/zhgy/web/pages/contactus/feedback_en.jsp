@@ -64,7 +64,7 @@
 							<p class="label">Email：</p><input type="text" alertmsg="Please enter your Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>
 						</div>
 						<div class="item">
-							<p class="label">Phone Number：</p><input type="text" alertmsg="Please enter your phone number" required="true" name="phone" id="phone" style="width:300px;"><p class="label"></p>
+							<p class="label">Phone：</p><input type="text" name="phone" id="phone" style="width:300px;"><p class="label"></p>
 						</div>
 						<div class="item">
 							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>

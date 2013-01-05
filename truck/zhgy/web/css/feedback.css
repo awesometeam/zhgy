@@ -16,11 +16,17 @@
 	margin-top: 0;
 	line-height: 1.2;
 	padding: 0.4em 0.3em;
+	font-family: Microsoft Yahei;
+}
+
+#feedback form {
+    padding-left: 30px;
+    padding-top: 10px;
 }
 
 #feedback form .label {
 	float:left;
-	width: 70px;
+	width: 50px;
 }
 #feedback form #feedback-submit {
 	width: 10em;

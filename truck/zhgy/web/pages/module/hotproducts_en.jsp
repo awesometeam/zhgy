@@ -19,7 +19,7 @@
 		</div>
 		<div>
 			<div class="hotproduct-Navigation">
-				<img src="/zhgy/images/arrow-l.png"></img>
+				<img src="/zhgy/images/arrow-l-blue.png"></img>
 			</div>
 			<div id="hotproduct">
 				<ul id="hotproductul">
@@ -37,7 +37,7 @@
 				</ul>
 			</div>
 			<div class="hotproduct-Navigation">
-				<img src="/zhgy/images/arrow-r.png" style="float:right;"></img>
+				<img src="/zhgy/images/arrow-r-blue.png" style="float:right;"></img>
 			</div>
 			<div class="cleaner"></div>
 		</div>

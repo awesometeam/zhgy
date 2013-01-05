@@ -64,7 +64,7 @@
 							<p class="label">Email：</p><input type="text" alertmsg="请填写Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>(*必填)
 						</div>
 						<div class="item">
-							<p class="label">电话：</p><input type="text" alertmsg="请填写电话" required="true" name="phone" id="phone" style="width:300px;"><p class="label"></p>(*必填)
+							<p class="label">电话：</p><input type="text" name="phone" id="phone" style="width:300px;"><p class="label"></p>(*必填)
 						</div>
 						<div class="item">
 							<p class="label">主题：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>

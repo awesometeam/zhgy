@@ -78,15 +78,15 @@ $(document).ready(function(){
 	        <div id="products" class="content_box">
 	       	 	<div class="information_box_title">
 	        		<ul>
-	        			<li>纹身贴纸</li>
-	        			<li class="last">纹身贴子分类一</li>
+	        			<li>Tattoo Sticker</li>
+	        			<li class="last">Tattoo Sticker_1</li>
 	        		</ul>
 	        	</div>
 	        	<div class="cleaner"></div>
 	        	<div class="separation-line"></div>
 	        	
 	        	<div id="productlist">
-	        		<c:forEach begin="1" end="3" step="1">
+	        		<c:forEach begin="1" end="4" step="1">
 	        			<div>
 	        				<ul>
 			        			<c:forEach begin="1" end="4" step="1">
@@ -94,8 +94,8 @@ $(document).ready(function(){
 				        				<div class="item">
 				        					<a title="ZH-CS050" href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>
 				        				</div>
-				        				<div class="item-cescription"> 贴纸</div>
-				        				<div class="item-cescription"> ZH-CS050</div>
+				        				<div class="item-cescription">Stickers</div>
+				        				<div class="item-cescription">ZH-CS050</div>
 			        				</li>
 			        			</c:forEach>
 		        			</ul>

@@ -57,7 +57,8 @@ h2 {
 	margin: 0px;
 	padding: 0px;
 	font-weight: normal;
-	color: #106fb8;
+/* 	color: #106fb8; */
+	color: #3e679b;
 }
 
 h3 {
@@ -149,7 +150,7 @@ h3 {
 	width: 1900px;
 	min-width: 920px;
 	height: 75px;
-	background: url(../images/menu2.png) no-repeat;
+	background: url(../images/menu2-blue.png) no-repeat;
 	position: relative;
 }
 
@@ -666,11 +667,17 @@ position: absolute; top: 9px; right: 5px}
 }
 
 #contactus {
-	line-height: 20px;
-	padding-left: 20px;
+    line-height: 25px;
+/*     padding-left: 30px; */
+    font-size: 15px;
+/*     padding-top: 5px; */
 }
 
 #contactus div {
 	margin-top: 10px;
+}
+
+#contactus table td div {
+	margin-left: 10px;
 }
 
