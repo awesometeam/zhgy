@@ -17,16 +17,15 @@
 <%
 	request.setAttribute("categories",new CategoryModel().getCategoryTree_en().getRoot().getChildren());
 %>
-
 <div class="sidebar_box_no_shadow">
 	<div id="categorytitle"></div>
 	<ul id="categorylist" class="sf-menu sf-vertical">
 		<c:forEach items="${categories}" var="category">
-			<li><a href="#">${category.data.name}</a> <c:if
+			<li><a href="###">${category.data.name}</a> <c:if
 					test="${fn:length(category.children) != 0}">
 					<ul>
 						<c:forEach items="${category.children}" var="subcategory">
-							<li><a href="#">${subcategory.data.name}</a></li>
+							<li><a href='/zhgy/ProductController.do?action=getProductList&categoryid=<c:out value="${subcategory.data.id}"></c:out>' >${subcategory.data.name}</a></li>
 						</c:forEach>
 					</ul>
 				</c:if></li>

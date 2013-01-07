@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+#company-photo ul
+{
+	list-style: none outside none;
+	padding: 0px;
+	z-index: 1;
+}
+
+#company-photo ul li
+{
+	width:200px;
+	position: relative;
+	float: left;
+	padding: 15px 18px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#company-photo .item
+{
+	border: 1px solid rgb(229, 229, 229);
+	background-color: white;
+	padding: 10px;
+}
+
+#company-photo .item-cescription
+{
+	text-align: center;
+/* 	padding: 8px 0px; */
+}

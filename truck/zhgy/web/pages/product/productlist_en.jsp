@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="com.tornado.model.CategoryModel" %>
+<%@ page import="com.tornado.model.ProductModel" %>
+<%@ page import="com.tornado.entity.Product" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -19,6 +20,7 @@
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){  
+	
     $('.productitem').jqzoom({  
            zoomType: 'standard',  
            alwaysOn : false,  
@@ -27,12 +29,12 @@ $(document).ready(function(){
            position:'left',  
            xOffset: 15,  
            yOffset: 0,  
-           showEffect : 'fadein',  
-           hideEffect: 'fadeout'  
+           showEffect : 'show',
+           hideEffect: 'hide'  
        });  
     
     $('.productitem').click(function(){
-		window.location.href="/zhgy/pages/product/productdetail_en.jsp";
+		window.location.href="ProductController.do?action=getProduct&productid="+$(this).attr("id");
     	return false;
     });
     
@@ -40,9 +42,6 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<%
-	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
-%>
 
 <%@ include file="../header_en_small.jsp" %>
 
@@ -53,24 +52,6 @@ $(document).ready(function(){
 	        
 	        <%@ include file="../module/categoryModule2.jsp" %>
 	        
-<!-- 	        <div id="categorytitle"></div> -->
-<!-- 	        <ul id="categorylist" class="sf-menu sf-vertical"> -->
-<%-- 			<c:forEach items="${categories}" var="category"> --%>
-<!-- 				<li> -->
-<%-- 					<a href="#">${category.data.name}</a> --%>
-<%-- 					<c:if test="${fn:length(category.children) != 0}"> --%>
-<!-- 						<ul> -->
-<%-- 							<c:forEach items="${category.children}" var="subcategory"> --%>
-<!-- 								<li> -->
-<%-- 									<a href="#">${subcategory.data.name}</a> --%>
-<!-- 								</li> -->
-<%-- 							</c:forEach> --%>
-<!-- 						</ul> -->
-<%-- 					</c:if> --%>
-<!-- 				</li> -->
-<%-- 			</c:forEach> --%>
-<!-- 			</ul> -->
-	    
 	    </div> 
 	    
 	    <div id="content" style="width:78%;">
@@ -78,29 +59,35 @@ $(document).ready(function(){
 	        <div id="products" class="content_box">
 	       	 	<div class="information_box_title">
 	        		<ul>
-	        			<li>Tattoo Sticker</li>
-	        			<li class="last">Tattoo Sticker_1</li>
+	        			<li><c:out value="${catetory}"></c:out></li>
+	        			<li class="last"><c:out value="${subcatetory}"></c:out></li>
 	        		</ul>
 	        	</div>
 	        	<div class="cleaner"></div>
 	        	<div class="separation-line"></div>
 	        	
 	        	<div id="productlist">
-	        		<c:forEach begin="1" end="4" step="1">
 	        			<div>
 	        				<ul>
-			        			<c:forEach begin="1" end="4" step="1">
+			        			<c:forEach items="${products}" var="product">
 				        			<li>
 				        				<div class="item">
-				        					<a title="ZH-CS050" href="/zhgy/images/product/1/6/ZH-CS050.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img></a>
+				        					<a title='<c:out value="${product.name}"></c:out>' 
+				        					   href='<c:out value="${product.primaryImage}"></c:out>' 
+				        					   id='<c:out value="${product.id}"></c:out>'
+				        					   class="productitem">
+				        					   	<img width="100%" 
+				        					   		 height="100%" 
+				        					   		 src='<c:out value="${product.primaryImage}"></c:out>'>
+				        					    </img>
+				        					</a>
 				        				</div>
-				        				<div class="item-cescription">Stickers</div>
-				        				<div class="item-cescription">ZH-CS050</div>
+				        				<div class="item-cescription"><c:out value="${product.name}"></c:out></div>
+				        				<div class="item-cescription"><c:out value="${product.number}"></c:out></div>
 			        				</li>
 			        			</c:forEach>
 		        			</ul>
 	        			</div>
-	        		</c:forEach>
 	        	</div>
 		        	
 	        </div>

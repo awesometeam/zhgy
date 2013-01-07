@@ -61,43 +61,46 @@ $(document).ready(function() {
 
 			<div id="informations" class="content_box">
 
-				<div id="slider" class="flexslider" style="margin: 0 0 10px;">
-					<ul class="slides">
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_caramel.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_caramel.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_cheesecake_brownie.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_cheesecake_brownie.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_donut.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_donut.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_lemon.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_lemon.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_caramel.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_caramel.jpg" />
-						</li>
-					</ul>
-				</div>
-				<div id="carousel" class="flexslider" style="0px 0px 30px;">
-					<ul class="slides">
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_caramel.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_caramel.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_cheesecake_brownie.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_cheesecake_brownie.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_donut.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_donut.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_lemon.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_lemon.jpg" />
-						</li>
-						<li data-thumb="/zhgy/images/show/kitchen_adventurer_caramel.jpg">
-							<img src="/zhgy/images/show/kitchen_adventurer_caramel.jpg" />
-						</li>
-					</ul>
+				<div style="width:90%;margin:0px auto;">
+					<div id="slider" class="flexslider" style="margin: 0 0 10px;">
+						<ul class="slides">
+								<li data-thumb="/zhgy/images/companyPic/4.jpg">
+									<img src="/zhgy/images/companyPic/4.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/5.jpg">
+									<img src="/zhgy/images/companyPic/5.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/6.jpg">
+									<img src="/zhgy/images/companyPic/6.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/7.jpg">
+									<img src="/zhgy/images/companyPic/7.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/8.jpg">
+									<img src="/zhgy/images/companyPic/8.jpg" />
+								</li>
+						</ul>
+					</div>
+				
+					<div id="carousel" class="flexslider" style="0px 0px 30px;">
+						<ul class="slides">
+								<li data-thumb="/zhgy/images/companyPic/4.jpg">
+									<img src="/zhgy/images/companyPic/4.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/5.jpg">
+									<img src="/zhgy/images/companyPic/5.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/6.jpg">
+									<img src="/zhgy/images/companyPic/6.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/7.jpg">
+									<img src="/zhgy/images/companyPic/7.jpg" />
+								</li>
+								<li data-thumb="/zhgy/images/companyPic/8.jpg">
+									<img src="/zhgy/images/companyPic/8.jpg" />
+								</li>
+						</ul>
+					</div>
 				</div>
 
 			</div>
@@ -105,10 +108,11 @@ $(document).ready(function() {
 	    
 	    </div>
 		<div class="cleaner"></div>
+		
+		<%@ include file="../module/hotproducts_en_short.jsp" %>
 	    
 	</div>
 </div>
-<%@ include file="../module/hotproducts.jsp" %>
 
 <%@ include file="../footer.jsp" %>
 

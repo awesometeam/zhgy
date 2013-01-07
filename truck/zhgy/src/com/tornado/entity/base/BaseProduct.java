@@ -122,7 +122,7 @@ public abstract class BaseProduct  implements Serializable {
 	/**
 	 * Return the value associated with the column: INSHOWCASE
 	 */
-	public boolean isInshowcase () {
+	public boolean getInshowcase () {
 		return inshowcase;
 	}
 

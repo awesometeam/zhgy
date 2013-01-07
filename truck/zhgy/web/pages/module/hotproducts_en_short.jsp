@@ -18,10 +18,10 @@
 			<h2 id="hotproducttitle">latest products</h2>
 		</div>
 		<div>
-			<div class="hotproduct-Navigation">
-				<img src="/zhgy/images/arrow-l-blue.png"></img>
-			</div>
-			<div id="hotproduct">
+<!-- 			<div class="hotproduct-Navigation"> -->
+<!-- 				<img src="/zhgy/images/arrow-l-blue.png"></img> -->
+<!-- 			</div> -->
+			<div id="hotproduct" class="short">
 				<ul id="hotproductul">
 					<c:forEach begin="0" end="2">
 						<c:forEach items="${showcasePic}" var="pic">
@@ -36,9 +36,9 @@
 					</c:forEach>
 				</ul>
 			</div>
-			<div class="hotproduct-Navigation">
-				<img src="/zhgy/images/arrow-r-blue.png" style="float:right;"></img>
-			</div>
+<!-- 			<div class="hotproduct-Navigation"> -->
+<!-- 				<img src="/zhgy/images/arrow-r-blue.png" style="float:right;"></img> -->
+<!-- 			</div> -->
 			<div class="cleaner"></div>
 		</div>
 		

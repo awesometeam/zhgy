@@ -15,11 +15,24 @@
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="/zhgy/css/superfish.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/zhgy/css/superfish-vertical.css" media="screen">
-<link rel="stylesheet" type="text/css" href="/zhgy/css/temp.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/zhgy/css/product.css" media="screen">
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/hoverIntent.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/superfish.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
+<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish({
+				animation: 	{height:'show'},
+		        delay:		300,
+		        speed:		'fast',
+		        autoArrows:	true
+			});
+		});
+
+</script>
 </head>
 <body>
 <%
@@ -43,11 +56,11 @@
 	        	<div class="information_box_title">
 	        		
 	        		<ul>
-	        			<li><a href="/zhgy" >Home</a></li>
-	        			<li><a href="/zhgy/ProductController.do?action=getProductList">Products</a></li>
-	        			<li><a href="/zhgy/ProductController.do?action=getProductList"><c:out value="${category.name}"></c:out></a></li>
-	        			<li><a href="/zhgy/ProductController.do?action=getProductList&categoryid=<c:out value="${subcategory.id}"></c:out>"><c:out value="${subcategory.name}"></c:out></a></li>
-	        			<li class="last"><c:out value="${product.name}"></c:out></li>
+	        			<li>Home</li>
+	        			<li>Products</li>
+	        			<li>Tattoo Sticker</li>
+	        			<li>Tattoo Sticker_1</li>
+	        			<li class="last">a example Tattoo Sticker</li>
 	        		</ul>
 	        	
 <!-- 		        	<div  style="float:left;"> -->
@@ -62,34 +75,32 @@
 	        	<div class="cleaner"></div>
 	        	<div class="separation-line"></div>
 	        	
-	        	<div id="productdetail">
+	        	<div id="productdetail_temp">
 	        	
 	        		<div class="pic">
-	        			<div>
-	        				<img width="350px" height="350px" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>
-	        			</div>
+	        			<img width="350px" height="350px" src="/zhgy/images/IMG_1773.JPG"></img>
 	        		</div>
 	        		<div class="detail">
 	        			<table>
 		        			<tr>
 		        				<th>Name:</th>
-		        				<td><c:out value="${product.name}"></c:out></td>
+		        				<td>name</td>
 		        			</tr>
 		        			<tr>
 		        				<th>Item Number:</th>
-		        				<td><c:out value="${product.number}"></c:out></td>
+		        				<td>item number</td>
 		        			</tr>
 		        			<tr>
 		        				<th>Size:</th>
-		        				<td><c:out value="${product.specifications}"></c:out></td>
+		        				<td>size</td>
 		        			</tr>
 		        			<tr>
 		        				<th>Packing:</th>
-		        				<td><c:out value="${product.packaging}"></c:out></td>
+		        				<td>packing</td>
 		        			</tr>
 		        			<tr>
 		        				<th>Material:</th>
-		        				<td><c:out value="${product.materials}"></c:out></td>
+		        				<td>material</td>
 		        			</tr>
 	        			</table>
 	        		</div>

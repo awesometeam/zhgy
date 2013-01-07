@@ -5,13 +5,24 @@ import com.tornado.entity.base.BaseProduct;
 
 
 public class Product extends BaseProduct {
+	
 	private static final long serialVersionUID = 1L;
+	
+	private static final String noPicture = "/zhgy/images/NoPicture.jpg";
 	
 	private String primaryImage = "";
 
 /*[CONSTRUCTOR MARKER BEGIN]*/
 	public Product () {
 		super();
+	}
+	
+	public Product (Long id,String name,String number, String primaryImage) {
+		super();
+		setId(id);
+		setName(name);
+		setNumber(number);
+		setPrimaryImage(primaryImage);
 	}
 
 	/**
@@ -40,7 +51,10 @@ public class Product extends BaseProduct {
 /*[CONSTRUCTOR MARKER END]*/
 	public void setPrimaryImage(String s)
 	{
-		primaryImage = s;
+		if(s==null || s.equals(""))
+			primaryImage = Product.noPicture;
+		else
+			primaryImage = s;
 	}
 
 	public String getPrimaryImage()

@@ -92,10 +92,11 @@
 	    </div>
 		<div class="cleaner"></div>
 	    
+	    <%@ include file="../module/hotproducts_en_short.jsp" %>
+	    
 	</div>
 </div>
 
-<%@ include file="../module/hotproducts_en.jsp" %>
 
 <%@ include file="../footer.jsp" %>
 

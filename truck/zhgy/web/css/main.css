@@ -350,6 +350,17 @@ h3 {
 	float:left;
 }
 
+#hotproduct.short {
+	width:100%;
+/* 	min-width: 920px; */
+	position: relative;
+	overflow: hidden;
+	left:0px;
+	top:0px;
+	float:left;
+	padding:10px 15px;
+}
+
 #hotproduct ul
 {
 	margin:0;
@@ -399,8 +410,8 @@ h3 {
 	width: 100%;
 /* 	min-width: 920px; */
 	margin: 0 auto;
-	background: #454545;
-	border-top: thin medium #bfbfbf;
+/* 	background: #454545; */
+	border-top: 1px solid rgb(211, 211, 211);
 /* 	background: #fff url(../images/footer_top.jpg) top repeat-x; */
 }
 
@@ -409,7 +420,8 @@ h3 {
 	margin: 0 auto;
 	line-height: 30px;
 	text-align: center;
-	color: #bdbdbd;
+/* 	color: #bdbdbd; */
+	color: gray;
 }
 
 #footer a {
@@ -619,18 +631,18 @@ position: absolute; top: 9px; right: 5px}
 
 #productdetail .pic
 {
-	width: 400px;
+/* 	width: 400px; */
 	margin: 15px 0px;
 	padding-bottom:20px;
-	border-bottom: 1px solid rgb(229, 229, 229);
+/* 	border-bottom: 1px solid rgb(229, 229, 229); */
 	float:left;
 }
 
 #productdetail .pic div
 {
 /* 	margin: 0px auto; */
-	width: 360px;
-	height: 360px;
+/* 	width: 360px; */
+/* 	height: 360px; */
 	padding: 10px;
 	border: 2px solid rgb(229, 229, 229);
 }
@@ -643,7 +655,8 @@ position: absolute; top: 9px; right: 5px}
 }
 
 #productdetail .detail table {
-	padding-top:30px;
+	padding-top:50px;
+	padding-left:10px;
 	font-size: 12px;
 	line-height: 30px;
 }
@@ -679,5 +692,13 @@ position: absolute; top: 9px; right: 5px}
 
 #contactus table td div {
 	margin-left: 10px;
+}
+
+#no-products {
+	text-align: center;
+	padding-top: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	color: #acacac;
 }
 

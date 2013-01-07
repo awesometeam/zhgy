@@ -62,4 +62,44 @@ public class CategoryModel extends AbstractModel<Category>
 		return getCategoryTree(list(hql));
 	}
 	
+	/**
+	 * 取得上级分类
+	 * @param categoryid
+	 * @return
+	 */
+	public Category getParentCategory(Long categoryid)
+	{
+		Category category = getCategory(categoryid);
+		
+		if(category == null)
+			return null;
+		
+		String hql = "from Category where Id="+category.getHigherid();
+		List<Category> result = list(hql);
+		if(result == null || result.size()==0)
+			return null;
+		else
+			return result.get(0);
+	}
+	
+	public Category getCategory(Long categoryid)
+	{
+		String hql = "from Category where Id="+categoryid;
+		List<Category> result = list(hql);
+		if(result == null || result.size()==0)
+			return null;
+		else
+			return result.get(0);
+	}
+	
+	public Category getCategoryByProduct(Long productid)
+	{
+		String hql = "select c from Category c,Product p where p.Id="+productid+" and c.Id=p.CategoryId";
+		List<Category> result = list(hql);
+		if(result == null || result.size()==0)
+			return null;
+		else
+			return result.get(0);
+	}
+	
 }
