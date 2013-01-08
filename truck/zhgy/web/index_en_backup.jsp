@@ -18,8 +18,8 @@
 <link href="/zhgy/css/jquery.xslider.css" rel="stylesheet" type="text/css" />
 <link href="/zhgy/css/flexslider.css" type="text/css" rel="stylesheet" media="screen" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="/zhgy/js/framework/jquery.Xslider.js"></script>
-<script defer src="/zhgy/js/framework/jquery.flexslider.js"></script>
+<!-- <script type="text/javascript" src="/zhgy/js/framework/jquery.Xslider.js"></script> -->
+<script type="text/javascript" src="/zhgy/js/framework/jquery.flexslider.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/homepage.js"></script>
 </head>
@@ -30,7 +30,7 @@
 	request.setAttribute("slideshowPic",new PictureModel().getAllSlideshowPic());
 %>
 
-<%@ include file="pages/header_en2.jsp" %>
+<%@ include file="pages/header_en.jsp" %>
 
 <div id="contentPanel">
 	<div id="content_wrapper">

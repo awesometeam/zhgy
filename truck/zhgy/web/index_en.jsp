@@ -16,12 +16,10 @@
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <link href="/zhgy/css/jquery.xslider.css" rel="stylesheet" type="text/css" />
-<link href="/zhgy/css/flexslider.css" type="text/css" rel="stylesheet" media="screen" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/jquery.Xslider.js"></script>
-<script defer src="/zhgy/js/framework/jquery.flexslider.js"></script>
-<script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/homepage.js"></script>
+<script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 </head>
 <body>
 <%
@@ -35,27 +33,18 @@
 <div id="contentPanel">
 	<div id="content_wrapper">
 
-		<div class="flexslider">
-			<ul class="slides">
+		<div id="slideshow" class="slider" style="width:900px;height:400px;">
+			<div class="conbox">
 				<c:forEach items="${slideshowPic}" var="pic">
-					<li><img src='<c:out value="${pic.picturePath}" />' /></li>
+					<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="900" height="400" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div>
 				</c:forEach>
-			</ul>
-		</div>
-
-			<!-- 		<div id="slideshow" class="slider"> -->
-<!-- 			<div class="conbox"> -->
-<%-- 				<c:forEach items="${slideshowPic}" var="pic"> --%>
-<%-- 					<div><a href="###" title='<c:out value="${pic.pictureDescription}" />' ><img width="920" height="579" alt='<c:out value="${pic.pictureDescription}" />' src='<c:out value="${pic.picturePath}" />'></a></div> --%>
-<%-- 				</c:forEach> --%>
-<!-- 			</div> -->
+			</div>
 	
-<!-- 			<div class="slideshow-switcher"> -->
-<!-- 				<a href="#" class="slideshow-cur">1</a> -->
-<!-- 				<a href="#">2</a> -->
-<!-- 				<a href="#">3</a> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
+			<div class="slideshow-switcher">
+				<a href="###" class="slideshow-cur">1</a>
+				<a href="###">2</a>
+			</div>
+		</div>
 	
 <!-- 		<div id="sidebar"> -->
 		

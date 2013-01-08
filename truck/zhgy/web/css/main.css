@@ -89,7 +89,8 @@ h3 {
 /* 	left: -100px; */
 	width:1900px;
 	height: 300px;
-	background: url(../images/bg.jpg) no-repeat;
+	background: url(../images/bg22.jpg) no-repeat;
+/* 	left: -318.5px; */
 }
 
 #header_small {
@@ -341,7 +342,7 @@ h3 {
 }
 
 #hotproduct {
-	width:90%;
+/* 	width:100%; */
 /* 	min-width: 920px; */
 	position: relative;
 	overflow: hidden;
@@ -366,7 +367,7 @@ h3 {
 	margin:0;
 	padding:0;
 	list-style-type:none;
-	width:9999px;
+	width:9998px;
 	left:0px;
 }
 
@@ -675,7 +676,7 @@ position: absolute; top: 9px; right: 5px}
 
 .hotproduct-Navigation {
 	height: 165px;
-	width: 5%;
+	width: 26px;
 	float:left;
 }
 

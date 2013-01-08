@@ -17,6 +17,7 @@
 <link href="/zhgy/css/jquery.jqzoom.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/jquery.jqzoom-core.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/jPages.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){  
@@ -24,9 +25,9 @@ $(document).ready(function(){
     $('.productitem').jqzoom({  
            zoomType: 'standard',  
            alwaysOn : false,  
-           zoomWidth: 210,  
-           zoomHeight:210,  
-           position:'left',  
+           zoomWidth: 300,  
+           zoomHeight:300,  
+           position:'right',  
            xOffset: 15,  
            yOffset: 0,  
            showEffect : 'show',
@@ -36,6 +37,32 @@ $(document).ready(function(){
     $('.productitem').click(function(){
 		window.location.href="ProductController.do?action=getProduct&productid="+$(this).attr("id");
     	return false;
+    });
+    
+    $('#productlist li').mouseover(function(){
+    	$(this).css("z-index",11);
+    }).mouseout(function(){
+    	$(this).css("z-index",10);
+    });
+    
+ 
+    $("#pager").jPages({
+        containerID  : "itemContainer",
+		first: '首页',
+		last: '尾页',
+		previous: '上页',
+		next: '下页',
+        perPage: 16,
+        startPage: 1,
+//        startRange: 2,
+//        midRange: 1,
+//        endRange: 2,
+//		animation: 'wobble',
+//		keyBrowse: true,
+		callback    : function( pages, items ){
+//			alert(pages);
+//			alert(items);
+		}
     });
     
  }); 
@@ -59,8 +86,8 @@ $(document).ready(function(){
 	        <div id="products" class="content_box">
 	       	 	<div class="information_box_title">
 	        		<ul>
-	        			<li><c:out value="${catetory}"></c:out></li>
-	        			<li class="last"><c:out value="${subcatetory}"></c:out></li>
+	        			<li><c:out value="${category}"></c:out></li>
+	        			<li class="last"><c:out value="${subcategory}"></c:out></li>
 	        		</ul>
 	        	</div>
 	        	<div class="cleaner"></div>
@@ -68,9 +95,9 @@ $(document).ready(function(){
 	        	
 	        	<div id="productlist">
 	        			<div>
-	        				<ul>
+	        				<ul id="itemContainer">
 			        			<c:forEach items="${products}" var="product">
-				        			<li>
+				        			<li style="position:relative;z-index: 10">
 				        				<div class="item">
 				        					<a title='<c:out value="${product.name}"></c:out>' 
 				        					   href='<c:out value="${product.primaryImage}"></c:out>' 
@@ -88,6 +115,9 @@ $(document).ready(function(){
 			        			</c:forEach>
 		        			</ul>
 	        			</div>
+<!-- 	        			<div class="cleaner"></div> -->
+<!-- 	        			<div id="pager" class="pager"></div> -->
+<!-- 	        			<div class="cleaner"></div> -->
 	        	</div>
 		        	
 	        </div>

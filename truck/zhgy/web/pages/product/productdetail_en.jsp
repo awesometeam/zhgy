@@ -15,16 +15,13 @@
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="/zhgy/css/superfish.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/zhgy/css/superfish-vertical.css" media="screen">
-<link rel="stylesheet" type="text/css" href="/zhgy/css/temp.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/zhgy/css/product.css" >
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/hoverIntent.js"></script>
 <script type="text/javascript" src="/zhgy/js/framework/superfish.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 </head>
 <body>
-<%
-	request.setAttribute("categories",new CategoryModel().getCategoryTree().getRoot().getChildren());
-%>
 
 <%@ include file="../header_en_small.jsp" %>
 
@@ -62,12 +59,10 @@
 	        	<div class="cleaner"></div>
 	        	<div class="separation-line"></div>
 	        	
-	        	<div id="productdetail">
+	        	<div id="productdetail_shadow">
 	        	
 	        		<div class="pic">
-	        			<div>
-	        				<img width="350px" height="350px" src="/zhgy/images/product/1/6/ZH-CS050.jpg"></img>
-	        			</div>
+	        			<img width="430px" height="430px" src='<c:out value="${picture.picturePath}"></c:out>'></img>
 	        		</div>
 	        		<div class="detail">
 	        			<table>

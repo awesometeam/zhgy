@@ -12,33 +12,36 @@
 <%
 	request.setAttribute("showcasePic",new PictureModel().getAllShowcasePic());
 %>
-	<div class="hotproduct_box">
+	<div id="latestproductbox_short" class="hotproduct_box">
 
 		<div class="information_box">
 			<h2 id="hotproducttitle">latest products</h2>
 		</div>
 		<div>
-<!-- 			<div class="hotproduct-Navigation"> -->
-<!-- 				<img src="/zhgy/images/arrow-l-blue.png"></img> -->
-<!-- 			</div> -->
-			<div id="hotproduct" class="short">
-				<ul id="hotproductul">
-					<c:forEach begin="0" end="2">
-						<c:forEach items="${showcasePic}" var="pic">
-							<li><a
-								href='/zhgy/ProductController.do?action=getProduct&productid=<c:out value="${pic.correlationId}"/>'><img
-									src='<c:out value="${pic.picturePath}"/>'
-									alt='<c:out value="${pic.pictureDescription}"/>' width='150'
-									height='150' />
-							</a>
-							</li>
+			<div id="latest-products" style="width: 100%; margin: 0px auto;">
+				<div class="hotproduct-Navigation">
+					<img src="/zhgy/images/arrow-l-blue.png"></img>
+				</div>
+				<div id="hotproduct">
+					<ul id="hotproductul">
+						<c:forEach begin="1" end="2" step="1">
+							<c:forEach items="${showcasePic}" var="pic">
+								<li><a
+									href='/zhgy/ProductController.do?action=getProduct&productid=<c:out value="${pic.correlationId}"/>'><img
+										src='<c:out value="${pic.picturePath}"/>'
+										alt='<c:out value="${pic.pictureDescription}"/>' width='150'
+										height='150' />
+								</a>
+								</li>
+							</c:forEach>
 						</c:forEach>
-					</c:forEach>
-				</ul>
+					</ul>
+				</div>
+				<div class="hotproduct-Navigation">
+					<img src="/zhgy/images/arrow-r-blue.png"></img>
+				</div>
+				<div class="cleaner"></div>
 			</div>
-<!-- 			<div class="hotproduct-Navigation"> -->
-<!-- 				<img src="/zhgy/images/arrow-r-blue.png" style="float:right;"></img> -->
-<!-- 			</div> -->
 			<div class="cleaner"></div>
 		</div>
 		

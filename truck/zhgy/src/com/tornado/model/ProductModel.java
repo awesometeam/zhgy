@@ -1,6 +1,9 @@
 package com.tornado.model;
 
+import com.tornado.entity.Picture;
 import com.tornado.entity.Product;
+import com.tornado.persistence.PMF;
+
 import java.util.List;
 
 public class ProductModel extends AbstractModel<Product>
@@ -27,6 +30,16 @@ public class ProductModel extends AbstractModel<Product>
 	{
 		String hql = "from Product where Id="+productid;
 		List<Product> result = list(hql);
+		if(result == null || result.size() == 0)
+			return null;
+		else
+			return result.get(0);
+	}
+	
+	public Picture getPrimaryImage(Long productid)
+	{
+		String hql = "from Picture where CorrelationId="+productid+" and IsPrimary=true";
+		List<Picture> result = PMF.list(hql);
 		if(result == null || result.size() == 0)
 			return null;
 		else

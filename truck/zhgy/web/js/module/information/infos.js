@@ -2,7 +2,7 @@
  * 
  */
 
-jQuery(function($) {
+$(document).ready(function(){
 	
 	$("#pager").jPages({
         containerID  : "itemContainer",

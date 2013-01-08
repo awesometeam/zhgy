@@ -1,8 +1,4 @@
-/**
- * 
- */
-
-jQuery(function($) {
+$(document).ready(function(){
 	
 	$("#slideshow").Xslider({
 		// 默认配置
@@ -19,10 +15,9 @@ jQuery(function($) {
 		rand:false //是否随机指定默认幻灯图片
 	});
 	
-	$('.flexslider').flexslider({
-	    animation: "slide"
-	});
-	
+//	$('.flexslider').flexslider({
+//	    animation: "slide"
+//	});
 	
 
 //	if($("#informations").height()<$("#introduction").height())

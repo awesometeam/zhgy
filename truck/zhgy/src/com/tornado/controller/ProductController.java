@@ -27,14 +27,16 @@ public class ProductController extends Controller
 		String _productid = content.getParameter("productid");
 		Long productid = null;
 		Product product = null;
+		Picture picture = null;
 		Category category = null,subcategory = null;
 		
 		try
 		{
 			productid = new Long(_productid);
 			product = new ProductModel().getProduct(productid);
-			category = new CategoryModel().getCategoryByProduct(productid);
-			subcategory = new CategoryModel().getCategory(category.getHigherid());
+			picture = new ProductModel().getPrimaryImage(productid);
+			subcategory = new CategoryModel().getCategoryByProduct(productid);
+			category = new CategoryModel().getCategory(subcategory.getHigherid());
 		}
 		catch(Exception e) { }
 		
@@ -45,6 +47,7 @@ public class ProductController extends Controller
 		else
 		{
 			content.getRequest().setAttribute("product", product);
+			content.getRequest().setAttribute("picture", picture);
 			content.getRequest().setAttribute("category", category);
 			content.getRequest().setAttribute("subcategory", subcategory);
 			view = new View("pages/product/productdetail_en.jsp");

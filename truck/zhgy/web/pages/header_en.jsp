@@ -12,8 +12,6 @@
 <!--         <div class="cleaner"></div> -->
 <!--     </div> -->
 
-
-
 <div id="menu_wrapper">
     <div id="menu">
         <ul>

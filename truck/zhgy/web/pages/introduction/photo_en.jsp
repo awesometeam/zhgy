@@ -13,32 +13,11 @@
 <meta name="keywords" content="工艺,工艺品,温州,中昊,wenzhou,zhgy" />
 <meta name="description" content="温州中昊工艺品有限公司主页" />
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/zhgy/css/flexslider.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="/zhgy/css/photo.css" type="text/css" rel="stylesheet" media="screen" />
 
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
 <script defer src="/zhgy/js/framework/jquery.flexslider.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$('#carousel').flexslider({
-	    animation: "slide",
-	    controlNav: false,
-	    animationLoop: false,
-	    slideshow: false,
-	    itemWidth: 210,
-	    itemMargin: 5,
-	    asNavFor: '#slider'
-	  });
-	   
-	  $('#slider').flexslider({
-	    animation: "slide",
-	    controlNav: false,
-	    animationLoop: false,
-	    slideshow: false,
-	    sync: "#carousel"
-	  });
-});
-</script>
 </head>
 <body>
 
@@ -59,50 +38,33 @@ $(document).ready(function() {
 	    
 	    <div id="content">
 
-			<div id="informations" class="content_box">
-
-				<div style="width:90%;margin:0px auto;">
-					<div id="slider" class="flexslider" style="margin: 0 0 10px;">
-						<ul class="slides">
-								<li data-thumb="/zhgy/images/companyPic/4.jpg">
-									<img src="/zhgy/images/companyPic/4.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/5.jpg">
-									<img src="/zhgy/images/companyPic/5.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/6.jpg">
-									<img src="/zhgy/images/companyPic/6.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/7.jpg">
-									<img src="/zhgy/images/companyPic/7.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/8.jpg">
-									<img src="/zhgy/images/companyPic/8.jpg" />
-								</li>
-						</ul>
-					</div>
-				
-					<div id="carousel" class="flexslider" style="0px 0px 30px;">
-						<ul class="slides">
-								<li data-thumb="/zhgy/images/companyPic/4.jpg">
-									<img src="/zhgy/images/companyPic/4.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/5.jpg">
-									<img src="/zhgy/images/companyPic/5.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/6.jpg">
-									<img src="/zhgy/images/companyPic/6.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/7.jpg">
-									<img src="/zhgy/images/companyPic/7.jpg" />
-								</li>
-								<li data-thumb="/zhgy/images/companyPic/8.jpg">
-									<img src="/zhgy/images/companyPic/8.jpg" />
-								</li>
-						</ul>
-					</div>
-				</div>
-
+			<div id="products" class="content_box">
+	       	 	<div class="information_box_title">
+	        		<ul>
+	        			<li>Home</li>
+	        			<li class="last">Photo</li>
+	        		</ul>
+	        	</div>
+	        	<div class="cleaner"></div>
+	        	<div class="separation-line"></div>
+	        	
+	        	<div id="company-photo">
+	        		<c:forEach begin="1" end="3" step="1">
+	        			<div>
+	        				<ul>
+			        			<c:forEach begin="1" end="3" step="1">
+				        			<li>
+				        				<div class="item">
+				        					<a title="ZH-CS050" href="/zhgy/images/companyPic/4.jpg" class="productitem"><img width="100%" height="100%" src="/zhgy/images/companyPic/4.jpg"></img></a>		
+				        				</div>
+				        				<div class="item-cescription">phote description</div>
+			        				</li>
+			        			</c:forEach>
+		        			</ul>
+	        			</div>
+	        		</c:forEach>
+	        	</div>
+			
 			</div>
 			<div class="cleaner"></div>
 	    
