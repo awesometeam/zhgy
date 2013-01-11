@@ -53,6 +53,57 @@ var FormUtil = {
 			}
 		}
 	},
+	check: function(item,ifwarn) {
+		debugger;
+		if(ifwarn==null || ifwarn==undefined)
+			ifwarn=false;
+		if(item.tagName.toUpperCase() == "SELECT" || item.children.length == 0)
+		{
+			if(item.getAttribute("required")!=null)
+			{
+				if(item.getAttribute("required")=="true" || item.getAttribute("required")==true)
+				{
+					if(item.value == null || item.value=="")
+					{
+						if(ifwarn)
+							this.warn(item);
+						return false;
+					}
+				}
+			}
+			if(item.getAttribute("ver-type")!=null)
+			{
+				if(item.getAttribute("ver-type")=="email")
+				{
+					var reg = /^(?:[a-z\d]+[_\-\+\.]?)*[a-z\d]+@(?:([a-z\d]+\-?)*[a-z\d]+\.)+([a-z]{2,})+$/i;
+					if(!reg.test(item.value))
+					{
+						if(ifwarn)
+							this.warn(item);
+						return false;
+					}
+				}
+			}
+			
+			return true;
+		} 
+		else
+		{
+			var nodes = item.children;
+			for(var i=0;i<nodes.length;i++)
+			{
+				if(this.check(nodes[i],ifwarn))
+					continue;
+				else
+					return false;
+			}
+			return true;
+		}
+	},
+	warn: function(item) {
+		if(item.getAttribute("alertmsg")!=null && item.getAttribute("alertmsg")!="")
+			alert(item.getAttribute("alertmsg"));
+	},
 	checkForEmpty: function(item) {
 		
 		if(item.tagName.toUpperCase() == "SELECT" || item.children.length == 0)
@@ -61,7 +112,6 @@ var FormUtil = {
 			{
 				if(item.getAttribute("required")=="true" || item.getAttribute("required")==true)
 				{
-					debugger;
 					if(item.value == null || item.value=="")
 					{
 						if(item.getAttribute("alertmsg")!=null && item.getAttribute("alertmsg")!="")

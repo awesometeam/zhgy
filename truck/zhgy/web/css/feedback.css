@@ -11,6 +11,26 @@
 	margin:10px 5px;
 }
 
+#feedback .item span
+{
+/* 	width: 50px; */
+/* 	height: 100%; */
+	
+	padding-left: 25px;
+}
+
+#feedback .item span.error {
+	background: url(/zhgy/images/register.png) 5px -79px no-repeat;
+}
+
+#feedback .item span.correct {
+	background: url(/zhgy/images/register.png) 5px 2px no-repeat;
+}
+
+#feedback .item span.init {
+	background: url(/zhgy/images/register.png) 5px -134px no-repeat;
+}
+
 #feedback input {
 	border: 1px solid lightGrey;
 	margin-top: 0;

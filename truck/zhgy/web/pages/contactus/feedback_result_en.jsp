@@ -18,6 +18,7 @@
 <link href="/zhgy/css/main.css" rel="stylesheet" type="text/css" />
 <link href="/zhgy/css/feedback.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/zhgy/js/framework/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="/zhgy/js/framework/CoreUtil.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/common.js"></script>
 <script type="text/javascript" src="/zhgy/js/module/contactus/feedback.js"></script>
 </head>
@@ -60,22 +61,26 @@
 	        		<div id="feedback">
 						<form id="feedback-form" method="post" action="MessageController.do">
 						<div class="item">
-							<p class="label">Name：</p><input type="text" name="author" id="author" value='<c:out value="${data.author}"></c:out>'>
+							<p class="label">Name：</p>
+							<input type="text" name="author" required="true" alertmsg="Please enter your name" id="author" value='<c:out value="${data.author}"></c:out>'>
+							<span id="author-check" class="correct"></span>
 						</div>
 						<div class="item">
-							<p class="label">Email：</p><input type="text" name="email" id="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;"><p class="label"></p>
+							<p class="label">Email：</p>
+							<input type="text" name="email" required="true" alertmsg="Please enter the right Email address" id="email" ver-type="email" value='<c:out value="${data.email}"></c:out>' style="width:300px;">
+							<span id="email-check" class="correct"></span>
+						</div>
+<!-- 						<div class="item"> -->
+<%-- 							<p class="label">Phone：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p> --%>
+<!-- 						</div> -->
+<!-- 						<div class="item"> -->
+<%-- 							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p> --%>
+<!-- 						</div> -->
+						<div class="item">
+							<p class="label">Content：</p><textarea rows="8" name="content"><c:out value="${data.content}"></c:out></textarea>
 						</div>
 						<div class="item">
-							<p class="label">Phone：</p><input type="text" name="phone" id="phone" style="width:300px;" value='<c:out value="${data.phone}"></c:out>'><p class="label"></p>
-						</div>
-						<div class="item">
-							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;" value='<c:out value="${data.title}"></c:out>'><p class="label"></p>
-						</div>
-						<div class="item">
-							<p class="label">Content：</p><textarea rows="5" name="content"><c:out value="${data.content}"></c:out></textarea>
-						</div>
-						<div class="item">
-							<input required="true" type="submit" accesskey="s" id="feedback-submit" value="Modify Message">
+							<input type="submit" accesskey="s" id="feedback-form-submit" value="Modify Message">
 						</div>
 						<input type="hidden" name="action" value="updateMessage_en">
 						<input type="hidden" name="messageid" value='<c:out value="${data.id}"></c:out>'>

@@ -58,22 +58,30 @@
 	        		<div id="feedback">
 						<form id="feedback-form" method="post" action="MessageController.do">
 						<div class="item">
-							<p class="label">Name：</p><input type="text" alertmsg="Please enter your name" required="true" name="author" id="author">
+							<p class="label">Name：</p>
+							<input type="text" alertmsg="Please enter your name" required="true" name="author" id="author">
+							<span id="author-check" class="init">required</span>
 						</div>
 						<div class="item">
-							<p class="label">Email：</p><input type="text" alertmsg="Please enter your Email" required="true" name="email" id="email" style="width:300px;"><p class="label"></p>
+							<p class="label">Email：</p>
+							<input type="text" alertmsg="Please enter the right Email address" ver-type="email" required="true" name="email" id="email" style="width:300px;">
+							<span id="email-check" class="init">required</span>
 						</div>
-						<div class="item">
-							<p class="label">Phone：</p><input type="text" name="phone" id="phone" style="width:300px;"><p class="label"></p>
-						</div>
-						<div class="item">
-							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>
-						</div>
+<!-- 						<div class="item"> -->
+<!-- 							<p class="label">Phone：</p> -->
+<!-- 							<input type="text" name="phone" id="phone" style="width:300px;"><p class="label"></p> -->
+<!-- 							<span class="error"></span> -->
+<!-- 						</div> -->
+<!-- 						<div class="item"> -->
+<!-- 							<p class="label">Title：</p> -->
+<!-- 							<input type="text" name="title" id="title" style="width:300px;"><p class="label"></p> -->
+<!-- 							<span class="error"></span> -->
+<!-- 						</div> -->
 						<div class="item">
 							<p>Content：</p><textarea rows="8" alertmsg="Please enter your content" required="true" name="content" ></textarea>
 						</div>
 						<div class="item">
-							<input type=submit id="feedback-form-submit" accesskey="s" id="feedback-submit" value="Send Message">
+							<input type="submit" id="feedback-form-submit" accesskey="s" value="Send Message">
 						</div>
 						<input type="hidden" name="action" value="leaveMessage_en">
 						<input type="hidden" name="messageid">
