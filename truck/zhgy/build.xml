@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<project name="zhgy" default="war">
+<path id="compile.classpath">
+<fileset dir="web/WEB-INF/lib">
+<include name="*.jar"/>
+</fileset>
+</path>
+<target name="init">
+<mkdir dir="build/classes"/>
+<mkdir dir="build/war" />
+</target>
+<target name="compile" depends="init" >
+<javac destdir="build/classes" debug="true" srcdir="src">
+<classpath refid="compile.classpath"/>
+</javac>
+</target>
+<property name="webxml.file" value="web/WEB-INF/web.xml"/>
+<property name="war.dir" value="build/war"/>
+<property name="lib.dir" value="web/WEB-INF/lib"/>
+<property name="classes.dir" value="build/classes"/>
+<target name="war" depends="compile">
+<war destfile="${war.dir}/zhgy.war" webxml="${webxml.file}">
+<fileset dir="web"/>
+<!-- <lib dir="${lib.dir}"/> -->
+<classes dir="${classes.dir}"/>
+</war>
+</target>
+<target name="clean">
+<delete dir="build" />
+</target>
+</project>
+

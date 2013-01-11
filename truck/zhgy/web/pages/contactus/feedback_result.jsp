@@ -38,7 +38,7 @@
 	<div id="content_wrapper">
 	
 		<div style=width:100%;margin-bottom:5px;">
-			<img src="/zhgy/images/show/wrap1.jpg" />
+			<img width="100%" src="/zhgy/images/show/wrap1.jpg" />
 		</div>
 	
 		<div id="sidebar">

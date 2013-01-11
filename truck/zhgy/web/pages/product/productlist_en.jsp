@@ -98,6 +98,7 @@ $(document).ready(function(){
 	        				<ul id="itemContainer">
 			        			<c:forEach items="${products}" var="product">
 				        			<li style="position:relative;z-index: 10">
+				        			<div class="the-border">
 				        				<div class="item">
 				        					<a title='<c:out value="${product.name}"></c:out>' 
 				        					   href='<c:out value="${product.primaryImage}"></c:out>' 
@@ -109,8 +110,12 @@ $(document).ready(function(){
 				        					    </img>
 				        					</a>
 				        				</div>
-				        				<div class="item-cescription"><c:out value="${product.name}"></c:out></div>
+				        				<div class="item-cescription">
+<%-- 				        				<c:out value="${product.name}"></c:out> --%>
+											<a href='ProductController.do?action=getProduct&productid=<c:out value="${product.id}" />'><input type="button" value="view detail"></a>
+				        				</div>
 				        				<div class="item-cescription"><c:out value="${product.number}"></c:out></div>
+				        			</div>
 			        				</li>
 			        			</c:forEach>
 		        			</ul>

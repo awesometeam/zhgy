@@ -36,7 +36,7 @@
 	<div id="content_wrapper">
 	
 		<div style=width:100%;margin-bottom:5px;">
-			<img src="/zhgy/images/show/wrap1.jpg" />
+			<img width="100%" src="/zhgy/images/show/wrap1.jpg" />
 		</div>
 	
 		<div id="sidebar">
@@ -70,7 +70,7 @@
 							<p class="label">Title：</p><input type="text" name="title" id="title" style="width:300px;"><p class="label"></p>
 						</div>
 						<div class="item">
-							<p>Content：</p><textarea rows="5" alertmsg="Please enter your content" required="true" name="content" ></textarea>
+							<p>Content：</p><textarea rows="8" alertmsg="Please enter your content" required="true" name="content" ></textarea>
 						</div>
 						<div class="item">
 							<input type=submit id="feedback-form-submit" accesskey="s" id="feedback-submit" value="Send Message">
