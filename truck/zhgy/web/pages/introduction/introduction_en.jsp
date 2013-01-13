@@ -60,17 +60,23 @@
 				<div style="width:100%;">
 	<!-- 				<img alt="" src="/zhgy/images/companyPic/cf.jpg" ></img> -->
 				</div>
-				<div style="width:100%;">
-					<ul style="width:100%;list-style-type: none;margin:0px;padding: 0px;">
-						<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/1.jpg" width="100%"></img></li>
-						<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/2.jpg" width="100%"></img></li>
-						<li style="float:left;margin:0px 3px;width:32%;"><img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="100%"></img></li>
-					</ul>
+				<div style="padding:5px;">
+					<img src="/zhgy/images/companyPic/cf.jpg" width="95%" />
 				</div>
-				<div class="cleaner"></div>
 				<c:forEach items="${CompanyIntroduction}" var="line">
 					<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
 				</c:forEach>
+				<c:forEach items="${CompanyIntroduction}" var="line">
+					<p class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${line}"></c:out></p>
+				</c:forEach>
+				<div style="width:100%;">
+					<ul style="width:100%;list-style-type: none;margin:0px;padding: 0px;">
+						<li style="float:left;padding:5px 15px;width:28%;"><img alt="" src="/zhgy/images/companyPic/1.jpg" width="100%"></img></li>
+						<li style="float:left;padding:5px 15px;width:28%;"><img alt="" src="/zhgy/images/companyPic/2.jpg" width="100%"></img></li>
+						<li style="float:left;padding:5px 15px;width:28%;"><img alt="" src="/zhgy/images/companyPic/IMG_2879.jpg" width="100%"></img></li>
+					</ul>
+				</div>
+				<div class="cleaner"></div>
 				
 	<!-- 			<div style="margin:auto;width:640px;"> -->
 	<!-- 				<img alt="" src="/zhgy/images/companyPic/1.jpg" width="640px" height="480px"></img> -->

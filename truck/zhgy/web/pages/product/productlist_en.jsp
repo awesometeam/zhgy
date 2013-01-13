@@ -39,10 +39,10 @@ $(document).ready(function(){
     	return false;
     });
     
-    $('#productlist li').mouseover(function(){
-    	$(this).css("z-index",11);
+    $('#productlist li.lastitem').mouseover(function(){
+    	$(this).css("z-index",2501);
     }).mouseout(function(){
-    	$(this).css("z-index",10);
+    	$(this).css("z-index",1);
     });
     
  
@@ -63,6 +63,14 @@ $(document).ready(function(){
 //			alert(pages);
 //			alert(items);
 		}
+    });
+    
+    $(".item-cescription a").mouseover(function(){
+    	$(this).removeClass("hidebg");
+    	$(this).children("span").removeClass("hidebg");
+    }).mouseout(function(){
+    	$(this).addClass("hidebg");
+    	$(this).children("span").addClass("hidebg");
     });
     
  }); 
@@ -96,27 +104,37 @@ $(document).ready(function(){
 	        	<div id="productlist">
 	        			<div>
 	        				<ul id="itemContainer">
-			        			<c:forEach items="${products}" var="product">
-				        			<li style="position:relative;z-index: 10">
-				        			<div class="the-border">
-				        				<div class="item">
-				        					<a title='<c:out value="${product.name}"></c:out>' 
-				        					   href='<c:out value="${product.primaryImage}"></c:out>' 
-				        					   id='<c:out value="${product.id}"></c:out>'
-				        					   class="productitem">
-				        					   	<img width="100%" 
-				        					   		 height="100%" 
-				        					   		 src='<c:out value="${product.primaryImage}"></c:out>'>
-				        					    </img>
-				        					</a>
-				        				</div>
-				        				<div class="item-cescription">
-<%-- 				        				<c:out value="${product.name}"></c:out> --%>
-											<a href='ProductController.do?action=getProduct&productid=<c:out value="${product.id}" />'><input type="button" value="view detail"></a>
-				        				</div>
-				        				<div class="item-cescription"><c:out value="${product.number}"></c:out></div>
-				        			</div>
-			        				</li>
+			        			<c:forEach items="${products}" var="product" varStatus="vs">
+				        			<c:choose>
+				        				<c:when test="${vs.index%4 eq 3}">
+				        					<li class="lastitem" style='position:relative;z-index:<fmt:formatNumber type="number" value="${2500-vs.index}" pattern="0000" maxFractionDigits="0"/>'>
+			        					</c:when>
+				        				<c:otherwise>
+				        					<li style='position:relative;z-index:<fmt:formatNumber type="number" value="${2500-vs.index}" pattern="0000" maxFractionDigits="0"/>'>
+				        				</c:otherwise>
+				        			</c:choose>
+					        			<div class="the-border">
+					        				<div class="item">
+					        					<a title='<c:out value="${product.name}"></c:out>' 
+					        					   href='<c:out value="${product.primaryImage}"></c:out>' 
+					        					   id='<c:out value="${product.id}"></c:out>'
+					        					   class="productitem">
+					        					   	<img width="100%" 
+					        					   		 height="100%" 
+					        					   		 src='<c:out value="${product.primaryImage}"></c:out>' />
+					        					</a>
+					        				</div>
+					        				<div class="cleaner"></div>
+					        				<div class="item-cescription">
+	<%-- 				        				<c:out value="${product.name}"></c:out> --%>
+												<a class="hidebg" href='ProductController.do?action=getProduct&productid=<c:out value="${product.id}" />'>
+													<span class="hidebg">view detail</span>
+												</a>
+					        				</div>
+					        				<div class="cleaner"></div>
+					        				<div class="item-cescription"><c:out value="${product.number}"></c:out></div>
+					        			</div>
+				        			</li>
 			        			</c:forEach>
 		        			</ul>
 	        			</div>

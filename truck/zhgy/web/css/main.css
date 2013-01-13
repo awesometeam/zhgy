@@ -495,7 +495,7 @@ h3 {
  .pager span { margin: 0 5px; }
  
 .title { text-align: center;font-size: 28px; margin: 20px 0px; line-height: 35px; }
-.line { font-size: 14px; line-height: 20px; margin:10px 0px; }
+.line { font-size: 13px; line-height: 25px; margin:10px 0px; }
 
 /* category */
 
@@ -633,19 +633,49 @@ position: absolute; top: 9px; right: 5px}
 	margin: 3px 0px;
 }
 
-#productlist .item-cescription input {
-	border: 1px solid lightGrey;
-	margin-top: 0;
-	line-height: 1.2;
-/* 	padding: 0.4em 0.3em; */
-	font-family: Microsoft Yahei;
-	cursor: hand;
-	cursor:pointer;
+/* #productlist .item-cescription input { */
+/* 	border: 1px solid lightGrey; */
+/* 	margin-top: 0; */
+/* 	line-height: 1.2; */
+/* 	font-family: Microsoft Yahei; */
+/* 	cursor: hand; */
+/* 	cursor:pointer; */
+/* } */
+
+#productlist .item-cescription a span {
+	background: transparent url('/zhgy/images/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+
+#productlist .item-cescription .hidebg {
+	background: none;
 }
 
 #productlist .item-cescription a {
-	 text-decoration: none;
+    background: transparent url('/zhgy/images/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+    margin-left: 40px;
 }
+
+#productlist .item-cescription a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+	
+#productlist .item-cescription a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+} 
 
 #categorytitle
 {
@@ -717,7 +747,7 @@ position: absolute; top: 9px; right: 5px}
 }
 
 #contactus table td div {
-	margin-left: 10px;
+	margin-left: 30px;
 }
 
 #no-products {

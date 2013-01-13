@@ -18,7 +18,6 @@ $(document).ready(function(){
 	$("#email").blur(function() {
 		$("#email-check").removeClass();
 		$("#email-check").html("");
-		console.log($("#email").val());
 //		var reg = /^(?:[a-z\d]+[_\-\+\.]?)*[a-z\d]+@(?:([a-z\d]+\-?)*[a-z\d]+\.)+([a-z]{2,})+$/i;
 	    if(FormUtil.check(document.getElementById("email")))
 	    {
@@ -34,7 +33,6 @@ $(document).ready(function(){
 	$("#author").blur(function() {
 		$("#author-check").removeClass();
 		$("#author-check").html("");
-		console.log($("#email").val());
 		if(FormUtil.check(document.getElementById("author")))
 	    {
 			$("#author-check").addClass("correct");
