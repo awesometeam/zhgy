@@ -10,9 +10,15 @@
 <mkdir dir="build/war" />
 </target>
 <target name="compile" depends="init" >
-<javac destdir="build/classes" debug="true" srcdir="src">
+<javac encoding="utf-8" destdir="build/classes" debug="true" srcdir="src">
 <classpath refid="compile.classpath"/>
 </javac>
+<copy todir="build/classes" overwrite="true">  
+	<fileset dir="src">  
+		<include name="**/*.xml" />  
+		<include name="**/*.properties" />  
+    </fileset>  
+</copy> 
 </target>
 <property name="webxml.file" value="web/WEB-INF/web.xml"/>
 <property name="war.dir" value="build/war"/>
