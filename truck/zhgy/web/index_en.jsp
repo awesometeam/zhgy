@@ -45,6 +45,20 @@
 				<a href="###">2</a>
 			</div>
 		</div>
+		
+		
+<!-- 		<div id="partners"> -->
+<!-- 			<div style="padding-left:60px;"><img src="/zhgy/images/partner_blue.png" /></div> -->
+<!-- 			<div class="items" style="padding-left:60px;"> -->
+<!-- 				<table> -->
+<!-- 					<tr> -->
+<%-- 					<c:forEach begin="1" end="6" step="1" var="i"> --%>
+<%-- 						<td><img height="40px" src='/zhgy/images/partners/<c:out value="${i}" />.jpg' /></td> --%>
+<%-- 					</c:forEach> --%>
+<!-- 					</tr> -->
+<!-- 				</table> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 	
 <!-- 		<div id="sidebar"> -->
 		
@@ -130,6 +144,8 @@
 </div>
 
 <%@ include file="pages/module/hotproducts_en.jsp" %>
+
+<%@ include file="pages/module/partners_en.jsp" %>
 
 <%@ include file="pages/footer.jsp" %>
 

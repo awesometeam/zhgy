@@ -32,9 +32,9 @@
 <div id="contentPanel">
 	<div id="content_wrapper">
 	
-		<div style=width:100%;margin-bottom:5px;">
-			<img width="100%" src="/zhgy/images/show/wrap1.jpg" />
-		</div>
+<!-- 		<div style=width:100%;margin-bottom:5px;"> -->
+<!-- 			<img width="100%" height="150px" src="/zhgy/images/companyPic/njpic_8292910_20.jpg" /> -->
+<!-- 		</div> -->
 	
 		<div id="sidebar">
 	        

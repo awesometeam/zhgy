@@ -14,9 +14,9 @@
 %>
 	<div id="latestproductbox" class="hotproduct_box">
 
-		<div class="information_box">
-			<h2 id="hotproducttitle">latest products</h2>
-		</div>
+<!-- 		<div class="information_box"> -->
+<!-- 			<h2 id="hotproducttitle">latest products</h2> -->
+<!-- 		</div> -->
 		<div>
 			<div id="latest-products" style="width: 98%; margin: 0px auto;">
 				<div class="hotproduct-Navigation">

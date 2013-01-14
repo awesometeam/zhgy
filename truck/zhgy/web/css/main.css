@@ -758,3 +758,32 @@ position: absolute; top: 9px; right: 5px}
 	color: #acacac;
 }
 
+#partners .items {
+}
+
+#partners .items table {
+	border: 1px solid rgb(229, 229, 229);
+	padding: 0px;
+}
+
+#partners .items table td {
+	float: left;
+	padding: 5px 15px;
+}
+
+#partner {
+	width: 98%;
+}
+
+#partner table {
+	border: 1px solid rgb(229, 229, 229);
+	padding: 0px 15px;
+	width: 100%;
+}
+
+#partner table td {
+	float: left;
+	padding: 5px 20px;
+}
+
+
